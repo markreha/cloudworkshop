@@ -11,6 +11,7 @@ GPIO.cleanup()
 # Read data using pin 4
 instance = dht11_lib.DHT11(pin=4)
 
+# For testing just sit in a loop reading the sensor every second
 while True:
     result = instance.read()
     if result.is_valid():
