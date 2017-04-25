@@ -16,7 +16,7 @@ elif cfg.environment == "dev2":
 	environment = cfg.env_dev2
 elif cfg.environment == "qa":
 	print("Running QA Environment Configuration")
-	environment = cfg.env_dev2
+	environment = cfg.env_qa
 else:
 	print("Running Production Environment Configuration")
 	environment = cfg.env_prod
