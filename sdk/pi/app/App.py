@@ -1,6 +1,6 @@
 import Config as cfg
-import TemperatureSensor
-import LED
+from TemperatureSensor import TemperatureSensor
+from LED import LED
 import datetime
 import json
 import requests
@@ -40,14 +40,14 @@ temperatureData = {}
 
 # Sit in a loop reading the sensors every sampleTime, convert result to JSON, and POST to the Web API
 while True:
-	# Turn LED ON
+        # Turn LED ON
 	led.on()
 	
-    # Read the Temperature Sensor
+        # Read the Temperature Sensor
 	temperatureSensor.read()
 	if temperatureSensor.valid:
 		# Save the Temperature Sensor results in a Temperature Data Object
-		temperatureData["deviceID"] = configuration.deviceID
+		temperatureData["deviceID"] = deviceID
 		temperatureData["temperature"] = temperatureSensor.temperatureF
 		temperatureData["humidity"] = temperatureSensor.humidity
         
