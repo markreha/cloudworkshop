@@ -17,6 +17,9 @@ env_dev1 = {'webApi': 'http://marks-macbookair.local:8080/workshop/rest/dht11/sa
 env_dev2 = {'webApi': 'http://node5.codenvy.io:37551/cloudservices/rest/dht11/save',
          	'username': 'CloudWorkshop',
          	'password': 'dGVzdHRlc3Q='}
+env_qa = {'webApi': 'http://cloud-services-playlaravel.44fs.preview.openshiftapps.com/cloadservices/rest/dht11/save',
+         	'username': 'CloudWorkshop',
+         	'password': 'dGVzdHRlc3Q='}
 env_prod = {'webApi': 'http://cloud-services-playlaravel.44fs.preview.openshiftapps.com/cloadservices/rest/dht11/save',
          	'username': 'CloudWorkshop',
          	'password': 'dGVzdHRlc3Q='}
