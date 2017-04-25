@@ -1,3 +1,4 @@
+import Config as cfg
 import TemperatureSensor
 import LED
 import datetime
@@ -5,15 +6,25 @@ import json
 import requests
 import time
 
-# Application constants
-sampleTime = 20
-debug = True
-deviceID = 0
-#webApiUrl = "http://marks-macbookair.local:8080/workshop/rest/dht11/save"
-webApiUrl = "http://node5.codenvy.io:37551/cloudservices/rest/dht11/save"
-#webApiUrl = "http://cloud-services-playlaravel.44fs.preview.openshiftapps.com/cloadservices/rest/dht11/save"
-webApiUsername = "CloudWorkshop"
-webApiPassword = "dGVzdHRlc3Q="
+# Load the current Environment Configuration
+print("Running Sensor Application v0.1")
+if cfg.environment == "dev1":
+	print("Running Dev 1 Environment Configuration")
+	environment = cfg.env_dev1
+elif cfg.environment == "dev2":
+	print("Running Dev 2 Environment Configuration")
+	environment = cfg.env_dev2
+else:
+	print("Running Production Environment Configuration")
+	environment = cfg.env_prod
+
+# Application constants from Environment and Configuration file
+sampleTime = cfg.sampleTime
+debug = cfg.debug
+deviceID = cfg.deviceID
+webApiUrl = environment["webApi"]
+webApiUsername = environment["username"]
+webApiPassword = environment["password"]
 
 # Create an indicator LED on GPIO pin 17
 led = LED(17)
@@ -33,7 +44,7 @@ while True:
 	temperatureSensor.read()
 	if temperatureSensor.valid:
 		# Save the Temperature Sensor results in a Temperature Data Object
-		temperatureData["deviceID"] = deviceID
+		temperatureData["deviceID"] = configuration.deviceID
 		temperatureData["temperature"] = temperatureSensor.temperatureF
 		temperatureData["humidity"] = temperatureSensor.humidity
         
