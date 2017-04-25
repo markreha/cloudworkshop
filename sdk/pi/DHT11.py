@@ -8,9 +8,9 @@ import requests
 # Application constants
 sampleTime = 20
 debug = True
-#webApiUrl = "http://marks-macbookair.local:8080/workshop/rest/services/save"
-#webApiUrl = "http://node5.codenvy.io:37551/cloudservices/rest/services/save"
-webApiUrl = "http://cloud-services-playlaravel.44fs.preview.openshiftapps.com/cloadservices/rest/services/save"
+#webApiUrl = "http://marks-macbookair.local:8080/workshop/rest/dht11/save"
+webApiUrl = "http://node5.codenvy.io:37551/cloudservices/rest/dht11/save"
+#webApiUrl = "http://cloud-services-playlaravel.44fs.preview.openshiftapps.com/cloadservices/rest/dht11/save"
 webApiUsername = "CloudWorkshop"
 webApiPassword = "dGVzdHRlc3Q="
 
