@@ -11,7 +11,7 @@ debug = True
 deviceID = 0
 
 # Different environment configurations
-env_dev1 = {'webApi': 'http://marks-macbookair.local:8080/workshop/rest/dht11/save',
+env_dev1 = {'webApi': 'http://marks-macbookair.local:8080/cloudservices/rest/dht11/save',
          	'username': 'CloudWorkshop',
          	'password': 'dGVzdHRlc3Q='}
 env_dev2 = {'webApi': 'http://node5.codenvy.io:37551/cloudservices/rest/dht11/save',
