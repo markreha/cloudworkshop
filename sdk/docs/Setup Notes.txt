@@ -1,0 +1,66 @@
+==================================== PI ==========================================
+
+1. Install GPIO library: sudo apt-get install python-rpi.gpio
+	https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-gpio
+2. Install DHT11 library:
+	- Get library files from SDK
+3. Setup Breadboard:
+	- DHT11 wiring: Do a screencast
+	- LED wiring: Do a screencast
+4. Test GPIO using an LED:
+	- Get code from Github (see Git Clone instructions below)
+	- Walk thru LED.py code
+	- Run code
+5. Setup Git:
+	- Cloning remote repo: git clone https://github.com/markreha/cloudworkshop
+	- Adding files: git add [filename]
+	- Committing files: git commit -m [Check in message]
+	- Pushing file: git push origin master
+	
+Other Tools:
+	- Install Postman Chrome App from the Chrome Web App Store.
+	
+================================ CODENVY =======================================
+
+Import Project: 
+	Import from Github at https://github.com/markreha/cloudservices
+	Select Project Configuration type as Java, click next, set Source Folder or src in project, click Save.
+	Run the Build and Deploy command from the Command Palette.
+	Select Project->Configure Classpath menu items, in the Java Build Path add javax.ws.rs-api-2.0.jar and slf4j-api-1.7.5.jar from the target/cloudservices/WEB-INF folder.
+
+Building, Deploying, and Running App:
+	Setup the config.properties under the src\config\dev folder. Domain is db, username is petclinic and password is password.
+	Run the Start Tomcat command from the Command Palette to start the Tomcat Server.
+	Run the Build and Deploy command from the Command Palette to start the Tomcat Server.
+	Click on the Preview URL from the Start Tomcat command to run the application. 
+
+Debugging:
+	Make sure the Start Tomcat command was run with the 'jpda' command line argument.
+	In Codenvy click the Run->Edit Debug Configurations menu items, select the Remote Java configuration, click the Debug button.
+	
+Database Setup:
+	Run the Workspace, in the Workspace Runtime configuration expand the DB Server to locate the DB URL and Port. 
+	Using MySQL Workbench log in as root user and run IoT.sql script. Also add iot schema privileges to petclinic user.
+
+Issue: MySQL DB loses all data on Workspace save and restart
+Resolution: Use the kaloyanraev/mysql-no-volume Docker image and the Java-MySQL-Mark Stack
+				To Java-MySQL-Mark Stack copy the Java-MySQL Stack, change the MySQL Docker image, and customize with Mark's Commands.
+
+Issue: Commands get lost
+Resolution: Add them back manually:
+	Build and Deploy
+		mvn clean package -f ${current.project.path} -Pdev
+		echo Deploying ${current.project.path}/target/cloadservices.war to $TOMCAT_HOME/webapps/cloudservices.war ......
+		cp ${current.project.path}/target/cloadservices.war $TOMCAT_HOME/webapps/cloudservices.war
+		echo Deployed ${current.project.path}/target/cloadservices.war
+	PreviewUr: http://${server.port.8080}/${current.project.relpath}
+	
+	Start Tomcat
+      	$TOMCAT_HOME/bin/catalina.sh jpda run 2>&1
+	PreviewUr: http://${server.port.8080}/${current.project.relpath}
+
+	Stop Tomcat        
+    	$TOMCAT_HOME/bin/catalina.sh stop
+
+Other Tools:
+	Install MyAdmin Chrome App from the Chrome Web App Store. 

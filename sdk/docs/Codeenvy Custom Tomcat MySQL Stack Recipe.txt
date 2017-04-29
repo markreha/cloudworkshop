@@ -1,0 +1,103 @@
+{
+  "name": "Java-MySQL-Mark",
+  "source": {
+    "origin": "eclipse/ubuntu_jdk8",
+    "type": "image"
+  },
+  "components": [
+    {
+      "version": "1.8.0_45",
+      "name": "JDK"
+    },
+    {
+      "version": "3.2.2",
+      "name": "Maven"
+    },
+    {
+      "version": "8.0.24",
+      "name": "Tomcat"
+    }
+  ],
+  "tags": [
+    "Java 1.8, Tomcat 8, MySQL 5.7"
+  ],
+  "id": "stackl2kv6iuvopu3ux1q",
+  "workspaceConfig": {
+    "defaultEnv": "default",
+    "environments": {
+      "default": {
+        "machines": {
+          "db": {
+            "attributes": {
+              "memoryLimitBytes": "1073741824"
+            },
+            "servers": {
+              "DbServer-3306-tcp": {
+                "port": "3306",
+                "properties": {},
+                "protocol": "http"
+              }
+            },
+            "agents": [
+              "org.eclipse.che.exec",
+              "org.eclipse.che.terminal"
+            ]
+          },
+          "dev-machine": {
+            "attributes": {
+              "memoryLimitBytes": "2147483648"
+            },
+            "servers": {},
+            "agents": [
+              "org.eclipse.che.exec",
+              "org.eclipse.che.terminal",
+              "org.eclipse.che.ws-agent",
+              "org.eclipse.che.ssh"
+            ]
+          }
+        },
+        "recipe": {
+          "type": "compose",
+          "content": "services:\n  db:\n    image: kaloyanraev/mysql-no-volume\n    environment:\n      MYSQL_ROOT_PASSWORD: password\n      MYSQL_DATABASE: petclinic\n      MYSQL_USER: petclinic\n      MYSQL_PASSWORD: password\n    mem_limit: 1073741824\n  dev-machine:\n    image: eclipse/ubuntu_jdk8\n    mem_limit: 2147483648\n    depends_on:\n      - db\n",
+          "contentType": "application/x-yaml"
+        }
+      }
+    },
+    "projects": [],
+    "name": "default",
+    "commands": [
+      {
+        "commandLine": "mysql -u $MYSQL_USER -p$MYSQL_PASSWORD -e 'show databases;'",
+        "name": "show databases",
+        "attributes": {},
+        "type": "custom"
+      },
+      {
+        "commandLine": "$TOMCAT_HOME/bin/catalina.sh stop",
+        "name": "Stop Tomcat",
+        "attributes": {},
+        "type": "custom"
+      },
+      {
+        "commandLine": "$TOMCAT_HOME/bin/catalina.sh jpda run 2>&1",
+        "name": "Start Tomcat",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}/cloudservices\\"
+        },
+        "type": "custom"
+      },
+      {
+        "commandLine": "mvn clean package -f ${current.project.path} -Pdev \\ echo Deploying ${current.project.path}/target/cloadservices.war to $TOMCAT_HOME/webapps/cloudservices.war ......\\ cp ${current.project.path}/target/cloadservices.war $TOMCAT_HOME/webapps/cloudservices.war\\necho Deployed ${current.project.path}/target/cloadservices.war",
+        "name": "Build and Deploy",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}/${current.project.relpath}"
+        },
+        "type": "mvn"
+      }
+    ],
+    "links": []
+  },
+  "description": "Multi-machine environment with Default Java Stack and MySQL database",
+  "creator": "userv7i41y05szlh5j8k",
+  "scope": "general"
+}

@@ -1,0 +1,88 @@
+{
+  "defaultEnv": "wksp-hges",
+  "environments": {
+    "wksp-hges": {
+      "machines": {
+        "db": {
+          "attributes": {
+            "memoryLimitBytes": "1073741824"
+          },
+          "servers": {
+            "DbServer-3306-tcp": {
+              "port": "3306",
+              "properties": {},
+              "protocol": "http"
+            }
+          },
+          "agents": [
+            "org.eclipse.che.exec",
+            "org.eclipse.che.terminal"
+          ]
+        },
+        "dev-machine": {
+          "attributes": {
+            "memoryLimitBytes": "2147483648"
+          },
+          "servers": {},
+          "agents": [
+            "org.eclipse.che.exec",
+            "org.eclipse.che.terminal",
+            "org.eclipse.che.ws-agent",
+            "org.eclipse.che.ssh"
+          ]
+        }
+      },
+      "recipe": {
+        "type": "compose",
+        "content": "services:\n  db:\n    image: kaloyanraev/mysql-no-volume\n    environment:\n      MYSQL_ROOT_PASSWORD: password\n      MYSQL_DATABASE: petclinic\n      MYSQL_USER: petclinic\n      MYSQL_PASSWORD: password\n    mem_limit: 1073741824\n  dev-machine:\n    image: eclipse/ubuntu_jdk8\n    mem_limit: 2147483648\n    depends_on:\n      - db\n",
+        "contentType": "application/x-yaml"
+      }
+    }
+  },
+  "projects": [
+    {
+      "links": [],
+      "name": "cloudservices",
+      "attributes": {
+        "commands": [
+          "{\"commandLine\":\"mvn clean package -f ${current.project.path}\\necho Deploying ${current.project.path}/target/cloadservices.war to $TOMCAT_HOME/webapps/cloudservices.war ......\\ncp ${current.project.path}/target/cloadservices.war $TOMCAT_HOME/webapps/cloudservices.war\\necho Deployed ${current.project.path}/target/cloadservices.war\\n\", \"name\":\"Build and Deploy\", \"attributes\":{\"previewUrl\":\"http://${server.port.8080}/${current.project.relpath}\", \"goal\":\"Deploy\"}, \"type\":\"mvn\"}"
+        ]
+      },
+      "type": "javac",
+      "source": {
+        "location": "https://github.com/markreha/cloudservices",
+        "type": "github",
+        "parameters": {
+          "branch": "master"
+        }
+      },
+      "path": "/cloudservices",
+      "problems": [],
+      "mixins": []
+    }
+  ],
+  "name": "CloudServices",
+  "commands": [
+    {
+      "commandLine": "mysql -u $MYSQL_USER -p$MYSQL_PASSWORD -e 'show databases;'",
+      "name": "show databases",
+      "attributes": {},
+      "type": "custom"
+    },
+    {
+      "commandLine": "$TOMCAT_HOME/bin/catalina.sh stop",
+      "name": "Stop Tomcat",
+      "attributes": {},
+      "type": "custom"
+    },
+    {
+      "commandLine": "$TOMCAT_HOME/bin/catalina.sh run 2>&1",
+      "name": "Start Tomcat",
+      "attributes": {
+        "previewUrl": "http://${server.port.8080}/cloudservices"
+      },
+      "type": "custom"
+    }
+  ],
+  "links": []
+}
