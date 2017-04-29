@@ -45,7 +45,7 @@
       "name": "cloudservices",
       "attributes": {
         "commands": [
-          "{\"commandLine\":\"mvn clean package -f ${current.project.path}\\necho Deploying ${current.project.path}/target/cloadservices.war to $TOMCAT_HOME/webapps/cloudservices.war ......\\ncp ${current.project.path}/target/cloadservices.war $TOMCAT_HOME/webapps/cloudservices.war\\necho Deployed ${current.project.path}/target/cloadservices.war\\n\", \"name\":\"Build and Deploy\", \"attributes\":{\"previewUrl\":\"http://${server.port.8080}/${current.project.relpath}\", \"goal\":\"Deploy\"}, \"type\":\"mvn\"}"
+          "{\"commandLine\":\"mvn clean package -f ${current.project.path} -Pdev\\necho Deploying ${current.project.path}/target/cloadservices.war to $TOMCAT_HOME/webapps/cloudservices.war ......\\ncp ${current.project.path}/target/cloadservices.war $TOMCAT_HOME/webapps/cloudservices.war\\necho Deployed ${current.project.path}/target/cloadservices.war\\n\", \"name\":\"Build and Deploy\", \"attributes\":{\"previewUrl\":\"http://${server.port.8080}/${current.project.relpath}\", \"goal\":\"Deploy\"}, \"type\":\"mvn\"}"
         ]
       },
       "type": "javac",
