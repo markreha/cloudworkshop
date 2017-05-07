@@ -50,6 +50,7 @@ while True:
 		temperatureData["deviceID"] = deviceID
 		temperatureData["temperature"] = temperatureSensor.temperatureF
 		temperatureData["humidity"] = temperatureSensor.humidity
+		temperatureData["pressure"] = 0
         
 		# Print results to the console if in debug mode
 		if debug:
