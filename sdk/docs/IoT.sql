@@ -1,8 +1,8 @@
 -- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
 --
--- Host: node3.codenvy.io    Database: iot
+-- Host: localhost    Database: iot
 -- ------------------------------------------------------
--- Server version	5.7.17
+-- Server version	5.6.16
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,12 +14,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
--- -----------------------------------------------------
--- Schema iot
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `iot` DEFAULT CHARACTER SET utf8 ;
-USE `iot` ;
 
 --
 -- Table structure for table `device`
@@ -55,14 +49,15 @@ DROP TABLE IF EXISTS `weather`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `weather` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `device_id` int(11) NOT NULL,
   `temp` float NOT NULL,
   `humidity` float NOT NULL,
+  `pressure` float NOT NULL,
   `date` datetime NOT NULL,
-  `device_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `device_id_fk_idx` (`device_id`),
   CONSTRAINT `device_id_fk` FOREIGN KEY (`device_id`) REFERENCES `device` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,6 +66,7 @@ CREATE TABLE `weather` (
 
 LOCK TABLES `weather` WRITE;
 /*!40000 ALTER TABLE `weather` DISABLE KEYS */;
+INSERT INTO `weather` VALUES (1,0,100,97.5,0,'2017-04-29 08:55:09'),(2,0,66,20,0,'2017-04-29 08:56:04'),(3,0,77,16,0,'2017-04-29 10:17:45'),(4,0,77,16,0,'2017-04-29 10:18:06'),(5,0,77,16,0,'2017-04-29 10:18:46');
 /*!40000 ALTER TABLE `weather` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -83,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-27  8:16:04
+-- Dump completed on 2017-05-07  6:51:00

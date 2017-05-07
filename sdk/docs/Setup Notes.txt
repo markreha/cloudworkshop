@@ -64,3 +64,17 @@ Resolution: Add them back manually:
 
 Other Tools:
 	Install MyAdmin Chrome App from the Chrome Web App Store. 
+	
+================================ OPENSHIFT V3 =======================================
+
+Initialize MySQl Database (https://docs.openshift.com/online/dev_guide/migrating_applications/database_applications.html)
+	1) Run to get MySQL Pod Name: ./oc get pods
+	2) Copy IoT.sql from SDK into a directory called db
+	3) Copy SQL script to OpenShift MySQL Pod: ./oc rsync /local/db <mysql_pod_name>:/var/lib/mysql/data
+	4) Remote into MySQL Pod: ./oc rsh <mysql_pod> then run cd /var/lib/mysql/data
+	5) Run SQL Script: mysql -u root then run source all.sql
+	6) Grant privileges to petclinic user: grant all privileges on iot.* to petclinic then run flush privileges
+	
+Issue: Not enough quota during deployment
+Resolution: Applications -> Deployments -> select app -> Actions -> Edit and change deployment strategy from Rolling to Recreate.
+
