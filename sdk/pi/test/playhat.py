@@ -35,9 +35,9 @@ while True:
     t = t - ((getCpuTemp() - t)/fudge)    
 
     # Round all values and then display
-    t = round(temperatureCtoF(t), 1)
-    p = round(pressureMbtoIn(p), 1)
-    h = round(h, 1)
+    t = round(temperatureCtoF(t), 2)
+    p = round(pressureMbtoIn(p), 2)
+    h = round(h, 2)
     msg = "Temperature = {0}F, Pressure = {1}In, Humidity = {2}%".format(t,p,h)
 #    sense.show_message(msg, scroll_speed=0.05)
     print(msg)
