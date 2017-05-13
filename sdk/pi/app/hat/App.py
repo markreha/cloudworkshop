@@ -96,7 +96,7 @@ while True:
     temperatureData["pressure"] = p
 
     # Log sensor data
-    msg = "   Sampled at {0}  Temperature = {1}F, Pressure = {2}In, Humidity = {3}%".format(str(datetime.datetime.now()),t,p,h)
+    msg = "Sampled at {0}  Temperature = {1}F, Pressure = {2}In, Humidity = {3}%".format(str(datetime.datetime.now()),t,p,h)
     logging.debug(msg)
 
     # Convert the Temperature Data Object to JSON string
@@ -106,10 +106,10 @@ while True:
     response = requests.post(webApiUrl, strj, headers={'Content-Type':'application/json'}, auth=(webApiUsername, webApiPassword))
     if response.status_code == 200:
         strj = response.json()
-        print("   Response status is %s with message of %s" % (strj["status"], strj["message"]))
+        logging.info("Response status is %s with message of %s" % (strj["status"], strj["message"]))
     else:
-        print("   Response Error: %d" % response.status_code)
-        print("   Temperature Sensor Error")
+        logging.error("Response Error: %d" % response.status_code)
+        logging.error("Temperature Sensor Error")
 
     # Turn Indicator OFF
     indicator(False)
