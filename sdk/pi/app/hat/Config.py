@@ -1,8 +1,8 @@
 # Active environment
 environment = "qa"
 
-# Sample time in ~seconds (not very accurate in sleep)
-sampleTime = 20
+# Sample time in ~seconds
+sampleTime = 300
 
 # Device ID for this PI
 deviceID = 0
