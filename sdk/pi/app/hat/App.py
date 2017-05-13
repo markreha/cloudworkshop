@@ -35,11 +35,15 @@ def pressureMbtoIn(pressure):
     return pressure/33.8638    
 
 # Turn Indicator light on and off
-def indicator(state):
-    if state:
-        sense.show_letter('*')
+def indicator(state, error):
+    if error:
+        color = (255, 0, 0)
     else:
-        sense.show_letter(' ')
+        color = (0, 255, 0)
+    if state:
+        sense.show_letter('*', text_colour=color)
+    else:
+        sense.show_letter(' ', text_colour=color)
                 
 #################################################
 
@@ -88,9 +92,6 @@ while True:
     # Print running indicator to console
     print('.', end='')
     
-    # Turn Indicator ON
-    indicator(True)
-
     # Get current temp, pressure, and humidity
     t = getCurrentTemp()
     p = sense.get_pressure()
@@ -117,13 +118,16 @@ while True:
     # POST the JSON results to the RESTful Web API using HTTP Basic Authentication
     response = requests.post(webApiUrl, strj, headers={'Content-Type':'application/json'}, auth=(webApiUsername, webApiPassword))
     if response.status_code == 200:
+        indicator(True, False)
         strj = response.json()
         logger.info("Response status is %s with message of %s" % (strj["status"], strj["message"]))
     else:
+        indicator(True, True)
         logger.error("Response error with status code of %d" % response.status_code)
-
+    time.sleep(1)
+    
     # Turn Indicator OFF
-    indicator(False)
+    indicator(False, False)
 
     # Sleep until we need to read the sensors again
     time.sleep(sampleTime)
