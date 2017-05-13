@@ -1,11 +1,8 @@
 # Active environment
-environment = "dev1"
+environment = "qa"
 
 # Sample time in ~seconds (not very accurate in sleep)
 sampleTime = 20
-
-# True if print debug statements
-debug = True
 
 # Device ID for this PI
 deviceID = 0
