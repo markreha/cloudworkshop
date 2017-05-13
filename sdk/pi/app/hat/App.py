@@ -50,7 +50,6 @@ logger = logging.getLogger('MyLogger')
 logger.setLevel(logging.DEBUG)
 logger.addHandler(log)
 
-
 # Load the current Environment Configuration
 print("Running Sensor Application v0.1")
 if cfg.environment == "dev1":
@@ -86,6 +85,9 @@ temperatureData = {}
 
 # Sit in a loop reading the sensors every sampleTime, convert result to JSON, and POST to the Web API
 while True:
+    # Print running indicator to console
+    print('.', end='')
+    
     # Turn Indicator ON
     indicator(True)
 
