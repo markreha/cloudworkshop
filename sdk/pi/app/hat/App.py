@@ -1,6 +1,7 @@
 from sense_hat import SenseHat
 import Config as cfg
 import os
+import sys
 import datetime
 import json
 import requests
@@ -91,6 +92,7 @@ temperatureData = {}
 while True:
     # Print running indicator to console
     print('.', end='')
+    sys.stdout.flush()
     
     # Get current temp, pressure, and humidity
     t = getCurrentTemp()
