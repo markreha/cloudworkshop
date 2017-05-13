@@ -6,6 +6,7 @@ import json
 import requests
 import time
 import logging
+import logging.handlers
 
 ############# HELPER FUNCTIONS ###################
 
@@ -42,19 +43,31 @@ def indicator(state):
                 
 #################################################
 
+# Setup log file for application
+log = logging.handlers.TimedRotatingFileHandler('sensor.log', 'midnight', 5)
+log.doRollover()
+logger = logging.getLogger('MyLogger')
+logger.setLevel(logging.DEBUG)
+logger.addHandler(log)
+
+
 # Load the current Environment Configuration
 print("Running Sensor Application v0.1")
 if cfg.environment == "dev1":
     print("Running Dev 1 Environment Configuration")
+    logger.info("Running Dev 1 Environment Configuration")
     environment = cfg.env_dev1
 elif cfg.environment == "dev2":
     print("Running Dev 2 Environment Configuration")
+    logger.info("Running Dev 2 Environment Configuration")
     environment = cfg.env_dev2
 elif cfg.environment == "qa":
     print("Running QA Environment Configuration")
+    logger.info("Running QA Environment Configuration")
     environment = cfg.env_qa
 else:
     print("Running Production Environment Configuration")
+    logger.info("Running Production Environment Configuration")
     environment = cfg.env_prod
 
 # Application constants from Environment and Configuration file
@@ -63,9 +76,6 @@ deviceID = cfg.deviceID
 webApiUrl = environment["webApi"]
 webApiUsername = environment["username"]
 webApiPassword = environment["password"]
-
-# Setup log file for sensor data
-logging.basicConfig(filename='sensor.log', level=logging.DEBUG)
 
 # Create an instance of the Sensor HAT and clear the display
 sense = SenseHat()
@@ -97,7 +107,7 @@ while True:
 
     # Log sensor data
     msg = "Sampled at {0}  Temperature = {1}F, Pressure = {2}In, Humidity = {3}%".format(str(datetime.datetime.now()),t,p,h)
-    logging.debug(msg)
+    logger.debug(msg)
 
     # Convert the Temperature Data Object to JSON string
     strj = json.dumps(temperatureData, ensure_ascii=False)
@@ -106,10 +116,9 @@ while True:
     response = requests.post(webApiUrl, strj, headers={'Content-Type':'application/json'}, auth=(webApiUsername, webApiPassword))
     if response.status_code == 200:
         strj = response.json()
-        logging.info("Response status is %s with message of %s" % (strj["status"], strj["message"]))
+        logger.info("Response status is %s with message of %s" % (strj["status"], strj["message"]))
     else:
-        logging.error("Response Error: %d" % response.status_code)
-        logging.error("Temperature Sensor Error")
+        logger.error("Response error with status code of %d" % response.status_code)
 
     # Turn Indicator OFF
     indicator(False)
