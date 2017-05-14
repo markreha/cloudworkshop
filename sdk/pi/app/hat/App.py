@@ -9,8 +9,27 @@ import time
 import logging
 import logging.handlers
 
+# Create an instance of the Sensor HAT
+sense = SenseHat()
+pixel_location = 0
+
 ############# HELPER FUNCTIONS ###################
 
+# Startup screen
+def startupScreen():
+    # Clear display
+    sense.clear()
+    sense.set_rotation(180)
+
+    # Display startup text
+    sense.show_letter('G', text_colour=(100, 50, 150))
+    time.sleep(2)
+    sense.show_letter('C', text_colour=(255, 255, 255))
+    time.sleep(2)
+    sense.show_letter('U', text_colour=(100, 50, 150))
+    time.sleep(2)
+    sense.clear()
+    
 # Get the CPU Temperature
 def getCpuTemp():
     ms = os.popen('/opt/vc/bin/vcgencmd measure_temp')
@@ -45,7 +64,24 @@ def indicator(state, error):
         sense.show_letter('*', text_colour=color)
     else:
         sense.show_letter(' ', text_colour=color)
-                
+
+# Turn a Pixel on
+def pixel(error):
+    global pixel_location
+    if pixel_location == 64:
+        pixel_location = 0
+        sense.clear()
+    if error:
+        color = (255, 0, 0)
+    else:
+        if pixel_location & 1:
+            color = (255, 255, 255)
+        else:
+            color = (100, 50, 150)
+    sense.set_pixel(pixel_location & 0x07, int(pixel_location / 8), color)
+    pixel_location = pixel_location + 1
+    
+
 #################################################
 
 # Setup log file for application
@@ -56,7 +92,7 @@ logger.setLevel(logging.DEBUG)
 logger.addHandler(log)
 
 # Load the current Environment Configuration
-print("Running Sensor Application v0.1")
+print("IoT Weather Application v0.1")
 if cfg.environment == "dev1":
     print("Running Dev 1 Environment Configuration")
     logger.info("Running Dev 1 Environment Configuration")
@@ -81,9 +117,8 @@ webApiUrl = environment["webApi"]
 webApiUsername = environment["username"]
 webApiPassword = environment["password"]
 
-# Create an instance of the Sensor HAT and clear the display
-sense = SenseHat()
-sense.clear()
+# Display Startup Screen
+startupScreen()
 
 # Dictionary to hold Temperature Sensor data
 temperatureData = {}
@@ -120,16 +155,18 @@ while True:
     # POST the JSON results to the RESTful Web API using HTTP Basic Authentication
     response = requests.post(webApiUrl, strj, headers={'Content-Type':'application/json'}, auth=(webApiUsername, webApiPassword))
     if response.status_code == 200:
-        indicator(True, False)
+        #indicator(True, False)
+        pixel(False)
         strj = response.json()
         logger.info("Response status is %s with message of %s" % (strj["status"], strj["message"]))
     else:
-        indicator(True, True)
+        #indicator(True, True)
+        pixel(True)
         logger.error("Response error with status code of %d" % response.status_code)
-    time.sleep(1)
+    time.sleep(2)
     
     # Turn Indicator OFF
-    indicator(False, False)
+    #indicator(False, False)
 
     # Sleep until we need to read the sensors again
     time.sleep(sampleTime)
