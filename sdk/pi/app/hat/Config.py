@@ -14,9 +14,9 @@ env_dev1 = {'webApi': 'http://marks-macbookair.local:8080/cloudservices/rest/wea
 env_dev2 = {'webApi': 'http://node5.codenvy.io:37551/cloudservices/rest/weather/save',
          	'username': 'CloudWorkshop',
          	'password': 'dGVzdHRlc3Q='}
-env_qa = {'webApi': 'http://cloudservices-workshop.1d35.starter-us-east-1.openshiftapps.com/cloadservices/rest/weather/save',
+env_qa = {'webApi': 'http://cloudservices-workshop.1d35.starter-us-east-1.openshiftapps.com/cloudservices/rest/weather/save',
          	'username': 'CloudWorkshop',
          	'password': 'dGVzdHRlc3Q='}
-env_prod = {'webApi': 'http://cloudservices-workshop.1d35.starter-us-east-1.openshiftapps.com/cloadservices/rest/weather/save',
+env_prod = {'webApi': 'http://cloudservices-workshop.1d35.starter-us-east-1.openshiftapps.com/cloudservices/rest/weather/save',
          	'username': 'CloudWorkshop',
          	'password': 'dGVzdHRlc3Q='}
