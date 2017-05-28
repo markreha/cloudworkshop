@@ -1,0 +1,152 @@
+{
+	"variables": [],
+	"info": {
+		"name": "OpenShift Weather Sensor API's",
+		"_postman_id": "794af785-3f8b-ccac-2fb1-56838cd616dd",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sensor Get Date Range API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Test Status\"] = jsonData.status === 0;",
+							"tests[\"Test Message\"] = jsonData.message === \"OK\";",
+							"tests[\"Test Data Length\"] = jsonData.data.length === 5;",
+							"tests[\"Test Data Device ID\"] = jsonData.data[0].deviceID === 0;",
+							"tests[\"Test Data Temperature\"] = jsonData.data[0].temperature === 100;",
+							"tests[\"Test Data Humidity\"] = jsonData.data[0].humidity === 97.5;",
+							"tests[\"Test Data Device ID\"] = jsonData.data[1].deviceID === 0;",
+							"tests[\"Test Data Temperature\"] = jsonData.data[1].temperature === 66;",
+							"tests[\"Test Data Humidity\"] = jsonData.data[1].humidity === 20;",
+							"tests[\"Test Data Pressure\"] = jsonData.data[1].pressure === 0;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://cloudservices-workshop.1d35.starter-us-east-1.openshiftapps.com/cloudservices/rest/weather/get/0/2017-04-21 00:00:00/2017-05-07 00:00:00",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic Q2xvdWRXb3Jrc2hvcDpkR1Z6ZEhSbGMzUT0=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Test API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Test Status\"] = jsonData.status === 0;",
+							"tests[\"Test Message\"] = jsonData.message === \"This is a test\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://cloudservices-workshop.1d35.starter-us-east-1.openshiftapps.com/cloudservices/rest/weather/test",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic Q2xvdWRXb3Jrc2hvcDpkR1Z6ZEhSbGMzUT0=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sensor Save API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Test Status\"] = jsonData.status === 1;",
+							"tests[\"Test Message\"] = jsonData.message === \"OK\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://cloudservices-workshop.1d35.starter-us-east-1.openshiftapps.com/cloudservices/rest/weather/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic Q2xvdWRXb3Jrc2hvcDpkR1Z6ZEhSbGMzUT0=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"deviceID\" : 0,\n  \"temperature\" : 100.0,\n  \"humidity\" : 97.5,\n  \"pressure\" : 50\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Sensor Get API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Test Status\"] = jsonData.status === 0;",
+							"tests[\"Test Message\"] = jsonData.message === \"OK\";",
+							"tests[\"Test Data Length\"] = jsonData.data.length === 1;",
+							"tests[\"Test Data Device ID\"] = jsonData.data[0].deviceID === 0;",
+							"tests[\"Test Data Temperature\"] = jsonData.data[0].temperature === 100;",
+							"tests[\"Test Data Humidity\"] = jsonData.data[0].humidity === 97.5;",
+							"tests[\"Test Data Pressure\"] = jsonData.data[0].pressure === 0;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://cloudservices-workshop.1d35.starter-us-east-1.openshiftapps.com/cloudservices/rest/weather/get/0/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic Q2xvdWRXb3Jrc2hvcDpkR1Z6ZEhSbGMzUT0=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
