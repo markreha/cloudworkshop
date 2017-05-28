@@ -41,7 +41,7 @@ def getCpuTemp():
 # Get the Current Temperature
 def getCurrentTemp():
     # Get temp from sensor, convert temp to Farenheit, and apply Sensor HAT correction forumla
-    fudge = 2.8
+    fudge = 1.6
     t = sense.get_temperature()
     t = t - ((getCpuTemp() - t)/fudge)
     return t
