@@ -40,11 +40,16 @@ def getCpuTemp():
 
 # Get the Current Temperature
 def getCurrentTemp():
-    # Get temp from sensor, convert temp to Farenheit, and apply Sensor HAT correction forumla
-    fudge = 1.1
-    t = sense.get_temperature()
-    t = t - ((getCpuTemp() - t)/fudge)
-    return t
+    # Sample over 10 seconds to get an average
+    sum = 0
+    for x in range(1,10):
+        # Get temp from sensor, convert temp to Farenheit, and apply Sensor HAT correction forumla
+        fudge = 1.23
+        t = sense.get_temperature()
+        t = t - ((getCpuTemp() - t)/fudge)
+        sum = sum + t
+        time.sleep(1)
+    return sum/10
 
 # Convert Temperature from C to F
 def temperatureCtoF(temp):
@@ -165,9 +170,6 @@ while True:
         logger.error("Response error with status code of %d" % response.status_code)
     time.sleep(2)
     
-    # Turn Indicator OFF
-    #indicator(False, False)
-
     # Sleep until we need to read the sensors again
     time.sleep(sampleTime)
 
