@@ -2,7 +2,7 @@
 environment = "qa"
 
 # Sample time in ~seconds
-sampleTime = 300
+sampleTime = 1800
 
 # Device ID for this PI
 deviceID = 0
