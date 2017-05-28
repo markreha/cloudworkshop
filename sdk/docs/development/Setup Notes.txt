@@ -1,29 +1,38 @@
-==================================== PI ==========================================
+==================================== CODENVY PHP APP ====================================
 
-1. Install GPIO library: sudo apt-get install python-rpi.gpio
-	https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-gpio
-2. Install DHT11 library:
-	- Get library files from SDK
-3. Setup Breadboard:
-	- DHT11 wiring: Do a screencast
-	- LED wiring: Do a screencast
-4. Test GPIO using an LED:
-	- Get code from Github (see Git Clone instructions below)
-	- Walk thru LED.py code
-	- Run code
-5. Setup Git:
-	- Cloning remote repo: git clone https://github.com/markreha/cloudworkshop
-	- Adding files: git add [filename]
-	- Committing files: git commit -m [Check in message]
-	- Pushing file: git push origin master
-	
-Other Tools:
-	- Install Postman Chrome App from the Chrome Web App Store.
-	
-================================ CODENVY =======================================
+Create a Codenvy Account and create a PHP Workspace.
+
+This is checked into GitHub but if you start from SDK Laravel Template then you will need to install:
+	Install Guzzle for a HTTP Client to make REST API calls easy
+		1. See instructions at: http://guzzle.readthedocs.io/en/latest/overview.html
+		2. Update composer.json file in project under requires add "guzzlehttp/guzzle": "~6.0",
+		3. Run composer to install Guzzle: php ../composer.phar require guzzlehttp/guzzle:~6.0 (assuming composer.phar is one directory up from project)
+
+	Install Lavacharts for Charting made easy
+		1. See instructions at: http://lavacharts.com
+		2. Update composer.json file in project under requires add "khill/lavacharts" : "3.0.*",
+		3. Run composer to install Lavacharts: php ../composer.phar require khill/lavacharts (assuming composer.phar is one directory up from project)
+
+To get Codenvy to run use the following steps:
+	1. Start the Workspace.
+	2. Fix permissions on Codenvy: 
+		1. Run the following in Codenvy Terminal - sudo find /projects/cloudapp -type d -exec chmod 777 {} \;
+	3. Fix up .htaccess for Laravel project by updating apache2.conf:
+		1. cd /etc/apache2
+		2. sudo chmod 777 apache2.conf
+		3. sudo apt-get install nano
+		4. nano apache2.conf
+		5. Scroll down to to Virtual Directorys for /project and set AllowOverride to All
+		6. Restart Apache
+	4. Import your PHP App from Github or simply import the Cloud Workshop app at https://github.com/markreha/cloudapp
+	5. Start Apache from the Command Tools
+		
+================================ CODENVY JAVA =====+++==================================
+
+Create a Codenvy Account, import the Stack 'Codeenvy Custom Tomcat MySQL Stack Recipe' from the SDK, and create a Java-MySQL-Mark Workspace.
 
 Import Project: 
-	Import from Github at https://github.com/markreha/cloudservices
+	Import your Java App from Github or simply import the Cloud Workshop at https://github.com/markreha/cloudservices
 	Select Project Configuration type as Java, click next, set Source Folder or src in project, click Save.
 	Run the Build and Deploy command from the Command Palette.
 	Select Project->Configure Classpath menu items, in the Java Build Path add javax.ws.rs-api-2.0.jar and slf4j-api-1.7.5.jar from the target/cloudservices/WEB-INF folder.
@@ -39,14 +48,14 @@ Debugging:
 	In Codenvy click the Run->Edit Debug Configurations menu items, select the Remote Java configuration, click the Debug button.
 	
 Database Setup:
-	Run the Workspace, in the Workspace Runtime configuration expand the DB Server to locate the DB URL and Port. 
+	Start the Workspace, in the Workspace Runtime configuration expand the DB Server to locate the DB URL and Port. 
 	Using MySQL Workbench log in as root user and run IoT.sql script. Also add iot schema privileges to petclinic user.
 
 Issue: MySQL DB loses all data on Workspace save and restart
-Resolution: Use the kaloyanraev/mysql-no-volume Docker image and the Java-MySQL-Mark Stack
-				To Java-MySQL-Mark Stack copy the Java-MySQL Stack, change the MySQL Docker image, and customize with Mark's Commands.
+Resolution: Use the kaloyanraev/mysql-no-volume Docker image and the Java-MySQL-Mark Stack (see the  'Codeenvy Custom Tomcat MySQL Stack Recipe' from the SDK)
+	To create your own Java-MySQL-Mark Stack copy the Java-MySQL Stack, change the MySQL Docker image to the kaloyanraev/mysql-no-volume Docker image, and customize with Mark's Commands.
 
-Issue: Commands get lost
+Issue: Mark's Commands get lost when Workspace is snapshotted
 Resolution: Add them back manually:
 	Build and Deploy
 		mvn clean package -f ${current.project.path} -Pdev
@@ -67,6 +76,12 @@ Other Tools:
 	
 ================================ OPENSHIFT V3 =======================================
 
+Create two OpenShift v3 accounts: use one account for the Java REST API Spring MySQL project and use another account for the PHP Laravel project.
+	Project Type: OPenShift JBoss Tomcat 8 image for the REST API Spring MySQL project
+	Project Type: MySQL datastore image for the REST API Spring MySQL project
+	Project Type: PHP 7.0 image for PHP Laravel project
+	NOTE: The Tomcat Container needs to be grouped with the MySQL Container
+	
 Initialize MySQl Database (https://docs.openshift.com/online/dev_guide/migrating_applications/database_applications.html)
 	1) Run to get MySQL Pod Name: ./oc get pods
 	2) Copy IoT.sql from SDK into a directory called db
