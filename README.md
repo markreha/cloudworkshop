@@ -14,7 +14,16 @@ Getting Started
 You should start by first reading the architecture and Java/Doc as well as PhpDoc files. And then make sure you are comfortable with the following technologies/frameworks:
 1) Cloud IoT Services: Java, Spring Framework (Core, Security, JDBC), Maven, and JAX-RS.
 2) Cloud IoT App: Laravel PHP
-3) Tooling: Github, SourceTree, Eclipse Neon (Java EE and PHP), PostMan
+3) Tooling: Github, SourceTree, Eclipse Neon (Java EE and PHP), Tomcat 8.5, PostMan
+
+Tools Install
+--------
+You will need to download and install the following tools:
+1. Eclipse Neon for Java EE platform: www.eclipse.org OR use cloud based the Codenvy IDE
+2. Eclipse Neon for PHP platform: www.eclipse.org OR use the cloud based Codenvy IDE
+3. Tomcat 8.5: www.apache.org OR use the cloud based Codenvy IDE
+4. SourceTree: www.sourcetreeapp.com OR use the Chrome Browser
+5. PostMan: www.getpostman.org OR use the Chrome Plugin
 
 Next Steps
 --------
