@@ -40,16 +40,10 @@ def getCpuTemp():
 
 # Get the Current Temperature
 def getCurrentTemp():
-    # Sample over 10 seconds to get an average
-    sum = 0
-    for x in range(1,10):
-        # Get temp from sensor, convert temp to Farenheit, and apply Sensor HAT correction forumla
-        fudge = 2.0
-        t = sense.get_temperature_from_pressure()
-        t = t - ((getCpuTemp() - t)/fudge)
-        sum = sum + t
-        time.sleep(1)
-    return sum/10
+    # Get temp from sensor, convert temp to Farenheit and apply a fudge factor
+    fudge = 4
+    t = sense.get_temperature() - fudge
+    return t
 
 # Convert Temperature from C to F
 def temperatureCtoF(temp):
