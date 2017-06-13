@@ -41,7 +41,7 @@ def getCpuTemp():
 # Get the Current Temperature
 def getCurrentTemp():
     # Get temp from sensor, convert temp to Farenheit and apply a fudge factor
-    fudge = 0
+    fudge = 2
     t = sense.get_temperature() - fudge
     return t
 
