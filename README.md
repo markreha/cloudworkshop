@@ -12,7 +12,7 @@ Folder Contents
 Getting Started
 --------
 You should start by first reading the architecture and Java/Doc as well as PhpDoc files. And then make sure you are comfortable with the following technologies/frameworks:
-1) Cloud IoT Server App (published REST API's): Java, Spring Framework (Core, Security, JDBC), Maven, and JAX-RS.
+1) Cloud IoT Services App (published REST API's): Java, Spring Framework (Core, Security, JDBC), Maven, and JAX-RS.
 2) Cloud IoT Reporting App: Laravel PHP
 3) Tooling: Github, SourceTree, Eclipse Neon (Java EE and PHP), Tomcat 8.5, PostMan
 
