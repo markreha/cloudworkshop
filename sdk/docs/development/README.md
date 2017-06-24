@@ -2,7 +2,14 @@
 ==================
 The Cloud and IoT Workshop SDK contains all the documentation, sample applications (REST Services, Reporting, and Raspberry Pi Sense HAT) required to build a simple, scalable, Cloud based suite of IoT applications. The following assumes you have a Github, Codenvy, and OpenShift accounts.
 
-To get started you should first Clone the SDK from Github: https://github.com/markreha/cloudworkshop then create two repositories 'cloudservices' and 'cloud app' in your Github account. Then from the SDK copy all the respective files from each of the developer/teampltes folders to your respective Github repositories. Note, bulk file upload can be done in GitHub using your browser but you must use the Chrome browser. If you use the Sourcetree GIT Client then make sure you configure (via .gitgnore file) your local GIT repository so that hidden files are also uploaded. The template projects are starter projects contains all the scaffolding Java Spring Maven files and all the scaffolding PHP Laravel files to build "working" applications. These starter projects can be used as a baseline when building your IoT set of applications. 
+To get started you should first Clone the SDK from Github: https://github.com/markreha/cloudworkshop then create two repositories 'cloudservices' and 'cloud app' in your Github account. Then from the SDK copy all the respective files from each of the developer/teampltes folders to your respective Github repositories. Note, bulk file upload can be done in GitHub using your browser but you must use the Chrome browser. If you use the Sourcetree GIT Client then make sure you configure (via .gitgnore file) your local GIT repository so that hidden files are also uploaded. The template projects are starter projects contains all the scaffolding Java Spring Maven files and all the scaffolding PHP Laravel files to build "working" applications. These starter projects can be used as a baseline when building your IoT set of applications.
+
+Other documents located in this directory are:
+* Codenvy and OpenShift Setup Notes - Cloud Setup Notes.txt
+* Codenvy Tomcat / MySQL Stack Recipe - Codeenvy Custom Tomcat MySQL Stack Recipe.txt
+* Codenvy PHP Workspace Recipe - Codenvy CloudApp Recipe.txt
+* Codenvy Tomcat / MySQL Workspace Recipe - Codenvy CloudServices Recipe.txt
+* OpenShift Getting Started Guide - OpenShift_Online-3-Getting_Started-en-US.pdf
 
 If you want to start with completely working end to end IoT Reference applications you can clone the following Github repositories:
 1) IoT Services App: https://github.com/markreha/cloudservices
