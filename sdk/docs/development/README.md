@@ -24,7 +24,7 @@ To build in Eclipse Neon:
 3. Add a Tomcat 8.5 server to your Workspace.
 4. Create a Maven Run Configuration using the clean package goals and the dev profile.
 5. See the IoT.sql DDL script in the SDK to create your Database Schema.
-6. Add the Project to your Tomcat Server (using the /cloudservices path for your web module.
+6. Add the Project to your Tomcat Server (making sure you use the /cloudservices path for your web module).
 
 Building the IoT Reporting Template App
 --------
@@ -37,7 +37,7 @@ To build in Codenvy:
 To build in Eclipse Neon:
 1. Create a new Workspace.
 2. Import the 'cloudapp' template from the SDK (making sure you check the 'copy' checkbox when importing).
-3. Setup an ANT build file to copy files from your Workspace to your MAMP runtime hotdogs directory.
+3. Setup an ANT build file to copy files from your Workspace to your MAMP runtime hotdogs directory (see Reference App for example).
 
 Next Steps
 --------
