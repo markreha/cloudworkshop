@@ -11,9 +11,9 @@ Folder Contents
 
 Getting Started
 --------
-You should start by first reading the architecture and Java/Doc as well as PhpDoc files. And then make sure you are comfortable with the following technologies/frameworks:
+You should start by first reading the Architecture decks and Java/Doc as well as PhpDoc files all located in the docs directory in the SDK. And then make sure you are comfortable with the following technologies/frameworks:
 1) Cloud IoT Services App (published REST API's): Java, Spring Framework (Core, Security, JDBC), Maven, and JAX-RS.
-2) Cloud IoT Reporting App: Laravel PHP
+2) Cloud IoT Reporting App: Laravel PHP, LavaCharts, Guzzle
 3) Tooling: Github, SourceTree, Eclipse Neon (Java EE and PHP), Tomcat 8.5, PostMan
 
 Tools Install
