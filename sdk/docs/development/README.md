@@ -16,7 +16,7 @@ To build in Codenvy:
 2. Create a new Workspace using the Java-MySQL-Mark runtime (created from step #1).
 3. Start your Workspace.
 4. Create a new Project by importing your Github 'cloudservices' repository.
-5. See the 'Cloud Setup Notes' located in this directory for instructions how to setup the database and command tools in Codeny.
+5. See the 'Cloud Setup Notes.txt' located in this directory for instructions how to setup the database and command tools in Codeny.
 
 To build in Eclipse Neon:
 1. Create a new Workspace.
@@ -32,7 +32,7 @@ To build in Codenvy:
 1. Create a new Workspace using the PHP runtime.
 3. Start your Workspace.
 4. Create a new Project by importing your Github 'cloudapp'  repository.
-5. See the 'Cloud Setup Notes' located in this directory for instructions how to setup the command tools in Codeny.
+5. See the 'Cloud Setup Notes.txt' located in this directory for instructions how to setup the command tools in Codeny.
 
 To build in Eclipse Neon:
 1. Create a new Workspace.
