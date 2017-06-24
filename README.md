@@ -1,6 +1,6 @@
 **Getting Started with the Cloud and IoT Workshop SDK**
 ==================
-The Cloud and IoT Workshop SDK contains all the documentation, sample applications (REST Services and Reporting), and Raspberry Pi Sensor HAT application required to build a simple, scalable, cloud based IoT suite of applications.
+The Cloud and IoT Workshop SDK contains all the documentation, and sample applications (REST Services, Reporting, and Raspberry Pi Sense HAT) required to build a simple, scalable, Cloud based IoT suite of applications.
 
 Folder Contents
 --------
