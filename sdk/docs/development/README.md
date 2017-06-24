@@ -5,7 +5,7 @@ The Cloud and IoT Workshop SDK contains all the documentation, sample applicatio
 To get started you should first Clone the SDK from Github: https://github.com/markreha/cloudworkshop then create two repositories 'cloudservices' and 'cloud app' in Github. Then from the SDK copy all the respective files from each of the developer/teampltes folders to the respective Github repositories.  The template projects are starter projects contains all the scaffolding Java Spring Maven files and all the scaffolding PHP Laravel files to build "working" applications. These starter projects can be used as a baseline when building your IoT set of applications. 
 
 If you want complete working end to end IoT applications you can clone the following Github repositories:
-1) IoT REST Services App: https://github.com/markreha/cloudservices
+1) IoT Services App: https://github.com/markreha/cloudservices
 2) IoT Reporting App: https://github.com/markreha/cloudapp
 
 Building the REST Services Template App
