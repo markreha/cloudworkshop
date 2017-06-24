@@ -1,6 +1,6 @@
 **Getting Started Building the IoT Apps**
 ==================
-The Cloud and IoT Workshop SDK contains all the documentation, sample applications (REST Services and Reporting), and Raspberry Pi Sensor HAT application required to build a simple, scalable, cloud based IoT suite of applications. The following assumes you have a Github, Codenvy, and OpenShift accounts.
+The Cloud and IoT Workshop SDK contains all the documentation, sample applications (REST Services, Reporting, and Raspberry Pi Sense HAT) required to build a simple, scalable, Cloud based IoT suite of applications. The following assumes you have a Github, Codenvy, and OpenShift accounts.
 
 To get started you should first Clone the SDK from Github: https://github.com/markreha/cloudworkshop then create two repositories 'cloudservices' and 'cloud app' in your Github account. Then from the SDK copy all the respective files from each of the developer/teampltes folders to your respective Github repositories. Note, bulk file upload can be done in GitHub using your browser but you must use the Chrome browser. If you use the Sourcetree GIT Client then make sure you configure (via .gitgnore file) your local GIT repository so that hidden files are also uploaded. The template projects are starter projects contains all the scaffolding Java Spring Maven files and all the scaffolding PHP Laravel files to build "working" applications. These starter projects can be used as a baseline when building your IoT set of applications. 
 
