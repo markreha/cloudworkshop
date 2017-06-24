@@ -4,11 +4,12 @@ The Cloud and IoT Workshop SDK contains all the documentation, sample applicatio
 
 To get started you should first Clone the SDK from Github: https://github.com/markreha/cloudworkshop then create two repositories 'cloudservices' and 'cloud app' in Github. Then from the SDK copy all the respective files from each of the developer/teampltes folders to the respective Github repositories.  The template projects are starter projects contains all the scaffolding Java Spring Maven files and all the scaffolding PHP Laravel files to build "working" applications. These starter projects can be used as a baseline when building your IoT set of applications. 
 
-If you want complete working end to end IoT applications you can clone the following Github repositories:
+If you want complete working with completely working end to end IoT Reference applications you can clone the following Github repositories:
 1) IoT Services App: https://github.com/markreha/cloudservices
 2) IoT Reporting App: https://github.com/markreha/cloudapp
+You can then use the project import steps as outlined below for the IoT Template applications.
 
-Building the REST Services Template App
+Building the IoT Services Template App
 --------
 To build in Codenvy:
 1. Import the Codeenvy Custom Tomcat MySQL Stack Recipe Stack located in the docs/development directory.
@@ -25,7 +26,7 @@ To build in Eclipse Neon:
 5. See the IoT.sql DDL script in the SDK to create your Database Schema.
 6. Add the Project to your Tomcat Server (using the /cloudservices path for your web module.
 
-Building the Reporting Template App
+Building the IoT Reporting Template App
 --------
 To build in Codenvy:
 1. Create a new Workspace using the PHP runtime.
