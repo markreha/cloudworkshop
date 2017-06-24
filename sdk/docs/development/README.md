@@ -13,9 +13,9 @@ Building the IoT Services Template App
 --------
 To build in Codenvy:
 1. Import the Codeenvy Custom Tomcat MySQL Stack Recipe Stack located in the docs/development directory.
-2. Create a new Workspace using the Java-MySQL-Mark runtime (created from step #2).
+2. Create a new Workspace using the Java-MySQL-Mark runtime (created from step #1).
 3. Start your Workspace.
-4. Create a new Project by importing your Github 'cloudservices'  repository.
+4. Create a new Project by importing your Github 'cloudservices' repository.
 5. See the Cloud Setup Notes for instructions how to setup the database and command tools in Codeny.
 
 To build in Eclipse Neon:
