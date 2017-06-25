@@ -5,6 +5,7 @@ The Cloud and IoT Workshop SDK contains all the documentation, and sample applic
 
 Folder Contents
 --------
+The SDK is organized into a number of folders:
 - The 'developer' folder: contains starter Java Spring and PHP Laravel template projects
 - The 'docs' folder: contains Database, JavaDoc, PhpDoc, and Architecture documentation, you should start here
 - The 'pi' folder: contains sample Raspberry Pi Sensor HAT and discrete IoT applications
