@@ -33,6 +33,7 @@ Next Steps
 --------
 After you are become familiar with the architecture, sample applications, and tools you can start building your own IoT applications using the sample Reference applications in the SDK as a guide. As a developer, there are application build instructions for developing in the Cloud based Cloudenvy IDE or desktop Eclipse Neon IDE. All code is maintained in the Github Cloud based source control system and deployed to the OpenShift PaaS Cloud. See the 'README' file and 'Cloud Setup Notes text' file located in the ***docs/development*** folder to get started building your own IoT applications.
 
+[I'm an inline-style link](/sdk/docs/development/README.md)
 
 ----------
 
