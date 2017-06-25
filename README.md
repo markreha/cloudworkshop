@@ -36,7 +36,8 @@ After you are become familiar with the architecture, sample applications, and to
 
 ----------
 
-###Developer Directory Contents
+Developer Directory Contents
+----------
 This directory contains the contains starter Java Spring and PHP Laravel template projects. You can import these into your IDE to get the basic scaffolding for a starter IoT Services application and an IoT Reporting application.
 
  - ***cloudapp***: this folder contains a basic PHP Laravel Project with the "Hello World" page along with the Guzzle and LavaCharts libraries added.
