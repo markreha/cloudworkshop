@@ -32,7 +32,7 @@ For desktop development will need to download and install the following tools. I
 
 Next Steps
 --------
-After you are become familiar with the architecture, sample applications, and tools you can start building your own IoT applications using the sample Reference applications in the SDK as a guide. As a developer, there are application build instructions for developing in the Cloud based Cloudenvy IDE or desktop Eclipse Neon IDE. All code is maintained in the Github Cloud based source control system and deployed to the OpenShift PaaS Cloud. See the ['README'](/sdk/docs/development/README.md) file and 'Cloud Setup Notes text' file located in the [***docs/development***](/sdk/docs/development/README.md) folder to get started building your own IoT applications.
+After you are become familiar with the architecture, sample applications, and tools you can start building your own IoT applications using the sample Reference applications in the SDK as a guide. As a developer, there are application build instructions for developing in the Cloud based Cloudenvy IDE or desktop Eclipse Neon IDE. All code is maintained in the Github Cloud based source control system and deployed to the Cloud based OpenShift PaaS. It should be noted that there is nothing technically preventing you from deploying these application to other Clouds such as Amazon AWS. See the ['README'](/sdk/docs/development/README.md) file and 'Cloud Setup Notes text' file located in the [***docs/development***](/sdk/docs/development/README.md) folder to get started building your own IoT applications.
 
 ----------
 
