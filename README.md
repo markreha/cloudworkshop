@@ -1,13 +1,13 @@
 
 **Getting Started with the Cloud and IoT Workshop SDK**
 ==================
-The Cloud and IoT Workshop SDK contains all the documentation, and sample Reference applications (REST Services, Reporting, and Raspberry Pi Sense HAT) required to build a simple, scalable, Cloud based suite of IoT applications.
+The Cloud and IoT Workshop SDK contains all the documentation and sample Reference applications (REST Services, Reporting, and Raspberry Pi Sense HAT) required to build a simple, scalable, Cloud based suite of IoT applications.
 
 ![IoT Logical Architecture](/sdk/docs/architecture/images/logical.png)
 
-Folder Contents
+SDK Contents
 --------
-The SDK is organized into a number of folders. It should be noted that all directories in this markup are indicated in bold italic text.
+This SDK is organized into a number of folders. It should be noted that all directories in this markup are indicated in bold italic text.
  - The '[***developer***](#developer-directory-contents)' folder: contains starter Java Spring and PHP Laravel template projects 
  - The '[***docs***](#docs-directory-contents)' folder: contains Database, JavaDoc, PhpDoc, and Architecture documentation, you should start here 
  - The '[***pi***](#pi-directory-contents)' folder: contains sample Raspberry Pi Sense HAT application and discrete component IoT applications 
@@ -15,19 +15,20 @@ The SDK is organized into a number of folders. It should be noted that all direc
 
 Getting Started
 --------
-You should start by first reading the Architecture decks and JavaDoc as well as the PhpDoc all located in the ***docs*** directory in the SDK. And then make sure you are comfortable with the following technologies/frameworks:
-1) IoT Services App (published REST API's): Java, Spring Framework (Core, Security, JDBC), Maven, and JAX-RS.
-2) IoT Reporting App: Laravel PHP, LavaCharts, Guzzle
-3) Tooling: Github, SourceTree, Eclipse Neon (Java EE and PHP), Tomcat 8.5, PostMan
+You should start by first reading the Architecture decks and JavaDoc as well as the PhpDoc all located in the [***docs***](/sdk/docs/development/README.md) directory in the SDK. You should also make sure you are comfortable with the following technologies/frameworks:
+1)  Java, Spring Framework (Core, Security, JDBC), Maven, and JAX-RS. These technologies and frameworks will be used to build the IoT Services application.
+2) Laravel PHP, LavaCharts, and Guzzle. These technologies and frameworks will be used to build the IoT Reporting application.
+3) Github, SourceTree, Eclipse Neon (Java EE and PHP), MySQL Workbench, Apache Tomcat 8.5, and PostMan. These tools will be used to support building all of the IoT applications.
 
-Tools Install
+Development Tools Installation
 --------
-You will need to download and install the following tools:
-1. Eclipse Neon for Java EE platform: www.eclipse.org OR use cloud based the Codenvy IDE
-2. Eclipse Neon for PHP platform: www.eclipse.org OR use the cloud based Codenvy IDE
-3. Tomcat 8.5: www.apache.org OR use the cloud based Codenvy IDE
-4. SourceTree: www.sourcetreeapp.com OR use the Chrome Browser
-5. PostMan: www.getpostman.org OR use the Chrome Plugin
+For desktop development will need to download and install the following tools. If you use the Cloud based Codeenvy IDE than you will not be required to install ANY development tools!
+1. Eclipse Neon for Java EE platform: Download [here](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3) and/or use cloud based the Codenvy IDE.
+2. Eclipse Neon for PHP platform: Download [here](http://www.eclipse.org/downloads/packages/eclipse-php-developers/neon3) and/or use the cloud based Codenvy IDE.
+3. Tomcat 8.5: Download [here](http://www.eclipse.org/downloads/packages/eclipse-php-developers/neon3) and/or use the cloud based Codenvy IDE.
+4. SourceTree: Download [here](https://www.sourcetreeapp.com) and/or use the Chrome Browser.
+5. MySQL Workbench: Download [here](https://dev.mysql.com/downloads/workbench/) and/or use the MySQL Admin Chrome Plugin.
+6. PostMan: Download [here](www.getpostman.org) and/or use the Chrome Plugin.
 
 Next Steps
 --------
