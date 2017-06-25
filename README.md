@@ -15,7 +15,7 @@ This SDK is organized into a number of folders. It should be noted that all dire
 
 Getting Started
 --------
-You should start by first reading the Architecture decks and JavaDoc as well as the PhpDoc all located in the [***docs***](/sdk/docs/development/README.md) directory in the SDK. You should also make sure you are comfortable with the following technologies, frameworks, and tools:
+You should start by first reading the Architecture decks and JavaDoc as well as the PhpDoc all located in the [***docs***](/sdk/docs/development/README.md) directory in the SDK. You should also make sure you are comfortable with the following technologies, frameworks, and tools. There are many [tutorials](#tutorials) available to help you come up to speed. If you are doing development using desktop tools you will also need to [install](#development-tools-installation) all the development tools.
 1)  Java, Spring Framework (Core, Security, JDBC), Maven, and JAX-RS. These technologies and frameworks will be used to build the IoT Services application.
 2) Laravel PHP, LavaCharts, and Guzzle. These technologies and frameworks will be used to build the IoT Reporting application.
 3) Github, SourceTree, Eclipse Neon, MySQL Workbench, Apache Tomcat 8.5, and PostMan. These tools will be used to support building all of the IoT applications.
@@ -82,5 +82,28 @@ This directory contains a few miscellaneous tools to support building the code a
 
  - ***phpdocumentor***: this folder contains the PHP Archive (phar file) that can be used to generate standard HTML documentation for any PHP projects.
  - ***yworks***: this folder contains the documentation and Java Archive (jar file) that creates and embeds UML class diagrams within standard JavaDoc.
+
+[Back to Top](#getting-started-with-the-cloud-and-iot-workshop-sdk)
+
+----------
+
+Tutorials
+----------
+The following tutorials can be referenced as needed to come up to speed on the technologies and frameworks that are used to build the IoT Reference applications.
+
+ - • Maven Tutorials:
+	 -  [Tutorial from TutorialsPoint](https://www.tutorialspoint.com/maven/index.htm) 
+	 - [What Is Maven?](https://maven.apache.org/what-is-maven.html)
+	 - [Maven In 5 Minutes](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
+	 - [Maven Home Page](https://maven.apache.org)
+ - • Spring Framework Tutorials:
+	- [Tutorial from TutorialsPoint](https://www.tutorialspoint.com/spring/index.htm)
+	- [Another Tutorial from TutorialsPoint](https://www.tutorialspoint.com/springjdbc/index.htm)
+	- [Spring Framework Documentation](https://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/)
+	- [Spring Framework Home Page](https://spring.io)
+ - • REST and JAX-RS Tutorials:
+	- [Tutorial from TutorialsPoint](https://www.tutorialspoint.com/restful/index.htm)
+	- [Tutorial from Oracle](http://docs.oracle.com/javaee/6/tutorial/doc/bnayk.html)
+	- [JAX-RS Specification](http://download.oracle.com/otn-pub/jcp/jaxrs-2_0_rev_A-mrel-eval-spec/jsr339-jaxrs-2.0-final-spec.pdf)
 
 [Back to Top](#getting-started-with-the-cloud-and-iot-workshop-sdk)
