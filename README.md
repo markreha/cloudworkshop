@@ -47,29 +47,34 @@ This directory contains the contains starter Java Spring and PHP Laravel templat
 ----------
 
 ###Docs Directory Contents
-This directory contains the contains starter Java Spring and PHP Laravel template projects. You can import these into your IDE to get the basic scaffolding for a starter IoT Services application and an IoT Reporting application.
+This directory contains all of the documentation for the IoT SDK. This is where all developers should start!
 
- - ***cloudapp***: this folder contains a basic PHP Laravel Project with the "Hello World" page along with the Guzzle and LavaCharts libraries added.
- - ***cloudservices***: this folder contains a basic Java Spring Project with "Test" REST API configured along with basic SLF4J configuration.
+ - ***architecture***: this folder contains all of the high level architecture documents.
+ - ***database***: this folder contains the database design (ER Diagram) and DDL script that can be used to build the database and tables to support the IoT Reference applications.
+ - ***development***: this folder contains the developer documentation that can be referenced when setting up the Development Environment and configuring the Cloud Environments. See the README markup file in this folder for all the details.
+ - ***javadoc***: this folder contains the JavaDoc for the Reference IoT Services application.
+ - ***phpdoc***: this folder contains the PhpDoc for the Reference IoT Reporting application.
+ - ***testing***: this folder contains the Postman Test Scripts that can be used when testing the Reference IoT Services application and its associated REST API's.
+ - ***training***: this folder contains the Workshop Training decks.
 
 [Back to Top](#getting-started-with-the-cloud-and-iot-workshop-sdk)
 
 ----------
 
 ###Pi Directory Contents
-This directory contains the contains starter Java Spring and PHP Laravel template projects. You can import these into your IDE to get the basic scaffolding for a starter IoT Services application and an IoT Reporting application.
+This directory contains the contains Reference IoT Device application that can be used with any Raspberry Pi 3 and Sense HAT or a Raspberry Pi 3 DHT11 and LED wired to a breadboard. The Reference application can be used as a starting point to monitor Weather IoT data.
 
- - ***cloudapp***: this folder contains a basic PHP Laravel Project with the "Hello World" page along with the Guzzle and LavaCharts libraries added.
- - ***cloudservices***: this folder contains a basic Java Spring Project with "Test" REST API configured along with basic SLF4J configuration.
+ - ***app/hat***: this folder contains the Python 3 code for the Reference IoT Device application using a Sense HAT.
+ - ***app/discrete***: this folder contains the Python 3 code for the Reference IoT Device application using the DHT11 and LED discrete components.
 
 [Back to Top](#getting-started-with-the-cloud-and-iot-workshop-sdk)
 
 ----------
 
 ###Tools Directory Contents
-This directory contains the contains starter Java Spring and PHP Laravel template projects. You can import these into your IDE to get the basic scaffolding for a starter IoT Services application and an IoT Reporting application.
+This directory contains a few miscellaneous tools to support building the code and documentation for the IoT applications.
 
- - ***cloudapp***: this folder contains a basic PHP Laravel Project with the "Hello World" page along with the Guzzle and LavaCharts libraries added.
- - ***cloudservices***: this folder contains a basic Java Spring Project with "Test" REST API configured along with basic SLF4J configuration.
+ - ***phpdocumentor***: this folder contains the PHP Archive (phar file) that can be used to generate standard HTML documentation for any PHP projects.
+ - ***yworks***: this folder contains the documentation and Java Archive (jar file) that creates and embeds UML class diagrams within standard JavaDoc.
 
 [Back to Top](#getting-started-with-the-cloud-and-iot-workshop-sdk)
