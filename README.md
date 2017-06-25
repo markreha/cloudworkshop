@@ -47,7 +47,8 @@ This directory contains the contains starter Java Spring and PHP Laravel templat
 
 ----------
 
-###Docs Directory Contents
+Docs Directory Contents
+----------
 This directory contains all of the documentation for the IoT SDK. This is where all developers should start!
 
  - ***architecture***: this folder contains all of the high level architecture documents.
@@ -62,7 +63,8 @@ This directory contains all of the documentation for the IoT SDK. This is where 
 
 ----------
 
-###Pi Directory Contents
+Pi Directory Contents
+----------
 This directory contains the contains Reference IoT Device application that can be used with any Raspberry Pi 3 and Sense HAT or a Raspberry Pi 3 DHT11 and LED wired to a breadboard. The Reference application can be used as a starting point to monitor Weather IoT data.
 
  - ***app/hat***: this folder contains the Python 3 code for the Reference IoT Device application using a Sense HAT.
@@ -72,7 +74,8 @@ This directory contains the contains Reference IoT Device application that can b
 
 ----------
 
-###Tools Directory Contents
+Tools Directory Contents
+----------
 This directory contains a few miscellaneous tools to support building the code and documentation for the IoT applications.
 
  - ***phpdocumentor***: this folder contains the PHP Archive (phar file) that can be used to generate standard HTML documentation for any PHP projects.
