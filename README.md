@@ -15,9 +15,9 @@ The SDK is organized into a number of folders. It should be noted that all direc
 
 Getting Started
 --------
-You should start by first reading the Architecture decks and Java/Doc as well as PhpDoc files all located in the docs directory in the SDK. And then make sure you are comfortable with the following technologies/frameworks:
-1) Cloud IoT Services App (published REST API's): Java, Spring Framework (Core, Security, JDBC), Maven, and JAX-RS.
-2) Cloud IoT Reporting App: Laravel PHP, LavaCharts, Guzzle
+You should start by first reading the Architecture decks and JavaDoc as well as the PhpDoc all located in the ***docs*** directory in the SDK. And then make sure you are comfortable with the following technologies/frameworks:
+1) IoT Services App (published REST API's): Java, Spring Framework (Core, Security, JDBC), Maven, and JAX-RS.
+2) IoT Reporting App: Laravel PHP, LavaCharts, Guzzle
 3) Tooling: Github, SourceTree, Eclipse Neon (Java EE and PHP), Tomcat 8.5, PostMan
 
 Tools Install
@@ -31,7 +31,7 @@ You will need to download and install the following tools:
 
 Next Steps
 --------
-After you are become familiar with the architecture, sample applications, and tools you can start building your own IoT applications using the sample reference applications in the SDK as a guide. As a developer, there are application build instructions for doing all development in the cloud based Cloudenvy IDE or desktop Eclipse Neon IDE. All code is maintained in the Github cloud based source control system and deployed to the OpenShift PaaS cloud. See the README file and Cloud Setup Notes text file located in the docs/development folder to get started building your own IoT applications.
+After you are become familiar with the architecture, sample applications, and tools you can start building your own IoT applications using the sample Reference applications in the SDK as a guide. As a developer, there are application build instructions for developing in the Cloud based Cloudenvy IDE or desktop Eclipse Neon IDE. All code is maintained in the Github Cloud based source control system and deployed to the OpenShift PaaS Cloud. See the 'README' file and 'Cloud Setup Notes text' file located in the ***docs/development*** folder to get started building your own IoT applications.
 
 
 ----------
