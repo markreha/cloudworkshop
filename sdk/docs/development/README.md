@@ -163,9 +163,10 @@ To build in Codenvy:
 ----------
 
 To build in Eclipse Neon:
-Open your Eclipse 'cloudapp' Workspace.
-Import the 'cloudapp' Template app or the 'cloudapp' Reference app from the SDK. This can be done by selecting the File->Import menu options in Eclipse, under the General section select the 'Existing Projects into Workspace' open, navigate to the root of the SDK to import the Template app or navigate to one folder higher than were the 'cloudapp' repository was cloned to, **make sure you check the 'copy' checkbox when importing**, and click the Finish button.
-You can setup an ANT build file to copy files from your Workspace to your MAMP runtime htdocs directory. For examples, see the 'build.properties and 'build.xml' files from the Reference App and the documentation in the ***developer/eclipsePHP*** directory in the SDK.
+
+ 1. Open your Eclipse 'cloudapp' Workspace.
+ 2. Import the 'cloudapp' Template app or the 'cloudapp' Reference app from the SDK. This can be done by selecting the File->Import menu options in Eclipse, under the General section select the 'Existing Projects into Workspace' open, navigate to the root of the SDK to import the Template app or navigate to one folder higher than were the 'cloudapp' repository was cloned to, **make sure you check the 'copy' checkbox when importing**, and click the Finish button.
+ 3. You can setup an ANT build file to automatically copy files from your Workspace to your MAMP runtime *htdocs* directory (i.e. auto-deployment). For examples, see the 'build.properties and 'build.xml' files from the Reference App and the documentation in the ***developer/eclipsePHP*** directory in the SDK.
 
 Next Steps
 --------
