@@ -1,6 +1,6 @@
 **Getting Started Building the IoT Apps**
 ==================
-The Cloud and IoT Workshop SDK contains all the documentation, sample applications (REST Services, Reporting, and Raspberry Pi Sense HAT) required to build a simple, scalable, Cloud based suite of IoT applications. The following assumes you have a Github, Codenvy, and OpenShift accounts.
+The Cloud and IoT Workshop SDK contains all the documentation, sample applications (REST Services, Reporting, and Raspberry Pi Sense HAT) required to build a simple, scalable, Cloud based suite of IoT applications. The following assumes you have setup Github, Codenvy, and OpenShift accounts.
 
 Get the SDK and Code
 --------------------
@@ -29,9 +29,13 @@ Other documents located in this directory that you need to review and reference 
 * Codenvy Tomcat / MySQL Workspace Recipe - Codenvy CloudServices Recipe.txt
 * OpenShift Getting Started Guide - OpenShift_Online-3-Getting_Started-en-US.pdf *
 
-You can now use the steps outlined below for building the IoT Template applications or building the IoT Reference applications.
+You can now use the steps outlined below for setting up your development environment and building the IoT Template applications or building the IoT Reference applications.
 
-Building the IoT Services Template App
+Setup your Development Environment
+--------------------
+It is recommended to use the Cloud based Codenvy IDE as your development environment. This saves you from all the time and complexity of setting up Eclipse, MySQL, and Tomcat in your local environment. However, if you wish, the Template and Reference apps have been built and validated in both the Codenvy IDE and Eclipse IDE so you are also free to setup a local development environment using Eclipse, MySQL, and Tomcat. You will want to reference [Cloud Setup Notes](sdk/docs/development/Cloud-Setup-Notes.txt) in the SDK.
+
+Build the IoT Services App
 --------
 To build in Codenvy:
 1. Import the Codeenvy Custom Tomcat MySQL Stack Recipe Stack located in the docs/development directory.
@@ -48,7 +52,7 @@ To build in Eclipse Neon:
 5. See the IoT.sql DDL script in the SDK to create your Database Schema.
 6. Add the Project to your Tomcat Server (making sure you use the /cloudservices path for your web module).
 
-Building the IoT Reporting Template App
+Build the IoT Reporting App
 --------
 To build in Codenvy:
 1. Create a new Workspace using the PHP runtime.
