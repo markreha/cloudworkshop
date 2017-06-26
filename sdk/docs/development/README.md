@@ -80,10 +80,47 @@ Eclipse Neon and MAMP Setup Instructions:
 
 Build the IoT Services App
 --------
-To build in Codenvy:
-3. Start your Java MySQL Workspace.
-4. Create a new Project by importing your Github 'cloudservices' repository.
-5. See the 'Cloud Setup Notes.txt' located in this directory for instructions how to setup the database and command tools in Codeny.
+The following steps can be used to configure and build the IoT Services app. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK for how to setup the database and command tools in Codeny as well as setup PHP auto deployment in your local Eclipse PHP environment.
+
+Codenvy Build Instructions:
+
+ 1. Start/open your 'cloudservices' Workspace. 
+ 2. Once the environment is up and running click the 'Import Project...' link in the left project pane. 
+ 3. Select the GITHUB option under the Source Control section. Enter the URL for your Github 'cloudservices' repository. Click the Import button.
+ 4. Select the Java Project Configuration and click the Next button.
+ 5. Click the Save button.
+ 6. Setup the following Commands by selecting the Commands tab (far left under the Projects tab in the Project pane. You can create a new Command by clicking the + icon next to the Command Category. These Custom Commands should be added under the Common Commands: 
+ 
+**Maven Build and Deployment Command**
+ Command Name: 
+ 	<pre>Build and Deploy</pre>
+ Command Line:
+	<pre>mvn clean package -f ${current.project.path} -Pdev
+	echo Deploying ${current.project.path}/target/cloadservices.war to $TOMCAT_HOME/webapps/cloudservices.war ......
+	cp ${current.project.path}/target/cloadservices.war $TOMCAT_HOME/webapps/cloudservices.war
+	echo Deployed ${current.project.path}/target/cloadservices.war</pre>
+Preview Url: 
+		<pre>http://${server.port.8080}/${current.project.relpath}</pre>
+
+**Start Tomcat Command**	
+Command Name: 
+	<pre>Start Tomcat</pre>
+Command Line:
+	<pre>$TOMCAT_HOME/bin/catalina.sh jpda run 2>&1</pre>
+Preview Url: 
+		<pre>http://${server.port.8080}/${current.project.relpath}</pre>
+
+**Stop Tomcat Command**
+Command Name:
+	<pre>Stop Tomcat</pre>        
+ Command Line:
+	 <pre>$TOMCAT_HOME/bin/catalina.sh stop</pre>
+Preview Url: 
+	<pre>None</pre>
+NOTE: you should create a backup of the Workspace and environment by selecting the Workspace Config tab within your workspace, select all the configuration text from the edit control, and save this to a standard text file. You can put this Codenvy Recipe under source control (recommended). If your Workspace every becomes corrupt (Codevny has a bug where your Custom Commands set are not snapshotted) you can always use this Recipe to create a new Workspace.
+
+Create a new Project by importing your Github 'cloudservices' repository.
+Also reference  the 'Cloud Setup Notes.txt' located in this directory for instructions how to setup the database and command tools in Codeny.
 
 To build in Eclipse Neon:
 2. Import the 'cloudservices' template from the SDK (making sure you check the 'copy' checkbox when importing).
