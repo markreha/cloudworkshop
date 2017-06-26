@@ -123,6 +123,10 @@ Preview Url:
 	<pre>None</pre>
 NOTE: you should create a backup of the Workspace and environment by selecting the Workspace Config tab within your workspace, select all the configuration text from the edit control, and save this to a standard text file. You can put this Codenvy Recipe under source control (recommended). If your Workspace every becomes corrupt (Codevny has a bug where your Custom Commands set are not snapshotted) you can always use this Recipe to create a new Workspace.
 
+
+----------
+
+
 Eclipse Build Instructions:
  1. Setup your MySQL Database. Log into MySQL Workbench as root user (username of root and password of root) and then run the IoT.sql DDL script located in the ***docs\database*** folder within the SDK. You will also need to set the privileges for the *iot* schema for the pet clinic user (username of petclinic and password of password).
  2. Make sure your MySQL database is running.
