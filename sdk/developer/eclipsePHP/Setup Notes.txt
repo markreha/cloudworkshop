@@ -1,0 +1,8 @@
+1. Copy build.xml and build.properties to root of project. In build properties set the location of MAMP htdocs and web hostname
+2. Install Java Development Tools to get Ant Builder
+3. In Project Properties select Builders, add new, select Ant Builder:
+	a. Select the Main tab. Set Buildfile to the build.xml in the root of the project
+	b. Select Targets tab. Set the default target for Auto Build and Clean.
+4. Setup Debugger:
+	a. Enable Zend Debug Plugin in the active php.ini file.
+	b. Select Debug, Debug Configurations, Debug as PHP Application, Configure Default PHP Web Server and set Default Debugger to XDebug
