@@ -18,7 +18,7 @@ Getting Started
 You should start by first reading the Architecture decks and JavaDoc as well as the PhpDoc all located in the [***docs***](sdk/docs/development/README.md) directory in the SDK. You should also make sure you are comfortable with the following technologies, frameworks, and tools. There are many [tutorials](#tutorials) available to help you come up to speed. If you are doing development using desktop tools you will also need to [install](#development-tools-installation) all the development tools.
 1)  Java, Spring Framework (Core, Security, JDBC), Maven, and JAX-RS. These technologies and frameworks will be used to build the IoT Services application.
 2) Laravel PHP, LavaCharts, and Guzzle. These technologies and frameworks will be used to build the IoT Reporting application.
-3) Github, SourceTree, Eclipse Neon, MySQL Workbench, Apache Tomcat 8.5, and PostMan. These tools will be used to support building all of the IoT applications.
+3) Github, SourceTree, MAMP, Eclipse Neon, MySQL Workbench, Apache Tomcat 8.5, and PostMan. These tools will be used to support building all of the IoT applications.
 
 Development Tools Installation
 --------
@@ -26,10 +26,11 @@ For desktop development you will need to download and install the following tool
 1. Eclipse Neon for Java EE platform: Download [here](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3) and/or use cloud based the Codenvy IDE.
 2. Eclipse Neon for PHP platform: Download [here](http://www.eclipse.org/downloads/packages/eclipse-php-developers/neon3) and/or use the cloud based Codenvy IDE.
 3. Tomcat 8.5: Download [here](http://www.eclipse.org/downloads/packages/eclipse-php-developers/neon3) and/or use the cloud based Codenvy IDE.
-4. MySQL Database: Download [here](https://www.mysql.com/downloads/) 
-5. SourceTree: Download [here](https://www.sourcetreeapp.com) and/or use the Chrome Browser.
-6. MySQL Workbench: Download [here](https://dev.mysql.com/downloads/workbench/) and/or use the MySQL Admin Chrome Plugin, which can be dowloaded from the [Chrome WebStore](https://chrome.google.com/webstore/) (search for MySQL Admin).
-7. PostMan: Download [here](www.getpostman.org) and/or use the Postman Chrome Plugin, which can be dowloaded from the [Chrome WebStore](https://chrome.google.com/webstore/) (search for Postman).
+4. MAMP: Download [here](https://www.mamp.info/en/downloads/) 
+5. MySQL Database: Download [here](https://www.mysql.com/downloads/) 
+6. SourceTree: Download [here](https://www.sourcetreeapp.com) and/or use the Chrome Browser.
+7. MySQL Workbench: Download [here](https://dev.mysql.com/downloads/workbench/) and/or use the MySQL Admin Chrome Plugin, which can be dowloaded from the [Chrome WebStore](https://chrome.google.com/webstore/) (search for MySQL Admin).
+8. PostMan: Download [here](www.getpostman.org) and/or use the Postman Chrome Plugin, which can be dowloaded from the [Chrome WebStore](https://chrome.google.com/webstore/) (search for Postman).
 
 Next Steps
 --------
