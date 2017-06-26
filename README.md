@@ -7,7 +7,7 @@ The Cloud and IoT Workshop SDK contains all the documentation and sample Referen
 
 SDK Contents
 --------
-This SDK is organized into a number of folders. It should be noted that all directories in this markup are indicated in ***bold italic*** text.
+This SDK is organized into a number of folders. It should be noted that all directories in this markup are indicated in ***bold italic*** text. Note, once you have downloaded the SDK the Markdown README files can still be viewed from your file system in Chrome by using the [Markdown Preview Chrome Plugin](https://chrome.google.com/webstore/detail/markdown-preview/jmchmkecamhbiokiopfpnfgbidieafmd).
  - The '[***developer***](#developer-directory-contents)' folder: contains starter Java Spring and PHP Laravel template projects 
  - The '[***docs***](#docs-directory-contents)' folder: contains Database, JavaDoc, PhpDoc, and Architecture documentation, you should start here 
  - The '[***pi***](#pi-directory-contents)' folder: contains sample Raspberry Pi Sense HAT application and discrete component IoT applications 
