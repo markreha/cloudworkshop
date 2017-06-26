@@ -31,7 +31,7 @@ Other documents located in this directory that you need to review and reference 
 
 You can now use the steps outlined below for setting up your development environment and building the IoT Template applications or building the IoT Reference applications.
 
-Setup your Development Environment
+Setup your Java MySQL Development Environment
 --------------------
 It is recommended to use the Cloud based Codenvy IDE as your development environment. This saves you from all the time and complexity of setting up Eclipse, MySQL, and Tomcat in your local environment. However, if you wish, the Template and Reference apps have been built and validated in both the Codenvy IDE and Eclipse IDE so you are also free to setup a local development environment using Eclipse, MySQL, and Tomcat. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.
 
@@ -50,6 +50,16 @@ Codenvy Setup Instructions:
  11. Select the Java-MySQL-Workshop runtime.
  12. Click the Save button.
 
+Eclipse Neon and MySQL Setup Instructions:
+
+ 1. Start Eclipse and create a new empty Workspace. 
+ 2. Click on the Servers tab. Click on the 'create new server' link.
+ 3. Select Tomcat 8.5 under the Apache section. Click the Next button.
+ 4. Click the Browse button and navigate to the root directory of the Tomcat installation. Click the Next button.
+ 5. Click the Finish button. The new Tomcat server should be listed in the Servers tab.
+ 6. Click the Start icon to validate that the Tomcat server starts and runs without errors.
+ 7.  Validate that MySQL database is installed and can be started. You should also connect MySQL Workbench to your local MySQL database to ensure that you can connect to the database.
+ 
 
 
 Build the IoT Services App
