@@ -44,6 +44,7 @@ Developer Directory Contents
 ----------
 This directory contains the contains starter Java Spring and PHP Laravel template projects. You can import these into your IDE to get the basic scaffolding for a starter IoT Services application and an IoT Reporting application.
 
+ - ***eclipsePHP***: this folder contains the instructions and ANT build files to support auto-deployment in Eclipse PHP.
  - ***cloudapp***: this folder contains a basic PHP Laravel Project with the "Hello World" page along with the Guzzle and LavaCharts libraries added.
  - ***cloudservices***: this folder contains a basic Java Spring Project with "Test" REST API configured along with basic SLF4J configuration.
 
