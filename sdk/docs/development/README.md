@@ -174,8 +174,47 @@ Next Steps
 --------
 After you are able to build Template applications you are then ready to start customizing the applications functionality as per your own IoT requirements or per the functionality implemented in the Reference applications. Remember, all code should be maintained in the Github Cloud based source control system because code deployed to the Codenvy Cloud IDE and OpenShift PaaS Cloud both uses Github as the source repository.
 
+[Back to Top](#getting-started-building-the-iot-apps)
+
 ----------
 
 Deploy the IoT Services App to OpenShift
 --------
-Once you have tested your IoT Services app you can then setup Cloud Containers in OpenShift and then build and deploy your application to OpenShift.
+Once you have tested your IoT Services app you can then setup Cloud Containers in OpenShift and then build and deploy your application to OpenShift. Your IoT Services should FIRST be regression tested using the Postman Test Scripts located in the ***/sdk/docs/testing*** directory in the SDK before building and deploying your application. You may have to customize the hostnames and ports in the Test Scripts from the SDK. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.
+
+NOTE: You will need to Create two OpenShift v3 accounts: use one account for the IoT Services application and another account for the IoT Reporting application.
+
+Setup and Configuration of OpenShift Tomcat MySQL Container:
+ 1. Create a new Project in OpenShift named GCU Cloud Workshop.
+ 2. Add the following types to the Project: JBoss Tomcat 8 image for the REST API Spring project and a MySQL datastore image for the MySQL database.
+ 3. When prompted for a Github URL for your project enter the URL for your 'cloudservices' Github repository.
+ 4. You will need to group Tomcat Container with the MySQL Container.
+
+Initialize MySQl Database (also see the online help [here](https://docs.openshift.com/online/dev_guide/migrating_applications/database_applications.html)).
+ 1. Download the OpenShift Command Line Interface tool from [here](https://console.starter-us-east-1.openshift.com/console/command-line).
+ 2. Open a Terminal Window or DOS Box. 
+ 3. Navigate to the path were the Command Line Tool was installed. 
+ 4. Get the MySQL Pod Name: ./oc get pods
+ 5. Copy the IoT.sql DDL script from SDK into a directory called /local/db on your local file system.
+ 6. Copy the SQL DDL script to the OpenShift MySQL Pod: ./oc rsync /local/db <mysql_pod_name>:/var/lib/mysql/data
+ 7. Remote into the MySQL Pod: ./oc rsh <mysql_pod> 
+ 8. Run the command: cd /var/lib/mysql/data
+ 8. Run the SQL DDL Script: mysql -u root
+ 9. Run the command: source all.sql
+ 9. Grant privileges to petclinic user: grant all privileges on iot.* to petclinic
+ 10. Run the command: flush privileges
+
+[Back to Top](#getting-started-building-the-iot-apps)
+
+Deploy the IoT Reporting App to OpenShift
+--------
+Once you have tested your IoT Reporting app you can then setup Cloud Containers in OpenShift and then build and deploy your application to OpenShift. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.
+
+NOTE: You will need to Create two OpenShift v3 accounts: use one account for the IoT Services application and another account for the IoT Reporting application.
+
+Setup and Configuration of OpenShift Tomcat MySQL Container:
+ 1. Create a new Project in OpenShift named GCU Cloud Workshop.
+ 2. Add the following types to the Project: PHP 7.0 image for PHP Laravel project.
+ 3. When prompted for a Github URL for your project enter the URL for your 'cloudapp' Github repository.
+
+[Back to Top](#getting-started-building-the-iot-apps)
