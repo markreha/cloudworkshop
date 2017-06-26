@@ -33,19 +33,33 @@ You can now use the steps outlined below for setting up your development environ
 
 Setup your Development Environment
 --------------------
-It is recommended to use the Cloud based Codenvy IDE as your development environment. This saves you from all the time and complexity of setting up Eclipse, MySQL, and Tomcat in your local environment. However, if you wish, the Template and Reference apps have been built and validated in both the Codenvy IDE and Eclipse IDE so you are also free to setup a local development environment using Eclipse, MySQL, and Tomcat. You will want to reference [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.
+It is recommended to use the Cloud based Codenvy IDE as your development environment. This saves you from all the time and complexity of setting up Eclipse, MySQL, and Tomcat in your local environment. However, if you wish, the Template and Reference apps have been built and validated in both the Codenvy IDE and Eclipse IDE so you are also free to setup a local development environment using Eclipse, MySQL, and Tomcat. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.
+
+Codenvy Setup Instructions:
+
+ 1. Log onto Codenvy. 
+ 2. Click on the Stacks menu from the left Main Menu.
+ 3. Scroll down to the Java-MySQL stack and click the 'Duplicate stack'
+ 4. Click on the newly created Java-MySQL stack to edit the stack configuration. In the Name field rename your new stack to 'Java-MySQL-Workshop' (no quotes). Under the Runtimes click under the Machines on the 'Down arrow' icon for the DB. Change the Source field from 'eclipse/mysql' to 'kaloyanraev/mysql-no-volume' (no quotes). This will change the Docker image to an image that works around a bug in the default image where the MySQL database is not maintained during the image snapshotting (and losses all data in the database).
+ 5. Click the Test button to validate your new stack. Make sure both the Tomcat 'dev-machine' and the MySQL 'db' environments all started without errors. This can be done by looking at the two respective terminal console output at the bottom of the Codenvy IDE.
+ 6. Click the Save button.
+ 7. Click on the Workspace menu from the left Main Menu.
+ 8. Click the Add Workspace button.
+ 9. In the Workspace name field rename the Workspace to 'cloud services' (no quotes).
+ 10. Select the Runtime icon.
+ 11. Select the Java-MySQL-Workshop runtime.
+ 12. Click the Save button.
+
+
 
 Build the IoT Services App
 --------
 To build in Codenvy:
-1. Import the Codeenvy Custom Tomcat MySQL Stack Recipe Stack located in the docs/development directory.
-2. Create a new Workspace using the Java-MySQL-Mark runtime (created from step #1).
-3. Start your Workspace.
+3. Start your Java MySQL Workspace.
 4. Create a new Project by importing your Github 'cloudservices' repository.
 5. See the 'Cloud Setup Notes.txt' located in this directory for instructions how to setup the database and command tools in Codeny.
 
 To build in Eclipse Neon:
-1. Create a new Workspace.
 2. Import the 'cloudservices' template from the SDK (making sure you check the 'copy' checkbox when importing).
 3. Add a Tomcat 8.5 server to your Workspace.
 4. Create a Maven Run Configuration using the clean package goals and the dev profile.
