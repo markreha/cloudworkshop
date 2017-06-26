@@ -26,9 +26,10 @@ For desktop development you will need to download and install the following tool
 1. Eclipse Neon for Java EE platform: Download [here](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3) and/or use cloud based the Codenvy IDE.
 2. Eclipse Neon for PHP platform: Download [here](http://www.eclipse.org/downloads/packages/eclipse-php-developers/neon3) and/or use the cloud based Codenvy IDE.
 3. Tomcat 8.5: Download [here](http://www.eclipse.org/downloads/packages/eclipse-php-developers/neon3) and/or use the cloud based Codenvy IDE.
-4. SourceTree: Download [here](https://www.sourcetreeapp.com) and/or use the Chrome Browser.
-5. MySQL Workbench: Download [here](https://dev.mysql.com/downloads/workbench/) and/or use the MySQL Admin Chrome Plugin, which can be dowloaded from the [Chrome WebStore](https://chrome.google.com/webstore/) (search for MySQL Admin).
-6. PostMan: Download [here](www.getpostman.org) and/or use the Postman Chrome Plugin, which can be dowloaded from the [Chrome WebStore](https://chrome.google.com/webstore/) (search for Postman).
+4. MySQL Database: Download [here](https://www.mysql.com/downloads/) 
+5. SourceTree: Download [here](https://www.sourcetreeapp.com) and/or use the Chrome Browser.
+6. MySQL Workbench: Download [here](https://dev.mysql.com/downloads/workbench/) and/or use the MySQL Admin Chrome Plugin, which can be dowloaded from the [Chrome WebStore](https://chrome.google.com/webstore/) (search for MySQL Admin).
+7. PostMan: Download [here](www.getpostman.org) and/or use the Postman Chrome Plugin, which can be dowloaded from the [Chrome WebStore](https://chrome.google.com/webstore/) (search for Postman).
 
 Next Steps
 --------
