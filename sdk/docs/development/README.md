@@ -141,15 +141,31 @@ Eclipse Build Instructions:
 Build the IoT Reporting App
 --------
 To build in Codenvy:
-1. Create a new Workspace using the PHP runtime.
-3. Start your Workspace.
-4. Create a new Project by importing your Github 'cloudapp'  repository.
-5. See the 'Cloud Setup Notes.txt' located in this directory for instructions how to setup the command tools in Codeny.
+
+ 1. Start your 'cloudapp' Workspace. Once the environment is up and running click the 'Import Project...' link in the left project pane. 
+ 2. Select the GITHUB option under the Source Control section. Enter the URL for your Github 'cloudapp' repository.
+ 3. Click the Import button.
+ 4. Select the PHP Project Configuration and click the Next button.
+ 5. Click the Save button.
+ 6. In order for Laravel to run properly requires some file level permissions to be setup and the Apache configuration updated to allow HTTP filters to be run. The following needs to be done only once and the first time you run your PHP environment:
+ 7. To run the project invoke the following (you must do the one time configuration in next step):
+ 	 - Run 'Start Apache' from the Command Tools
+ 8. Fix permissions on Codenvy (one time setup issue): 
+	 - Run the following in Codenvy Terminal: sudo find /projects/cloudapp -type d -exec chmod 777 {} \;
+	 - Fix up .htaccess for Laravel project by updating apache2.conf:
+	 -- cd /etc/apache2
+	 -- sudo chmod 777 apache2.conf
+	 -- sudo apt-get install nano
+	 -- nano apache2.conf
+	 -- Scroll down to to Virtual Directorys for /project and set AllowOverride to All
+	 -- Restart Apache
+
+----------
 
 To build in Eclipse Neon:
-1. Create a new Workspace.
-2. Import the 'cloudapp' template from the SDK (making sure you check the 'copy' checkbox when importing).
-3. Setup an ANT build file to copy files from your Workspace to your MAMP runtime hotdogs directory (see Reference App for example).
+Open your Eclipse 'cloudapp' Workspace.
+Import the 'cloudapp' Template app or the 'cloudapp' Reference app from the SDK. This can be done by selecting the File->Import menu options in Eclipse, under the General section select the 'Existing Projects into Workspace' open, navigate to the root of the SDK to import the Template app or navigate to one folder higher than were the 'cloudapp' repository was cloned to, **make sure you check the 'copy' checkbox when importing**, and click the Finish button.
+You can setup an ANT build file to copy files from your Workspace to your MAMP runtime htdocs directory. For examples, see the 'build.properties and 'build.xml' files from the Reference App and the documentation in the ***developer/eclipsePHP*** directory in the SDK.
 
 Next Steps
 --------
