@@ -186,9 +186,11 @@ NOTE: You will need to Create two OpenShift v3 accounts: use one account for the
 
 Setup and Configuration of OpenShift Tomcat MySQL Container:
  1. Create a new Project in OpenShift named GCU Cloud Workshop.
- 2. Add the following types to the Project: JBoss Tomcat 8 image for the REST API Spring project and a MySQL datastore image for the MySQL database.
- 3. When prompted for a Github URL for your project enter the URL for your 'cloudservices' Github repository.
- 4. You will need to group Tomcat Container with the MySQL Container.
+ 2. Click the Add to Project menu.
+ 3. Add the following types to the Project: JBoss Tomcat 8 image for the REST API Spring project and when prompted for a Github Repository URL for your project enter the URL for your 'cloudservices' Github repository.
+ 4. Click the Add to Project menu.
+ 4. Add the following Data Store to the Project: MySQL datastore image for the MySQL database.
+ 5. Once you have added both Containers to your Project you will need to group the JBoss Tomcat Container with the MySQL Container.
 
 Initialize MySQl Database (also see the online help [here](https://docs.openshift.com/online/dev_guide/migrating_applications/database_applications.html)):
  1. Download the OpenShift Command Line Interface tool from [here](https://console.starter-us-east-1.openshift.com/console/command-line).
@@ -207,7 +209,10 @@ Initialize MySQl Database (also see the online help [here](https://docs.openshif
 NOTE: Because you will not have enough quota during deployment you will need to change the Container deployment strategy for this project. This can be done by selecting the following menu options: click Applications -> Deployments -> select app -> Actions -> Edit and change the deployment strategy from Rolling to Recreate.
 
 Build and deploy your application:
-TODO
+ 1. Select the Builds->Builds main menu items. Click on the name of your JBoss Tomcat Container.
+ 2. Click the Start Build button. Note, you can monitor your build by clicking on the View Log link. Validate that your build was successful.
+ 3. Click the Overview main menu item. Note, you can monitor the build and deployment from this
+    screen.
 
 [Back to Top](#getting-started-building-the-iot-apps)
 
@@ -219,10 +224,13 @@ NOTE: You will need to Create two OpenShift v3 accounts: use one account for the
 
 Setup and Configuration of OpenShift Tomcat MySQL Container:
  1. Create a new Project in OpenShift named GCU Cloud Workshop.
- 2. Add the following types to the Project: PHP 7.0 image for PHP Laravel project.
- 3. When prompted for a Github URL for your project enter the URL for your 'cloudapp' Github repository.
+ 2. Click the Add to Project menu.
+ 3. Add the following types to the Project: PHP 7.0 image for PHP Laravel project. When prompted for a Github Repository URL for your project enter the URL for your 'cloudapp' Github repository.
 
 Build and deploy your application:
-TODO
+ 1. Select the Builds->Builds main menu items. Click on the name of your PHP Container.
+ 2. Click the Start Build button. Note, you can monitor your build by clicking on the View Log link. Validate that your build was successful.
+ 3. Click the Overview main menu item. Note, you can monitor the build and deployment from this
+    screen.
 
 [Back to Top](#getting-started-building-the-iot-apps)
