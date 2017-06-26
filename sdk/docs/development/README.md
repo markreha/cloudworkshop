@@ -2,7 +2,7 @@
 ==================
 The Cloud and IoT Workshop SDK contains all the documentation, sample applications (REST Services, Reporting, and Raspberry Pi Sense HAT) required to build a simple, scalable, Cloud based suite of IoT applications. The following assumes you have setup Github, Codenvy, and OpenShift accounts.
 
-![IoT Logical Architecture](../architecture/images/physical.png)
+![IoT Logical Architecture](../architecture/images/cloud.png)
 
 Get the SDK and Code
 --------------------
