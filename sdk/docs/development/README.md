@@ -190,7 +190,7 @@ Setup and Configuration of OpenShift Tomcat MySQL Container:
  3. When prompted for a Github URL for your project enter the URL for your 'cloudservices' Github repository.
  4. You will need to group Tomcat Container with the MySQL Container.
 
-Initialize MySQl Database (also see the online help [here](https://docs.openshift.com/online/dev_guide/migrating_applications/database_applications.html)).
+Initialize MySQl Database (also see the online help [here](https://docs.openshift.com/online/dev_guide/migrating_applications/database_applications.html)):
  1. Download the OpenShift Command Line Interface tool from [here](https://console.starter-us-east-1.openshift.com/console/command-line).
  2. Open a Terminal Window or DOS Box. 
  3. Navigate to the path were the Command Line Tool was installed. 
@@ -204,6 +204,11 @@ Initialize MySQl Database (also see the online help [here](https://docs.openshif
  9. Grant privileges to petclinic user: grant all privileges on iot.* to petclinic
  10. Run the command: flush privileges
 
+NOTE: Because you will not have enough quota during deployment you will need to change the Container deployment strategy for this project. This can be done by selecting the following menu options: click Applications -> Deployments -> select app -> Actions -> Edit and change the deployment strategy from Rolling to Recreate.
+
+Build and deploy your application:
+TODO
+
 [Back to Top](#getting-started-building-the-iot-apps)
 
 Deploy the IoT Reporting App to OpenShift
@@ -216,5 +221,8 @@ Setup and Configuration of OpenShift Tomcat MySQL Container:
  1. Create a new Project in OpenShift named GCU Cloud Workshop.
  2. Add the following types to the Project: PHP 7.0 image for PHP Laravel project.
  3. When prompted for a Github URL for your project enter the URL for your 'cloudapp' Github repository.
+
+Build and deploy your application:
+TODO
 
 [Back to Top](#getting-started-building-the-iot-apps)
