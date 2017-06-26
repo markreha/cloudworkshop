@@ -58,7 +58,7 @@ Eclipse Neon and MySQL Setup Instructions:
  4. Click the Browse button and navigate to the root directory of the Tomcat installation. Click the Next button.
  5. Click the Finish button. The new Tomcat server should be listed in the Servers tab.
  6. Click the Start icon to validate that the Tomcat server starts and runs without errors.
- 7.  Validate that MySQL database is installed and can be started. You should also connect MySQL Workbench to your local MySQL database to ensure that you can connect to the database.
+ 7.  Start MySQL Workbench and connect MySQL Workbench to your local MySQL database to ensure that you can connect to the database.
  
 
 
