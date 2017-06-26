@@ -2,7 +2,23 @@
 ==================
 The Cloud and IoT Workshop SDK contains all the documentation, sample applications (REST Services, Reporting, and Raspberry Pi Sense HAT) required to build a simple, scalable, Cloud based suite of IoT applications. The following assumes you have a Github, Codenvy, and OpenShift accounts.
 
-To get started you should first Clone the SDK from Github: https://github.com/markreha/cloudworkshop then create two repositories 'cloudservices' and 'cloud app' in your Github account. Then from the SDK copy all the respective files from each of the developer/teampltes folders to your respective Github repositories. Note, bulk file upload can be done in GitHub using your browser but you must use the Chrome browser. If you use the Sourcetree GIT Client then make sure you configure (via .gitgnore file) your local GIT repository so that hidden files are also uploaded. The template projects are starter projects contains all the scaffolding Java Spring Maven files and all the scaffolding PHP Laravel files to build "working" applications. These starter projects can be used as a baseline when building your IoT set of applications.
+#Get the SDK and Code
+To get started building the IoT Template apps please perform the following steps. The Template projects are starter projects contains all the scaffolding Java Spring Maven files and all the scaffolding PHP Laravel files to enable you to start building "working" applications. These starter projects can be used as a baseline when building your IoT set of applications. You will first need to create a Github account if you do not have one already.
+
+ 1. [Clone the SDK](https://github.com/markreha/cloudworkshop) to your local file system.
+ 2. Create two repositories 'cloudservices' and 'cloudapp' in your Github account.
+ 3. Copy all of the files from the SDK ***/sdk/developer/templates/cloudservices*** folder to your Github 'cloudservices' repository. Note, bulk file upload can be done in Github using your browser but you must use the Chrome browser.
+ 4. Copy all of the files from the SDK ***/sdk/developer/templates/cloudapp*** folder to your Github 'cloudapp' repository. Note, bulk file upload can be done in Github using your browser but you must use the Chrome browser.
+ 5. Create local GIT repositories using the Sourcetree GIT Client using the Github repositories created in the previous steps. Make sure your local GIT repositories are configured properly to manage hidden files (via .gitignore file) so that hidden files are also uploaded.
+
+To get started building the IoT Reference apps please perform the following steps. The Reference apps are fully working IoT applications that you can build and modify as desired.
+
+ 1. [Clone the IoT Cloud Services Reference app ](https://github.com/markreha/cloudservices) to your local file system. [Clone the IoT Cloud Reporting Reference app ](https://github.com/markreha/cloudapp) to your local file system.
+ 2. Create two repositories 'cloudservices' and 'cloudapp' in your Github account.
+ 3. Copy all of the files from the cloned IoT Cloud Services Reference app to your Github 'cloudservices' repository. Note, bulk file upload can be done in Github using your browser but you must use the Chrome browser.
+ 4. Copy all of the files from the cloned IoT Cloud Reporting Reference app to your Github 'cloudapp' repository. Note, bulk file upload can be done in Github using your browser but you must use the Chrome browser.
+ 5. Create local GIT repositories using the Sourcetree GIT Client using the Github repositories created in the previous steps. Make sure your local GIT repositories are configured properly to manage hidden files (via .gitignore file) so that hidden files are also uploaded.
+
 
 Other documents located in this directory are:
 * Codenvy and OpenShift Setup Notes - Cloud Setup Notes.txt
