@@ -184,7 +184,7 @@ Once you have tested your IoT Services app you can then setup Cloud Containers i
 
 NOTE: You will need to Create two OpenShift v3 accounts: use one account for the IoT Services application and another account for the IoT Reporting application.
 
-Setup and Configuration of OpenShift Tomcat MySQL Container:
+Setup and configure the OpenShift JBoss Tomcat MySQL Container:
  1. Create a new Project in OpenShift named GCU Cloud Workshop.
  2. Click the Add to Project menu.
  3. Add the following types to the Project: JBoss Tomcat 8 image for the REST API Spring project and when prompted for a Github Repository URL for your project enter the URL for your 'cloudservices' Github repository.
@@ -192,7 +192,7 @@ Setup and Configuration of OpenShift Tomcat MySQL Container:
  4. Add the following Data Store to the Project: MySQL datastore image for the MySQL database.
  5. Once you have added both Containers to your Project you will need to group the JBoss Tomcat Container with the MySQL Container.
 
-Initialize MySQl Database (also see the online help [here](https://docs.openshift.com/online/dev_guide/migrating_applications/database_applications.html)):
+Initialize the MySQL Database (also see the online help [here](https://docs.openshift.com/online/dev_guide/migrating_applications/database_applications.html)):
  1. Download the OpenShift Command Line Interface tool from [here](https://console.starter-us-east-1.openshift.com/console/command-line).
  2. Open a Terminal Window or DOS Box. 
  3. Navigate to the path were the Command Line Tool was installed. 
@@ -222,7 +222,7 @@ Once you have tested your IoT Reporting app you can then setup Cloud Containers 
 
 NOTE: You will need to Create two OpenShift v3 accounts: use one account for the IoT Services application and another account for the IoT Reporting application.
 
-Setup and Configuration of OpenShift Tomcat MySQL Container:
+Setup and configure the OpenShift PHP Container:
  1. Create a new Project in OpenShift named GCU Cloud Workshop.
  2. Click the Add to Project menu.
  3. Add the following types to the Project: PHP 7.0 image for PHP Laravel project. When prompted for a Github Repository URL for your project enter the URL for your 'cloudapp' Github repository.
