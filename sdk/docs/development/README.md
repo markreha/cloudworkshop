@@ -38,7 +38,6 @@ Setup your Java MySQL Development Environment
 It is recommended to use the Cloud based Codenvy IDE as your development environment. This saves you from all the time and complexity of setting up Eclipse, MySQL, and Tomcat in your local environment. However, if you wish, the Template and Reference apps have been built and validated in both the Codenvy IDE and Eclipse IDE so you are also free to setup a local development environment using Eclipse, MySQL, and Tomcat. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.
 
 Codenvy Setup Instructions:
-
  1. Log onto Codenvy. 
  2. Click on the Stacks menu from the left Main Menu.
  3. Scroll down to the Java-MySQL stack and click the 'Duplicate stack'
@@ -47,14 +46,14 @@ Codenvy Setup Instructions:
  6. Click the Save button.
  7. Click on the Workspace menu from the left Main Menu.
  8. Click the Add Workspace button.
- 9. In the Workspace name field rename the Workspace to 'cloud services' (no quotes).
+ 9. In the Workspace name field rename the Workspace to 'cloudservices' (no quotes).
  10. Select the Runtime icon.
  11. Select the Java-MySQL-Workshop runtime.
  12. Click the Save button.
+ 13. It is also recommended that you install the Postman Chrome Plugin and MySQL Admin Chrome Plugin.
 
 Eclipse Neon and MySQL Setup Instructions:
-
- 1. Start Eclipse and create a new empty Workspace. 
+ 1. Install Eclipse EE Neon. Start Eclipse and create a new empty Workspace. 
  2. Click on the Servers tab. Click on the 'create new server' link.
  3. Select Tomcat 8.5 under the Apache section. Click the Next button.
  4. Click the Browse button and navigate to the root directory of the Tomcat installation. Click the Next button.
@@ -62,7 +61,22 @@ Eclipse Neon and MySQL Setup Instructions:
  6. Click the Start icon to validate that the Tomcat server starts and runs without errors.
  7.  Start MySQL Workbench and connect MySQL Workbench to your local MySQL database to ensure that you can connect to the database.
  
+Setup your PHP Development Environment
+--------------------
+It is recommended to use the Cloud based Codenvy IDE as your development environment. This saves you from all the time and complexity of setting up Eclipse and MAMP in your local environment. However, if you wish, the Template and Reference apps have been built and validated in both the Codenvy IDE and Eclipse IDE so you are also free to setup a local development environment using Eclipse, and MAMP. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.
 
+Codenvy Setup Instructions:
+ 1. Log onto Codenvy. 
+ 2. Click on the Workspace menu from the left Main Menu.
+ 3. Click the Add Workspace button.
+ 4. In the Workspace name field rename the Workspace to 'cloudapp' (no quotes).
+ 5. Select the Runtime icon.
+ 6. Select the PHP runtime.
+ 7. Click the Save button.
+
+Eclipse Neon and MAMP Setup Instructions:
+ 1. Install Eclipse PHP Neon. Start Eclipse and create a new empty Workspace. 
+ 2. Install MAMP.
 
 Build the IoT Services App
 --------
