@@ -33,7 +33,7 @@ You can now use the steps outlined below for setting up your development environ
 
 Setup your Development Environment
 --------------------
-It is recommended to use the Cloud based Codenvy IDE as your development environment. This saves you from all the time and complexity of setting up Eclipse, MySQL, and Tomcat in your local environment. However, if you wish, the Template and Reference apps have been built and validated in both the Codenvy IDE and Eclipse IDE so you are also free to setup a local development environment using Eclipse, MySQL, and Tomcat. You will want to reference [Cloud Setup Notes](sdk/docs/development/Cloud-Setup-Notes.txt) in the SDK.
+It is recommended to use the Cloud based Codenvy IDE as your development environment. This saves you from all the time and complexity of setting up Eclipse, MySQL, and Tomcat in your local environment. However, if you wish, the Template and Reference apps have been built and validated in both the Codenvy IDE and Eclipse IDE so you are also free to setup a local development environment using Eclipse, MySQL, and Tomcat. You will want to reference [Cloud Setup Notes](sdk/docs/development/Cloud%20Setup%20Notes.txt) in the SDK.
 
 Build the IoT Services App
 --------
