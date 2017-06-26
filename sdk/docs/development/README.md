@@ -21,18 +21,15 @@ To get started building the IoT Reference apps please perform the following step
  4. Copy all of the files from the cloned IoT Cloud Reporting Reference app to your Github 'cloudapp' repository. Note, bulk file upload can be done in Github using your browser but you must use the Chrome browser.
  5. Create local GIT repositories using the Sourcetree GIT Client using the Github repositories created in the previous steps. Make sure your local GIT repositories are configured properly to manage hidden files (via .gitignore file) so that hidden files are also uploaded.
 
+Other documents located in this directory that you need to review and reference include:
 
-Other documents located in this directory are:
 * Codenvy and OpenShift Setup Notes - Cloud Setup Notes.txt
 * Codenvy Tomcat / MySQL Stack Recipe - Codeenvy Custom Tomcat MySQL Stack Recipe.txt
 * Codenvy PHP Workspace Recipe - Codenvy CloudApp Recipe.txt
 * Codenvy Tomcat / MySQL Workspace Recipe - Codenvy CloudServices Recipe.txt
-* OpenShift Getting Started Guide - OpenShift_Online-3-Getting_Started-en-US.pdf
+* OpenShift Getting Started Guide - OpenShift_Online-3-Getting_Started-en-US.pdf *
 
-If you want to start with completely working end to end IoT Reference applications you can clone the following Github repositories:
-1) IoT Services App: https://github.com/markreha/cloudservices
-2) IoT Reporting App: https://github.com/markreha/cloudapp
-You can then use the project steps as outlined below for building the IoT Template applications except rather than importing the Template based applications you will import and build the SDK Reference applications.
+You can now use the steps outlined below for building the IoT Template applications or building the IoT Reference applications.
 
 Building the IoT Services Template App
 --------
