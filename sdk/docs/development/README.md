@@ -44,7 +44,7 @@ Codenvy Setup Instructions:
  4. Click on the newly created Java-MySQL stack to edit the stack configuration. In the Name field rename your new stack to 'Java-MySQL-Workshop' (no quotes). Under the Runtimes click under the Machines on the 'Down arrow' icon for the DB. Change the Source field from 'eclipse/mysql' to 'kaloyanraev/mysql-no-volume' (no quotes). This will change the Docker image to an image that works around a bug in the default image where the MySQL database is not maintained during the image snapshotting (and losses all data in the database).
  5. Click the Test button to validate your new stack. Make sure both the Tomcat 'dev-machine' and the MySQL 'db' environments all started without errors. This can be done by looking at the two respective terminal console output at the bottom of the Codenvy IDE.
  6. Click the Save button.
- 7. Click on the Workspace menu from the left Main Menu.
+ 7. Click on the Workspaces menu from the left Main Menu.
  8. Click the Add Workspace button.
  9. In the Workspace name field rename the Workspace to 'cloudservices' (no quotes).
  10. Select the Runtime icon.
@@ -67,7 +67,7 @@ It is recommended to use the Cloud based Codenvy IDE as your development environ
 
 Codenvy Setup Instructions:
  1. Log onto Codenvy. 
- 2. Click on the Workspace menu from the left Main Menu.
+ 2. Click on the Workspaces menu from the left Main Menu.
  3. Click the Add Workspace button.
  4. In the Workspace name field rename the Workspace to 'cloudapp' (no quotes).
  5. Select the Runtime icon.
@@ -89,7 +89,9 @@ Codenvy Build Instructions:
  3. Select the GITHUB option under the Source Control section. Enter the URL for your Github 'cloudservices' repository. Click the Import button.
  4. Select the Java Project Configuration and click the Next button.
  5. Click the Save button.
- 6. Setup the following Commands by selecting the Commands tab (far left under the Projects tab in the Project pane. You can create a new Command by clicking the + icon next to the Command Category. These Custom Commands should be added under the Common Commands: 
+ 6. Setup your MySQL Database. Select the Workspaces menu from the left Main Menu in Codenvy. Select your Workspace. Under the Workspace Runtime configuration expand the DB Machine,  scroll down to the Servers section, and note the address DB URL in the dbserver-3306-tcp entry. This address (URL hostname and port) will be used in MySQL Workbench OR MySQL Admin Chrome Plugin.  Log into  MySQL Workbench or MySQL Admin as root user and then run the IoT.sql DDL script located in the ***docs\database*** folder within the SDK. You will also need to set the privileges for the iot schema for the pet clinic user.
+ 7. Setup the following Commands by selecting the Commands tab (far left under the Projects tab in the Project pane). You can create a new Command by clicking the + icon next to the Command Category.
+ 8. Setup the Commands below by selecting the Commands tab (far left under the Projects tab in the Project pane). You can create a new Command by clicking the + icon next to the Command Category. These Custom Commands should be added under the Common Commands: 
  
 **Maven Build and Deployment Command**
  Command Name: 
