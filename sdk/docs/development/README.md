@@ -206,7 +206,7 @@ Initialize the MySQL Database (also see the online help [here](https://docs.open
  9. Grant privileges to petclinic user: grant all privileges on iot.* to petclinic
  10. Run the command: flush privileges
 
-NOTE: Because you will not have enough quota during deployment you will need to change the Container deployment strategy for this project. This can be done by selecting the following menu options: click Applications -> Deployments -> select app -> Actions -> Edit and change the deployment strategy from Rolling to Recreate.
+NOTE: Because you will not have enough quota during deployment you will need to change the Container deployment strategy for this project. This can be done by selecting the following menu options: click Applications -> Deployments main menu items, select the name of your application, select the Actions -> Edit drop down menu options, and change the Deployment Strategy Type from Rolling to Recreate.
 
 Build and deploy your application:
  1. Select the Builds->Builds main menu items. Click on the name of your JBoss Tomcat Container.
