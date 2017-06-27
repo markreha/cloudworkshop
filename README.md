@@ -46,6 +46,7 @@ This directory contains the contains starter Java Spring and PHP Laravel templat
  - ***eclipsePHP***: this folder contains the instructions and ANT build files to support auto-deployment in Eclipse PHP.
  - ***cloudapp***: this folder contains a basic PHP Laravel Project with the "Hello World" page along with the Guzzle and LavaCharts libraries added.
  - ***cloudservices***: this folder contains a basic Java Spring Project with "Test" REST API configured along with basic SLF4J configuration.
+ - ***testing***: this folder contains the Postman Test Scripts that can be used when testing the Reference IoT Services application and its associated REST API's.
 
 [Back to Top](#getting-started-with-the-cloud-and-iot-workshop-sdk)
 
@@ -60,7 +61,6 @@ This directory contains all of the documentation for the IoT SDK. This is where 
  - ***development***: this folder contains the developer documentation that can be referenced when setting up the Development Environment and configuring the Cloud Environments. See the README markup file in this folder for all the details.
  - ***javadoc***: this folder contains the JavaDoc for the Reference IoT Services application.
  - ***phpdoc***: this folder contains the PhpDoc for the Reference IoT Reporting application.
- - ***testing***: this folder contains the Postman Test Scripts that can be used when testing the Reference IoT Services application and its associated REST API's.
  - ***training***: this folder contains the Workshop Training decks.
 
 [Back to Top](#getting-started-with-the-cloud-and-iot-workshop-sdk)
