@@ -3,7 +3,7 @@
 ==================
 The Cloud and IoT Workshop SDK contains all the documentation and sample Reference applications (REST Services, Reporting, and Raspberry Pi Sense HAT) required to build a simple, scalable, Cloud based suite of IoT applications.
 
-![IoT Logical Architecture](sdk/docs/architecture/images/logical.png)
+![IoT Logical Architecture](sdk/docs/architecture/images/cloud.png)
 
 SDK Contents
 --------
@@ -27,10 +27,9 @@ For desktop development you will need to download and install the following tool
 2. Eclipse Neon for PHP platform: Download [here](http://www.eclipse.org/downloads/packages/eclipse-php-developers/neon3) and/or use the cloud based Codenvy IDE.
 3. Tomcat 8.5: Download [here](http://www.eclipse.org/downloads/packages/eclipse-php-developers/neon3) and/or use the cloud based Codenvy IDE.
 4. MAMP: Download [here](https://www.mamp.info/en/downloads/).
-5. MySQL Database: Download [here](https://www.mysql.com/downloads/).
-6. SourceTree: Download [here](https://www.sourcetreeapp.com) and/or use the Chrome Browser.
-7. MySQL Workbench: Download [here](https://dev.mysql.com/downloads/workbench/) and/or use the MySQL Admin Chrome Plugin, which can be dowloaded from the [Chrome WebStore](https://chrome.google.com/webstore/) (search for MySQL Admin).
-8. PostMan: Download [here](www.getpostman.org) and/or use the Postman Chrome Plugin, which can be dowloaded from the [Chrome WebStore](https://chrome.google.com/webstore/) (search for Postman).
+5. SourceTree: Download [here](https://www.sourcetreeapp.com) and/or use the Chrome Browser.
+6. MySQL Workbench: Download [here](https://dev.mysql.com/downloads/workbench/) and/or use the MySQL Admin Chrome Plugin, which can be dowloaded from the [Chrome WebStore](https://chrome.google.com/webstore/) (search for MySQL Admin).
+7. PostMan: Download [here](www.getpostman.org) and/or use the Postman Chrome Plugin, which can be dowloaded from the [Chrome WebStore](https://chrome.google.com/webstore/) (search for Postman).
 
 Next Steps
 --------
