@@ -329,17 +329,17 @@
 <p><br></p>
 <ul>
  <li>Gets the POSTED form parameters</li>
-    - report = 0 for Chart Report or report = 1 for Tabular Data Report<br/>
-    - fromDate = report start date<br/>
-    - toDate = report end date
+    - reportType = 0 for Chart Report or report = 1 for Tabular Data Report<br/>
+    - fromDate = Report From Date<br/>
+    - toDate = Report End Date
  <li>Validates the form data</li>
     - if validation fails the Weather View is redisplayed
  <li>Calls the Web API to get the Weather Data using the GuzzleHttp Client</li>
-    - GET request to the CloudService REST /get API passing a Device ID of 0 and From Date and To Date as API parameters<br/>
-    - CloudService REST API returns JSON (see the ResponseDataModel and WeatherDataModel from the Cloud Services SDK JavaDocs)
+    - GET request to the IoT Services /get REST API passing a Device ID of 0 and Report From Date and the Report End Date as API parameters<br/>
+    - IoT Services REST API returns JSON (see the ResponseDataModel and WeatherDataModel from the Cloud Services SDK JavaDocs)
  <li>Renders a Weather Report</li>
-    - If report is 0 then use Lavaharts to render a Line Graph forwarding to the WeatherReportChart View<br/>
-    - Else if report is 1 then render an HTML forwarding to the WeatherReportTable View
+    - If reportType is 0 then use LavaCharts to render a Line Graph forwarding to the WeatherReportChart View<br/>
+    - Else if reportType is 1 then render a standard HTML Table forwarding to the WeatherReportTable View
  </ul>
 <p>See route setup in routes/web.php: HTTP POST to /doreport.</p>
 
