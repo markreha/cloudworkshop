@@ -180,7 +180,7 @@ After you are able to build Template applications you are then ready to start cu
 
 Deploy the IoT Services App to OpenShift
 --------
-Once you have tested your IoT Services app you can then setup Cloud Containers in OpenShift and then build and deploy your application to OpenShift. Your IoT Services should FIRST be regression tested using the Postman Test Scripts located in the ***/sdk/docs/testing*** directory in the SDK before building and deploying your application. You may have to customize the hostnames and ports in the Test Scripts from the SDK. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.
+Once you have tested your IoT Services app you can then setup Cloud Containers in OpenShift and then build and deploy your application to OpenShift. Your IoT Services should FIRST be regression tested using the Postman Test Scripts located in the ***/sdk/developer/testing*** directory in the SDK before building and deploying your application. You may have to customize the hostnames and ports in the Test Scripts from the SDK. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.
 
 NOTE: You will need to Create two OpenShift v3 accounts: use one account for the IoT Services application and another account for the IoT Reporting application.
 
