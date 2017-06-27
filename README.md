@@ -1,7 +1,7 @@
 
-**Getting Started with the Cloud and IoT Workshop SDK**
+**Getting Started with the Cloud Workshop SDK**
 ==================
-The Cloud and IoT Workshop SDK contains all the documentation and sample Reference applications (REST Services, Reporting, and Raspberry Pi Sense HAT) required to build a simple, scalable, Cloud based suite of IoT applications.
+The Cloud Workshop SDK contains all the documentation and sample Reference applications (REST Services, Reporting, and Raspberry Pi Sense HAT) required to build a simple, scalable, Cloud based suite of IoT applications.
 
 ![IoT Logical Architecture](sdk/docs/architecture/images/cloud.png)
 
@@ -48,7 +48,7 @@ This directory contains the contains starter Java Spring and PHP Laravel templat
  - ***cloudservices***: this folder contains a basic Java Spring Project with "Test" REST API configured along with basic SLF4J configuration.
  - ***testing***: this folder contains the Postman Test Scripts that can be used when testing the Reference IoT Services application and its associated REST API's.
 
-[Back to Top](#getting-started-with-the-cloud-and-iot-workshop-sdk)
+[Back to Top](#getting-started-with-the-cloud-workshop-sdk)
 
 ----------
 
@@ -63,7 +63,7 @@ This directory contains all of the documentation for the IoT SDK. This is where 
  - ***phpdoc***: this folder contains the PhpDoc for the Reference IoT Reporting application.
  - ***training***: this folder contains the Workshop Training decks.
 
-[Back to Top](#getting-started-with-the-cloud-and-iot-workshop-sdk)
+[Back to Top](#getting-started-with-the-cloud-workshop-sdk)
 
 ----------
 
@@ -74,7 +74,7 @@ This directory contains the contains Reference IoT Device application that can b
  - ***app/hat***: this folder contains the Python 3 code for the Reference IoT Device application using a Sense HAT.
  - ***app/discrete***: this folder contains the Python 3 code for the Reference IoT Device application using the DHT11 and LED discrete components.
 
-[Back to Top](#getting-started-with-the-cloud-and-iot-workshop-sdk)
+[Back to Top](#getting-started-with-the-cloud-workshop-sdk)
 
 ----------
 
@@ -85,7 +85,7 @@ This directory contains a few miscellaneous tools to support building the code a
  - ***phpdocumentor***: this folder contains the PHP Archive (phar file) that can be used to generate standard HTML documentation for any PHP projects.
  - ***yworks***: this folder contains the documentation and Java Archive (jar file) that creates and embeds UML class diagrams within standard JavaDoc.
 
-[Back to Top](#getting-started-with-the-cloud-and-iot-workshop-sdk)
+[Back to Top](#getting-started-with-the-cloud-workshop-sdk)
 
 ----------
 
@@ -108,4 +108,4 @@ The following tutorials can be referenced as needed to come up to speed on the t
 	- [Tutorial from Oracle](http://docs.oracle.com/javaee/6/tutorial/doc/bnayk.html)
 	- [JAX-RS Specification](http://download.oracle.com/otn-pub/jcp/jaxrs-2_0_rev_A-mrel-eval-spec/jsr339-jaxrs-2.0-final-spec.pdf)
 
-[Back to Top](#getting-started-with-the-cloud-and-iot-workshop-sdk)
+[Back to Top](#getting-started-with-the-cloud-workshop-sdk)
