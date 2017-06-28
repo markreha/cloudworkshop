@@ -10,7 +10,6 @@ SDK Contents
 This SDK is organized into a number of folders. It should be noted that all directories in this markup are indicated in ***bold italic*** text. Note, once you have downloaded the SDK the Markdown README files can still be viewed from your file system in Chrome by using the [Markdown Preview Chrome Plugin](https://chrome.google.com/webstore/detail/markdown-preview/jmchmkecamhbiokiopfpnfgbidieafmd).
  - The '[***developer***](#developer-directory-contents)' folder: contains starter Java Spring and PHP Laravel template projects 
  - The '[***docs***](#docs-directory-contents)' folder: contains Database, JavaDoc, PhpDoc, and Architecture documentation, you should start here 
- - The '[***pi***](#pi-directory-contents)' folder: contains sample Raspberry Pi Sense HAT application and discrete component IoT applications 
  - The '[***tools***](#tools-directory-contents)' folder: contains misc. documentation generation tools
 
 Getting Started
@@ -62,17 +61,6 @@ This directory contains all of the documentation for the IoT SDK. This is where 
  - ***javadoc***: this folder contains the JavaDoc for the Reference IoT Services application.
  - ***phpdoc***: this folder contains the PhpDoc for the Reference IoT Reporting application.
  - ***training***: this folder contains the Workshop Training decks.
-
-[Back to Top](#getting-started-with-the-cloud-workshop-sdk)
-
-----------
-
-Pi Directory Contents
-----------
-This directory contains the contains Reference IoT Device application that can be used with any Raspberry Pi 3 and Sense HAT or a Raspberry Pi 3 DHT11 and LED wired to a breadboard. The Reference application can be used as a starting point to monitor Weather IoT data.
-
- - ***app/hat***: this folder contains the Python 3 code for the Reference IoT Device application using a Sense HAT.
- - ***app/discrete***: this folder contains the Python 3 code for the Reference IoT Device application using the DHT11 and LED discrete components.
 
 [Back to Top](#getting-started-with-the-cloud-workshop-sdk)
 
