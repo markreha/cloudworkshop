@@ -1,6 +1,6 @@
 **Getting Started Building the IoT Apps**
 ==================
-The Cloud Workshop SDK contains all the documentation and sample template applicationsrequired to build a simple, scalable, Cloud based suite of IoT applications. The following assumes you have setup Github, Codenvy, and OpenShift accounts.
+The Cloud Workshop SDK contains all the documentation, tools, and sample template applicationsrequired to build a simple, scalable, Cloud based suite of IoT applications. The following assumes you have setup Github, Codenvy, and OpenShift accounts.
 
 ![IoT Logical Architecture](../architecture/images/logical.png)
 
