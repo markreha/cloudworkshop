@@ -19,8 +19,8 @@
         <div class="flex-center position-ref full-height">
         	<!-- Top Menu -->
             <div class="top-right links">
-                <a href="https://github.com/markreha/cloudworkshop/tree/master/sdk/docs" target="_blank">SDK Documentation</a>
-                <a href="https://github.com/markreha/cloudworkshop/tree/master/sdk" target="_blank">GitHub</a>
+                <a href="https://github.com/markreha/cloudworkshop" target="_blank">Get Started</a>
+                <a href="https://github.com/markreha/cloudworkshop/tree/master/sdk/docs/development" target="_blank">Build Apps</a>
                 <img src="resources/assets/image/logo.png" width="65" height="65"/>
 			</div>
  
@@ -28,12 +28,14 @@
             <div class="content">
             	<!--  Title and Menu Links -->
                 <div class="title m-b-md">
-                    GCU IoT Cloud Workshop
+                    GCU Cloud Workshop
                 </div>
                 <div class="links">
-                    <a href="weather">Weather</a>
+                    <a href="weather">IoT Weather Data</a>
                 </div>
             </div>
         </div>
     </body>
 </html>
+
+
