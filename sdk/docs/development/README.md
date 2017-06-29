@@ -28,11 +28,12 @@ If you plan on using the IoT Reference apps to start your development then pleas
  
 Other documents located in this directory that you need to review and reference include:
 
+* Swagger Compliant API Specification - awagger-api.json
 * Codenvy and OpenShift Setup Notes - Cloud Setup Notes.txt
 * Codenvy Tomcat / MySQL Stack Recipe - Codeenvy Custom Tomcat MySQL Stack Recipe.txt
 * Codenvy PHP Workspace Recipe - Codenvy CloudApp Recipe.txt
 * Codenvy Tomcat / MySQL Workspace Recipe - Codenvy CloudServices Recipe.txt
-* OpenShift Getting Started Guide - OpenShift_Online-3-Getting_Started-en-US.pdf *
+* OpenShift Getting Started Guide - OpenShift_Online-3-Getting_Started-en-US.pdf
 
 You can now use the steps outlined below for setting up your development environment and building the IoT Template applications or building the IoT Reference applications.
 
