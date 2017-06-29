@@ -134,7 +134,7 @@ Eclipse Build Instructions:
  1. Setup your MySQL Database. Log into MySQL Workbench as root user (username of root and password of root) and then run the IoT.sql DDL script located in the ***docs\database*** folder within the SDK. You will also need to set the privileges for the *iot* schema for the pet clinic user (username of petclinic and password of password).
  2. Make sure your MySQL database is running.
  3. Open your Eclipse 'cloudservices' Workspace.
- 4. Import the 'cloudservices' Template app from the SDK or the 'cloudservices' Reference app from the cloned repository. This can be done by selecting the File->Import menu options in Eclipse, under the General section select the 'Existing Projects into Workspace' open, navigate to the root of the SDK to import the Template app or navigate to one folder higher than were the 'cloudservices' repository was cloned to, **make sure you check the 'copy' checkbox when importing**, and click the Finish button.
+ 4. Import the 'cloudservices' Template app from the SDK or the 'cloudservices' Reference app from your local GIT repository. Importing the project into Eclipse can be done by selecting the File->Import menu options in Eclipse, under the General section select the 'Existing Projects into Workspace' open, navigate to the root of the SDK to import the Template app or navigate to one folder higher than were the 'cloudservices' repository was cloned to, **make sure you check the 'copy' checkbox when importing**, and click the Finish button.
  3. To build and run the project invoke the following:
 	 - Build the Project by selecting the Run->Run As->Maven Build and then set the name to My Cloudservices Build, set the Goals to clean deploy, set the Profiles to dev, and click the Run button.
 	 - Add the Project to your Tomcat Server. This can be done by right clicking on the Tomcat Server in the Servers tab and adding the 'cloudservices' project to the Configured section. Your should also make sure you use the /cloudservices path for your web module. This can be done by double clicking on the Tomcat Server in the Servers tab, selecting the Modules tab from the Server configuration page, adding or editing the cloudservices Web Module.
@@ -168,14 +168,14 @@ To build in Codenvy:
 To build in Eclipse Neon:
 
  1. Open your Eclipse 'cloudapp' Workspace.
- 2. Import the 'cloudapp' Template app from the SDK or the 'cloudapp' Reference app from the cloned repository. This can be done by selecting the File->Import menu options in Eclipse, under the General section select the 'Existing Projects into Workspace' open, navigate to the root of the SDK to import the Template app or navigate to one folder higher than were the 'cloudapp' repository was cloned to, **make sure you check the 'copy' checkbox when importing**, and click the Finish button.
- 3. You can setup an ANT build file to automatically copy files from your Workspace to your MAMP runtime *htdocs* directory (i.e. auto-deployment). For examples, see the 'build.properties and 'build.xml' files from the Reference App and the documentation in the ***developer/eclipsePHP*** directory in the SDK.
+ 2. Import the 'cloudapp' Template app from the SDK or the 'cloudapp' Reference app from your local GIT repository. Importing the project into Eclipse can be done by selecting the File->Import menu options in Eclipse, under the General section select the 'Existing Projects into Workspace' open, navigate to the root of the SDK to import the Template app or navigate to one folder higher than were the 'cloudapp' repository was cloned to, **make sure you check the 'copy' checkbox when importing**, and click the Finish button.
+ 3. It should be noted that both the Template app and the Reference app have setup an ANT build file to automatically copy files from your Workspace to your MAMP runtime *htdocs* directory (i.e. auto-deployment). For examples, see the 'build.properties and 'build.xml' files from the Template app or the Reference app and the documentation in the ***developer/eclipsePHP*** directory in the SDK.
 
 ----------
 
 Next Steps
 --------
-After you are able to build Template applications you are then ready to start customizing the applications functionality as per your own IoT requirements or per the functionality implemented in the Reference applications. Remember, all code should be maintained in the Github Cloud based source control system because code deployed to the Codenvy Cloud IDE and OpenShift PaaS Cloud both uses Github as the source repository.
+After you are able to build the Template applications or the Reference applications you are then ready to start customizing the applications functionality as per your own IoT requirements or per the functionality implemented in the Reference applications. Remember, all code should be maintained in the Github Cloud based source control system because code deployed to the Codenvy Cloud IDE and OpenShift PaaS Cloud both uses Github as the source repository.
 
 [Back to Top](#getting-started-building-the-iot-apps)
 
