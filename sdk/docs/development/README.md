@@ -20,13 +20,12 @@ If you plan on using the IoT Template apps to start your development then please
 
 If you plan on using the IoT Reference apps to start your development then please perform the following steps. The Reference apps are fully working IoT applications that you can build and modify as desired. These projects can be used if you want to quickly get fully working code to build and deploy with minimal effort and without worrying too much about the technical details, which can be picked up by studying the source code and working thru appropriate tutorials.
 
- 1. [Clone the IoT Cloud Services Reference app ](https://github.com/markreha/cloudservices) to your local file system. 
- 2. [Clone the IoT Cloud Reporting Reference app ](https://github.com/markreha/cloudapp) to your local file system.
+ 1. [Clone the IoT Cloud Services Reference app ](https://github.com/markreha/cloudservices) to your local file system or local GIT repository. 
+ 2. [Clone the IoT Cloud Reporting Reference app ](https://github.com/markreha/cloudapp) to your local file system or local GIT repository.
  3. If you havn't already create two remote repositories 'cloudservices' and 'cloudapp' in your Github account.
- 4. Copy all of the files from the cloned IoT Cloud Services Reference app to your Github 'cloudservices' repository. Note, bulk file upload can be done in Github using your browser but you must use the Chrome browser.
- 5. Copy all of the files from the cloned IoT Cloud Reporting Reference app to your Github 'cloudapp' repository. Note, bulk file upload can be done in Github using your browser but you must use the Chrome browser.
- 6. Create local GIT repositories using the Sourcetree GIT Client using the Github repositories created in the previous steps. Make sure your local GIT repositories are configured properly to manage hidden files (via .gitignore file) so that hidden files are also uploaded.
-
+ 4. If you cloned files to your local file system (and not GIT) then you will need to copy all of the files from the cloned IoT Cloud Services Reference app to your remote Github 'cloudservices' repository. Note, bulk file upload can be done in Github using your browser but you must use the Chrome browser. If cloned file to your local GIT repository then you will not to push all the fils to your remote Github 'cloudservices' repository. Make sure your local GIT repositories are configured properly to manage hidden files (via .gitignore file) so that hidden files are also uploaded.
+ 5. If you cloned files to your local file system (and not GIT) then you will need to copy all of the files from the cloned IoT Cloud Reporting Reference app to your remote Github 'cloudapp' repository. Note, bulk file upload can be done in Github using your browser but you must use the Chrome browser. If cloned file to your local GIT repository then you will not to push all the fils to your remote Github 'cloudseapp' repository. Make sure your local GIT repositories are configured properly to manage hidden files (via .gitignore file) so that hidden files are also uploaded.
+ 
 Other documents located in this directory that you need to review and reference include:
 
 * Codenvy and OpenShift Setup Notes - Cloud Setup Notes.txt
