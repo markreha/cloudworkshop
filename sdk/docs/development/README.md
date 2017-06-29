@@ -14,9 +14,9 @@ To get started first clone the SDK to your local file system and then create you
 To get started building the IoT Template apps OR the IoT Reference apps please perform the following steps.
 
 If you plan on using the IoT Template apps to start your development then please perform the following steps. The Template projects are starter projects containing all the scaffolding Java Spring Maven files and all the scaffolding PHP Laravel files to enable you to start building "working" applications. These starter projects can be used as a baseline when building your IoT set of applications.
- 1. Copy all of the files from the SDK ***/sdk/developer/templates/cloudservices*** folder to your Github 'cloudservices' repository. Note, bulk file upload can be done in Github using your browser but you must use the Chrome browser.
- 2. Copy all of the files from the SDK ***/sdk/developer/templates/cloudapp*** folder to your Github 'cloudapp' repository. Note, bulk file upload can be done in Github using your browser but you must use the Chrome browser.
- 3. Create local GIT repositories using the Sourcetree GIT Client using the Github repositories created in the previous steps. Make sure your local GIT repositories are configured properly to manage hidden files (via .gitignore file) so that hidden files are also uploaded.
+ 1. Copy all of the files from the SDK ***/sdk/developer/templates/cloudservices*** folder to your remote Github 'cloudservices' repository. Note, bulk file upload can be done in Github using your browser but you must use the Chrome browser.
+ 2. Copy all of the files from the SDK ***/sdk/developer/templates/cloudapp*** folder to your remote Github 'cloudapp' repository. Note, bulk file upload can be done in Github using your browser but you must use the Chrome browser.
+ 3. Create local GIT repositories using the Sourcetree GIT Client by cloning the Github repositories created in the previous steps. Make sure your local GIT repositories are configured properly to manage hidden files (via .gitignore file) so that hidden files are also uploaded.
 
 If you plan on using the IoT Reference apps to start your development then please perform the following steps. The Reference apps are fully working IoT applications that you can build and modify as desired. These projects can be used if you want to quickly get fully working code to build and deploy with minimal effort and without worrying too much about the technical details, which can be picked up by studying the source code and working thru appropriate tutorials.
 
