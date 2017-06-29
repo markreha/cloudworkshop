@@ -2,4 +2,4 @@ This is an Eclipse Project Template that can be imported into Eclipse to get a S
 
 To build: Run Maven with the clean package goals and the dev profile.
 
-To test locally: http://localhost:8080/cloudservices/weather/rest/test using CloudWorkshop/dGVzdHRlc3Q= for access credentials
+To test locally: http://localhost:8080/cloudservices/rest/weather/test using CloudWorkshop/dGVzdHRlc3Q= for access credentials
