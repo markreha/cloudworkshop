@@ -60,6 +60,7 @@ This directory contains all of the documentation for the IoT SDK. This is where 
  - ***development***: this folder contains the developer documentation that can be referenced when setting up the Development Environment and configuring the Cloud Environments. See the README markup file in this folder for all the details.
  - ***javadoc***: this folder contains the JavaDoc for the Reference IoT Services application.
  - ***phpdoc***: this folder contains the PhpDoc for the Reference IoT Reporting application.
+ - ***swagger***: this folder contains the API specification file for the IoT Services that is Swagger API compliant.
  - ***training***: this folder contains the Workshop Training decks.
 
 [Back to Top](#getting-started-with-the-cloud-workshop-sdk)
