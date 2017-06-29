@@ -3,12 +3,12 @@
 This is an Eclipse Project Template that can be imported into Eclipse to get a Laravel PHP project up and running quickly. This project could also be imported into Codenvy once you have cloned the project into your own local GIT repository and then pushed the source code into your own Github repository. This project has a single Welcome View page that displays a default page to the user.
 
 To build with Ant: 
-- This default project contains and Ant build file configured by default that will copy all files to your MAMP htdocs directory. You will need to customize the build.properties to adjust the directory to your MAMP hdtocs directory. Once you do this auto-ployment should automatically work such that any time files are changed in Eclipse they will automatically be copied to your MAMP htdocs directory.
+- This default project contains an Ant build file configured by default that will copy all changed files to your MAMP htdocs directory. You will need to customize the build.properties file located in the root of the project to adjust the location of your MAMP hdtocs directory. Once you do this configuration auto-ployment should automatically work such that any time files are changed in Eclipse they will automatically be copied to your MAMP htdocs directory.
 
 To run locally with Eclipse:
-- Start MAMP. With the default auto-deployment you basically do not have to do anthing besides start MAMP. By default the Laravel application is copied to an application 'cloudapp' in your MAMP environment. If desired the 'cloudapp' name can be changed in the build.properties file.
+- Start MAMP. With the default auto-deployment in place you basically do not have to do anthing besides start MAMP. By this default Laravel application is copied to an application called 'cloudapp' in your MAMP environment. If desired the 'cloudapp' application name can be changed in the build.properties file.
 
-To test locally with Eclipse and Tomcat: 
+To test locally with Eclipse and MAMP: 
 - Access the following URL: http://localhost:8888/cloudapp/
 
 ----------
