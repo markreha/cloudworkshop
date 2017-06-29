@@ -11,7 +11,7 @@ import javax.ws.rs.DefaultValue;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
-@Path("services")
+@Path("weather")
 public class RestService
 {
     Logger logger = LoggerFactory.getLogger(RestService.class);
@@ -24,9 +24,9 @@ public class RestService
     @GET
     @Path("/test")
     @Produces("application/json")
-    public String onIndex()
+    public String onTest()
     {
-    	logger.info("Entering RestService.onIndex()");
+    	logger.info("Entering RestService.onTest()");
     	return "{\"data\" : \"This is a test\"}";
     }
 }
