@@ -1,3 +1,18 @@
+**IoT Reporting Template Application**
+==================
+This is an Eclipse Project Template that can be imported into Eclipse to get a Laravel PHP project up and running quickly. This project could also be imported into Codenvy once you have cloned the project into your own local GIT repository and then pushed the source code into your own Github repository. This project has a single Welcome View page that displays a default page to the user.
+
+To build with Ant: 
+- This default project contains and Ant build file configured by default that will copy all files to your MAMP htdocs directory. You will need to customize the build.properties to adjust the directory to your MAMP hdtocs directory. Once you do this auto-ployment should automatically work such that any time files are changed in Eclipse they will automatically be copied to your MAMP htdocs directory.
+
+To run locally with Eclipse:
+- Start MAMP. With the default auto-deployment you basically do not have to do anthing besides start MAMP. By default the Laravel application is copied to an application 'cloudapp' in your MAMP environment. If desired the 'cloudapp' name can be changed in the build.properties file.
+
+To test locally with Eclipse and Tomcat: 
+- Access the following URL: http://localhost:8888/cloudapp/
+
+----------
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
@@ -6,6 +21,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
+
 
 ## About Laravel
 
