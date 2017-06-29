@@ -5,8 +5,8 @@ This is an Eclipse Project Template that can be imported into Eclipse to get a S
 To build with Maven: 
 - Run Maven with the clean package goals and the dev profile.
 
-To run with Eclipse:
+To run locally with Eclipse:
 - Add a Tomcat 8.5 Server to your project. Then add the projects Web Module and set the Web Modules path to /cloudservices.
 
-To test locally: 
-- http://localhost:8080/cloudservices/rest/weather/test using CloudWorkshop/dGVzdHRlc3Q= for access credentials
+To test locally with Eclipse and Tomcat: 
+- Access the following URL: http://localhost:8080/cloudservices/rest/weather/test using CloudWorkshop/dGVzdHRlc3Q= for access credentials
