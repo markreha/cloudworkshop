@@ -137,9 +137,10 @@ Eclipse Build Instructions:
  4. Import the 'cloudservices' Template app from the SDK or the 'cloudservices' Reference app from your local GIT repository. Importing the project into Eclipse can be done by selecting the File->Import menu options in Eclipse, under the General section select the 'Existing Projects into Workspace' open, navigate to the root of the SDK to import the Template app or navigate to one folder higher than were the 'cloudservices' repository was cloned to, **make sure you check the 'copy' checkbox when importing**, and click the Finish button.
  3. To build and run the project invoke the following:
 	 - Build the Project by selecting the Run->Run Configurations, select the Maven Build type, click the New Icon, and then set the name to My Cloudservices Build, set the Goals to clean package, set the Profiles to dev, and click the Run button. This build configuration will now be available when you select the Run Icon from the toolbar.
+	 - Refresh your Eclipse Workspace by right clicking on the project and selecting the Refresh menu option.
 	 - Add the Project to your Tomcat Server. This can be done by right clicking on the Tomcat Server in the Servers tab and adding the 'cloudservices' project to the Configured section. Your should also make sure you use the /cloudservices path for your web module. This can be done by double clicking on the Tomcat Server in the Servers tab, selecting the Modules tab from the Server configuration page, adding or editing the cloudservices Web Module.
 	 - From the Servers tab click the Start icon for Tomcat to start the Tomcat Server. Make sure you MySQL database is running or you will get an error starting the application.
-
+	 - You will also want to make sure the Maven Build is part of your Build Class Path and so Tomcat picks up your changed files. To do this right click on your Project and select the Properties menu option. Select the Order and Export tabe. Make sure the Maven Dependencies checkbox is checked. 
 
 Build the IoT Reporting App
 --------
