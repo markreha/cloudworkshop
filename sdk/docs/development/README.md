@@ -92,7 +92,7 @@ Codenvy Build Instructions:
  3. Select the GITHUB option under the Source Control section. Enter the URL for your Github 'cloudservices' repository. Click the Import button.
  4. Select the Java Project Configuration and click the Next button.
  5. Click the Save button.
- 6. Setup your MySQL Database. Select the Workspaces menu from the left Main Menu in Codenvy. Select your Workspace. Under the Workspace Runtime configuration expand the DB Machine,  scroll down to the Servers section, and note the address DB URL in the dbserver-3306-tcp entry. This address (URL hostname and port) will be used in MySQL Workbench OR MySQL Admin Chrome Plugin.  Log into  MySQL Workbench or MySQL Admin as root user (username of root and password of password) and then run the IoT.sql DDL script located in the ***docs\database*** folder within the SDK. You will also need to set the privileges for the *iot* schema for the pet clinic user (username of petclinic and password of password).
+ 6. Setup your MySQL Database. Select the Workspaces menu from the left Main Menu in Codenvy. Select your Workspace. Under the Workspace Runtime configuration expand the DB Machine,  scroll down to the Servers section, and note the address DB URL in the dbserver-3306-tcp entry. This address (URL hostname and port) will be used in MySQL Workbench OR MySQL Admin Chrome Plugin.  Start  MySQL Workbench or log into MySQL Admin as root user (username of root and password of password) and then run the IoT.sql DDL script located in the ***docs\database*** folder within the SDK. You will also need to set the privileges for the *iot* schema for the pet clinic user (username of petclinic and password of password).
  7. Setup the Commands below by selecting the Commands tab (far left under the Projects tab in the Project pane). You can create a new Command by clicking the + icon next to the Command Category. These Custom Commands should be added under the Common Commands.
  8. To build and run the project invoke the following commands from the Custom Commands:
 	 - Run 'Start Tomcat' to start the Tomcat Server.
@@ -131,15 +131,16 @@ NOTE: you should create a backup of the Workspace and environment by selecting t
 
 
 Eclipse Build Instructions:
- 1. Setup your MySQL Database. Log into MySQL Workbench as root user (username of root and password of root) and then run the IoT.sql DDL script located in the ***docs\database*** folder within the SDK. You will also need to set the privileges for the *iot* schema for the pet clinic user (username of petclinic and password of password).
+ 1. Setup your MySQL Database. Startup MySQL Workbench as root user (username of root and password of root), create a schema named 'iot' (without quotes), and then run the IoT.sql DDL script located in the ***docs\database*** folder within the SDK. You will also need to set the privileges for the *iot* schema for the pet clinic user (username of petclinic and password of password).
  2. Make sure your MySQL database is running.
  3. Open your Eclipse 'cloudservices' Workspace.
  4. Import the 'cloudservices' Template app from the SDK or the 'cloudservices' Reference app from your local GIT repository. Importing the project into Eclipse can be done by selecting the File->Import menu options in Eclipse, under the General section select the 'Existing Projects into Workspace' open, navigate to the root of the SDK to import the Template app or navigate to one folder higher than were the 'cloudservices' repository was cloned to, **make sure you check the 'copy' checkbox when importing**, and click the Finish button.
- 3. To build and run the project invoke the following:
+ 5. To build and run the project invoke the following:
 	 - Build the Project by selecting the Run->Run Configurations, select the Maven Build type, click the New Icon, and then set the name to My Cloudservices Build, set the Goals to clean package, set the Profiles to dev, and click the Run button. This build configuration will now be available when you select the Run Icon from the toolbar.
 	 - Refresh your Eclipse Workspace by right clicking on the project and selecting the Refresh menu option.
 	 - Add the Project to your Tomcat Server. This can be done by right clicking on the Tomcat Server in the Servers tab and adding the 'cloudservices' project to the Configured section. Your should also make sure you use the /cloudservices path for your web module. This can be done by double clicking on the Tomcat Server in the Servers tab, selecting the Modules tab from the Server configuration page, adding or editing the cloudservices Web Module.
-	 - From the Servers tab click the Start icon for Tomcat to start the Tomcat Server. Make sure you MySQL database is running or you will get an error starting the application.
+	 - Locate the config.properties files located in the src folder of the Eclipse project. Modify the user credentials to match the user that was setup in step 1.
+	 - From the Servers tab click the Start icon for Tomcat to start the Tomcat Server. Make sure you MySQL database is setup and running or you will get an error starting the application. 
 	 - You will also want to make sure the Maven Build is part of your Build Class Path and so Tomcat picks up your changed files. To do this right click on your Project and select the Properties menu option. Select the Order and Export tabe. Make sure the Maven Dependencies checkbox is checked. 
 
 Build the IoT Reporting App
