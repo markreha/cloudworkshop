@@ -5,6 +5,10 @@ The Cloud Workshop SDK contains all the documentation, tools, and sample templat
 
 ![IoT Logical Architecture](sdk/docs/architecture/images/cloud.png)
 
+What's New
+--------
+07-21-2017: Added new screencasts. See the  [***screencasts***](sdk/docs/training/screencasts/README.md) directory in the SDK.
+
 SDK Contents
 --------
 This SDK is organized into a number of folders. It should be noted that all directories in this markup are indicated in ***bold italic*** text. Note, once you have downloaded the SDK the Markdown README files can still be viewed from your file system in Chrome by using the [Markdown Preview Chrome Plugin](https://chrome.google.com/webstore/detail/markdown-preview/jmchmkecamhbiokiopfpnfgbidieafmd). If you want to report issues or suggest new features please enter an Issue in this repository.
