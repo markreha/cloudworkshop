@@ -7,7 +7,7 @@ The Cloud Workshop SDK contains all the documentation, tools, and sample templat
 
 What's New
 --------
-07-21-2017: Added new screencasts. See the  [***screencasts***](sdk/docs/training/screencasts/README.md) directory in the SDK.
+07-21-2017: Added new screencasts. See the  [***screencasts***](sdk/docs/training/screencasts) directory in the SDK.
 
 SDK Contents
 --------
