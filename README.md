@@ -3,7 +3,9 @@
 ==================
 The Cloud Workshop SDK contains all the documentation, tools, and sample template applications required to build a simple, scalable, Cloud based suite of IoT applications.
 
+<p align="center">
 ![IoT Logical Architecture](sdk/docs/architecture/images/cloud.png)
+</p>
 
 What's New
 --------
