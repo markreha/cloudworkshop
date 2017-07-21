@@ -26,6 +26,8 @@ If you plan on using the IoT Reference apps to start your development then pleas
  4. If you cloned files to your local file system (and not GIT) then you will need to copy all of the files from the cloned IoT Cloud Services Reference app to your remote Github 'cloudservices' repository. Note, bulk file upload can be done in Github using your browser but you must use the Chrome browser. If cloned file to your local GIT repository then you will not to push all the fils to your remote Github 'cloudservices' repository. Make sure your local GIT repositories are configured properly to manage hidden files (via .gitignore file) so that hidden files are also uploaded.
  5. If you cloned files to your local file system (and not GIT) then you will need to copy all of the files from the cloned IoT Cloud Reporting Reference app to your remote Github 'cloudapp' repository. Note, bulk file upload can be done in Github using your browser but you must use the Chrome browser. If cloned file to your local GIT repository then you will not to push all the fils to your remote Github 'cloudseapp' repository. Make sure your local GIT repositories are configured properly to manage hidden files (via .gitignore file) so that hidden files are also uploaded.
  
+ There are a number of training screencasts to help you with your development. All of the screencasts are in the SDK and located in the **/sdk/docs/development/training/screencasts** directory.
+ 
 Other documents located in this directory that you need to review and reference include:
 
 * Codenvy and OpenShift Setup Notes - Cloud Setup Notes.txt
