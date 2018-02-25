@@ -3,7 +3,13 @@
 ==================
 The Cloud Workshop SDK contains all the documentation, tools, and sample template applications required to build a simple, scalable, Cloud based suite of IoT applications.
 
-![IoT Logical Architecture](sdk/docs/architecture/images/cloud.png)
+<p align="center">
+	<img src="sdk/docs/architecture/images/cloud.png" alt="IoT Logical Architecture"/>
+</p>
+
+What's New
+--------
+ - 07-21-2017: Added new screencasts on desktop setup for Eclipse EE and MySQL Workbench . See the  [***screencasts***](sdk/docs/training/screencasts) directory in the SDK.
 
 SDK Contents
 --------
