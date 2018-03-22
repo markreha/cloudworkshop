@@ -93,3 +93,16 @@ Initialize MySQl Database (https://docs.openshift.com/online/dev_guide/migrating
 Issue: Not enough quota during deployment
 Resolution: Applications -> Deployments -> select app -> Actions -> Edit and change deployment strategy from Rolling to Recreate.
 
+================================ AZURE =============================================
+
+Create an Azure account. If you are a Grand Canyon University student this is free via your Microsoft Imagine account. You will need to create the following containers in Azure:
+	1. Log into the Azure Portal.
+	1. Click the '+ Create a resource' icon from the Azure Portal and search for PHP.
+	2. Select the PHP Starter Kit Application to create a PHP container.
+	3. Click the '+ Create a resource' icon from the Azure Portal and search for Tomcat.
+	4. Select the Apache Tomcat 8 Application from Microsoft to create a Tomcat / MySQL Container.
+
+
+
+
+Create two OpenShift v3 accounts: use one account for the Java REST API Spring MySQL project and use another account for the PHP Laravel project.
