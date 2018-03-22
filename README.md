@@ -9,7 +9,8 @@ The Cloud Workshop SDK contains all the documentation, tools, and sample templat
 
 What's New
 --------
- - 07-21-2017: Added new screencasts on desktop setup for Eclipse EE and MySQL Workbench . See the  [***screencasts***](sdk/docs/training/screencasts) directory in the SDK.
+  - 03-22-2018: Added support for Azure PaaS Cloud.
+- 07-21-2017: Added new screencasts on desktop setup for Eclipse EE and MySQL Workbench . See the  [***screencasts***](sdk/docs/training/screencasts) directory in the SDK.
 
 SDK Contents
 --------
@@ -38,7 +39,7 @@ For desktop development you will need to download and install the following tool
 
 Next Steps
 --------
-After you are become familiar with the architecture, sample applications, and tools you can start building your own IoT applications using the sample Reference applications in the SDK as a guide. As a developer, there are application build instructions for developing in the Cloud based Cloudenvy IDE or desktop Eclipse Neon IDE. All code is maintained in the Github Cloud based source control system and deployed to the Cloud based OpenShift PaaS. It should be noted that there is nothing technically preventing you from deploying these application to other Clouds such as Amazon AWS. See the ['README'](sdk/docs/development/README.md) file and 'Cloud Setup Notes text' file located in the [***docs/development***](sdk/docs/development/README.md) folder to get started building your own IoT applications.
+After you are become familiar with the architecture, sample applications, and tools you can start building your own IoT applications using the sample Reference applications in the SDK as a guide. As a developer, there are application build instructions for developing in the Cloud based Cloudenvy IDE or desktop Eclipse Neon IDE. All code is maintained in the Github Cloud based source control system and deployed to the Cloud based OpenShift PaaS or Azure PaaS. It should be noted that there is nothing technically preventing you from deploying these application to other Clouds such as Amazon AWS. See the ['README'](sdk/docs/development/README.md) file and 'Cloud Setup Notes text' file located in the [***docs/development***](sdk/docs/development/README.md) folder to get started building your own IoT applications.
 
 ----------
 
