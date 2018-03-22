@@ -1,13 +1,13 @@
 **Getting Started Building the IoT Apps**
 ==================
-The Cloud Workshop SDK contains all the documentation, tools, and sample template applicationsrequired to build a simple, scalable, Cloud based suite of IoT applications. The following assumes you have setup Github, Codenvy, and OpenShift accounts.
+The Cloud Workshop SDK contains all the documentation, tools, and sample template applicationsrequired to build a simple, scalable, Cloud based suite of IoT applications. The following assumes you have setup Github, Codenvy, and OpenShift or Azure accounts.
 
 ![IoT Logical Architecture](../architecture/images/logical.png)
 
 Get the SDK and Code
 --------------------
 
-To get started first clone the SDK to your local file system and then create your remote repositories in Github for the two IoT applications required to support an end to end working IoT application. You will first need to create a Github account if you do not have one already. Moving forward all application code should be maintained in your own local and remote Github repositories because any code imported or managed by the Codenvy Cloud IDE and build/deployed to the OpenShift PaaS Cloud will use Github as the source repository.
+To get started first clone the SDK to your local file system and then create your remote repositories in Github for the two IoT applications required to support an end to end working IoT application. You will first need to create a Github account if you do not have one already. Moving forward all application code should be maintained in your own local and remote Github repositories because any code imported or managed by the Codenvy Cloud IDE and build/deployed to the OpenShift PaaS or Azure Cloud will use Github as the source repository.
  1. [Clone the SDK](https://github.com/markreha/cloudworkshop) to your local file system or local GIT repository. 
  2. Create two repositories 'cloudservices' and 'cloudapp' in your Github account.
 
@@ -30,7 +30,7 @@ If you plan on using the IoT Reference apps to start your development then pleas
  
 Other documents located in this directory that you need to review and reference include:
 
-* Codenvy and OpenShift Setup Notes - Cloud Setup Notes.txt
+* Codenvy, OpenShift, and Azure Setup Notes - Cloud Setup Notes.txt
 * Codenvy Tomcat / MySQL Stack Recipe - Codeenvy Custom Tomcat MySQL Stack Recipe.txt
 * Codenvy PHP Workspace Recipe - Codenvy CloudApp Recipe.txt
 * Codenvy Tomcat / MySQL Workspace Recipe - Codenvy CloudServices Recipe.txt
@@ -239,5 +239,64 @@ Build and deploy your application:
  2. Click the Start Build button. Note, you can monitor your build by clicking on the View Log link. Validate that your build was successful.
  3. Click the Overview main menu item. Note, you can monitor the build and deployment from this
     screen.
+
+----------
+
+Deploy the IoT Services App to Azure
+--------
+Once you have tested your IoT Services app you can then setup Cloud Containers in Azure and then build and deploy your application to Azure. Your IoT Services should FIRST be regression tested using the Postman Test Scripts located in the ***/sdk/developer/testing*** directory in the SDK before building and deploying your application. You may have to customize the hostnames and ports in the Test Scripts from the SDK. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.A future update to these instructions will include building the application from GitHub in Azure.
+
+NOTE: You will need to Create Azure accounts (this is available for free if you are a Grand Canyon University student).
+
+Create Tomcat 8.5 and MySQL Container in Azure:
+ 1. Log into the Azure Portal.
+ 2. Click the '+ Create a resource' icon from the Azure Portal and search for Tomcat.
+ 3. Select the Apache Tomcat 8 Application from Microsoft.
+ 4. Open your application from your Dashboard. This is an important step! This will ensure that phpMyAdmin is accessible via single sign on.
+
+Initialize the MySQL Database:
+ 1. Open your application.
+ 2. Under the Settings section click the MySQL In App icon, make sure your Database is enabled, and click the Manage icon to open phpMyAdmin. Import your Database DDL.
+ 3. Under the Development Tools section click the Console icon.
+ 4. Navigate to the D:\home\data\mysql directory and display the ‘MYSQLCONNSTR_localdb.txt' file using the type command to get your MySQL Connection Properties. Note the DB connection information to get your DB hostname, post, and credentials.
+
+Configure Tomcat Manager:
+ 1. Open your application (by default Tomcat Manager will be invoked for the default URL).
+ 2. Under the Development Tools section click the Advanced Tools icon, select the Go link, and select the Tools->Zip Push Deploy menu. 
+ 3. Navigate into the bin->apache-tomcat-8.x.x->conf directory.
+ 4. Edit the tomcat-users.xml file.
+ 5. Add a Tomcat User under the manager-gui role within the <tomcat-users> tag. Use the following XML tags:
+    <role rolename="manager-gui"/>
+    <user username="tomcat" password="admin" roles="manager-gui"/>
+ 6. Click the Save button.
+
+Build and deploy your application:
+ 1. Open your application.
+ 2. Update your MySQL Database Connection properties in your application (note your hostname will need to be formatted as hostname:port).
+ 3. In Eclipse run a Maven build script or right click on your project and use the Export->WAR file menu options to create a WAR file for your project.
+ 4. Run the Tomcat Web Application Manager application at https://[Azure app name].azurewebsites.net/manager. Log into the Tomcat Web Application Manager using the credentials in the prior step.
+ 5. Under the Deploy section use the ‘WAR file to deploy’ to upload your WAR file created from step 3. After a few minutes your application should be listed in Applications with a Running state.
+
+[Back to Top](#getting-started-building-the-iot-apps)
+
+Deploy the IoT Reporting App to Azure
+--------
+Once you have tested your IoT Reporting app you can then setup Cloud Containers in Azure and then build and deploy your application to Azure. A future update to these instructions will include building the application from GitHub in Azure.
+
+NOTE: You will need to Create Azure accounts (this is available for free if you are a Grand Canyon University student).
+
+Create PHP Container in Azure:
+ 1. Log into the Azure Portal.
+ 2. Click the '+ Create a resource' icon from the Azure Portal and search for PHP.
+ 3. Select the PHP Starter Kit Application.
+ 4. Open your application from your Dashboard.
+
+Build and deploy your application:
+ 1. Note: Make sure you have built your Laravel Project with the right version to match the version of PHP you are using.
+ 2. For the local Laravel codebase make sure to copy the web.config from the public directory to the root of your project.
+ 3. For the local Laravel codebase zip up your PHP project into a file named [appname].zip.
+ 4. Under the Development Tools section click the Advanced Tools icon, select the Go link, and select the Tools->Zip Push Deploy menu.
+ 5. Delete the Azure created default files from the application (if they exist).
+ 6. Drag and drop your zip file onto the page.
 
 [Back to Top](#getting-started-building-the-iot-apps)
