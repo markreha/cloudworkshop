@@ -77,20 +77,26 @@ Other Tools:
 ================================ OPENSHIFT V3 =======================================
 
 Create two OpenShift v3 accounts: use one account for the Java REST API Spring MySQL project and use another account for the PHP Laravel project.
-	Project Type: OPenShift JBoss Tomcat 8 image for the REST API Spring MySQL project
+	Project Type: OPenShift Wildfly image for the REST API Spring MySQL project
 	Project Type: MySQL datastore image for the REST API Spring MySQL project
 	Project Type: PHP 7.0 image for PHP Laravel project
-	NOTE: The Tomcat Container needs to be grouped with the MySQL Container
 	
 Initialize MySQl Database (https://docs.openshift.com/online/dev_guide/migrating_applications/database_applications.html)
-	1) Run to get MySQL Pod Name: ./oc get pods
-	2) Copy IoT.sql from SDK into a directory called db
-	3) Copy SQL script to OpenShift MySQL Pod: ./oc rsync /local/db <mysql_pod_name>:/var/lib/mysql/data
-	4) Remote into MySQL Pod: ./oc rsh <mysql_pod> then run cd /var/lib/mysql/data
-	5) Run SQL Script: mysql -u root then run source all.sql
-	6) Grant privileges to petclinic user: grant all privileges on iot.* to petclinic then run flush privileges
+	1) Log into OpenShift: ./oc [OpenShift Online Web Console URL]
+	2) Get your MySQL Pod Name: ./oc get pods
+	3) Copy the IoT.sql DDL script from SDK into a directory called db under the folder where you run oc
+	4) Copy the SQL DDL script to OpenShift your MySQL Pod: ./oc rsync /local/db <mysql_pod_name>:/var/lib/mysql/data
+	5) Remote into your MySQL Pod: ./oc rsh <mysql_pod>
+	6) Navigate to the MySQL data directory: cd /var/lib/mysql/data
+	7) Run the SQL DDL script on MySQL by executing the following commands: 
+		a) mysql -u root
+		b) source db/IoT.sql
+	7) Grant privileges to your MySQL user by executing the following commands: 
+		a) grant all privileges on iot.* to [your MySQL username]
+		b) flush privileges
+		c) exit
 	
-Issue: Not enough quota during deployment
+Issue: You many not have enough POD quota during build and deployment.
 Resolution: Applications -> Deployments -> select app -> Actions -> Edit and change deployment strategy from Rolling to Recreate.
 
 ================================ AZURE =============================================
