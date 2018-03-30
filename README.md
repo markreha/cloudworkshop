@@ -29,8 +29,8 @@ You should start by first reading the Architecture decks and JavaDoc as well as 
 Development Tools Installation
 --------
 For desktop development you will need to download and install the following tools. If you use the Cloud based Codeenvy IDE than you will not be required to install ANY development tools!
-1. Eclipse Neon for Java EE platform: Download [here](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3) and/or use cloud based the Codenvy IDE.
-2. Eclipse Neon for PHP platform: Download [here](http://www.eclipse.org/downloads/packages/eclipse-php-developers/neon3) and/or use the cloud based Codenvy IDE.
+1. Eclipse Oxygen for Java EE platform: Download [here](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3) and/or use cloud based the Codenvy IDE.
+2. Eclipse Oxygen for PHP platform: Download [here](http://www.eclipse.org/downloads/packages/eclipse-php-developers/neon3) and/or use the cloud based Codenvy IDE.
 3. Tomcat 8.5: Download [here](http://tomcat.apache.org/download-80.cgi) and/or use the cloud based Codenvy IDE.
 4. MAMP: Download [here](https://www.mamp.info/en/downloads/).
 5. SourceTree: Download [here](https://www.sourcetreeapp.com) and/or use the Chrome Browser.
@@ -39,7 +39,7 @@ For desktop development you will need to download and install the following tool
 
 Next Steps
 --------
-After you are become familiar with the architecture, sample applications, and tools you can start building your own IoT applications using the sample Reference applications in the SDK as a guide. As a developer, there are application build instructions for developing in the Cloud based Cloudenvy IDE or desktop Eclipse Neon IDE. All code is maintained in the Github Cloud based source control system and deployed to the Cloud based OpenShift PaaS or Azure PaaS. It should be noted that there is nothing technically preventing you from deploying these application to other Clouds such as Amazon AWS. See the ['README'](sdk/docs/development/README.md) file and 'Cloud Setup Notes text' file located in the [***docs/development***](sdk/docs/development/README.md) folder to get started building your own IoT applications.
+After you are become familiar with the architecture, sample applications, and tools you can start building your own IoT applications using the sample Reference applications in the SDK as a guide. As a developer, there are application build instructions for developing in the Cloud based Cloudenvy IDE or desktop Eclipse Oxygen IDE. All code is maintained in the Github Cloud based source control system and deployed to the Cloud based Redhat OpenShift PaaS or Microsoft Azure PaaS. It should be noted that there is nothing technically preventing you from deploying these application to other Clouds such as Amazon AWS. See the ['README'](sdk/docs/development/README.md) file and 'Cloud Setup Notes text' file located in the [***docs/development***](sdk/docs/development/README.md) folder to get started building your own IoT applications.
 
 ----------
 
