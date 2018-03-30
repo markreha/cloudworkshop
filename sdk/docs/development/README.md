@@ -16,15 +16,11 @@ Step 3: [Setup the IoT Reporting Application Development Environment](#setup-you
 
 Step 4: [Build and configure the IoT Services Application](#build-the-iot-services-app)
 
-Step 5a: [Deploy the IoT Services Application to the OpenShift Cloud](#deploy-the-iot-services-app-to-openshift)
-
-Step 5b: [Deploy the IoT Services Application to the Azure Cloud](#deploy-the-iot-services-app-to-azure)
+Step 5: [Deploy the IoT Services Application to the OpenShift Cloud](#deploy-the-iot-services-app-to-openshift) or [Deploy the IoT Services Application to the Azure Cloud](#deploy-the-iot-services-app-to-azure)
 
 Step 6: [Build and configure the IoT Reporting Application](#build-the-iot-reporting-app)
 
-Step 7a: [Deploy the IoT Reporting Application to the OpenShift Cloud](#deploy-the-iot-reporting-app-to-openshift)
-
-Step 7b: [Deploy the IoT Reporting Application to the Azure Cloud](#deploy-the-iot-reporting-app-to-azure)
+Step 7: [Deploy the IoT Reporting Application to the OpenShift Cloud](#deploy-the-iot-reporting-app-to-openshift) or [Deploy the IoT Reporting Application to the Azure Cloud](#deploy-the-iot-reporting-app-to-azure)
 
 
 ----------
