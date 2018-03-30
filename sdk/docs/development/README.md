@@ -4,6 +4,10 @@ The Cloud Workshop SDK contains all the documentation, tools, and sample templat
 
 ![IoT Logical Architecture](../architecture/images/logical.png)
 
+[Step 1: Get the Code and Docs](#get-the-sDK-and-code)
+[Step 2: Setup Services Development Environment](#setup-your-java-mySQL-development-environment)
+
+
 Get the SDK and Code
 --------------------
 
