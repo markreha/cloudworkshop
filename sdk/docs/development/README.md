@@ -8,7 +8,7 @@ The Cloud Workshop SDK contains all the documentation, tools, and sample templat
 Follow These Easy Steps
 -----------------------
 
-Step 1: [Get the Code and Docs](#get-the-sDK-and-code)
+Step 1: [Get the Code and Read the Documentation](#get-the-sDK-and-code)
 
 Step 2: [Setup IoT Services Application Development Environment](#setup-your-java-mysql-development-environment)
 
@@ -56,7 +56,7 @@ If you plan on using the IoT Reference apps to start your development then pleas
  
 Additional documents located in this directory that you need to review and reference include:
 
-* Codenvy, OpenShift, and Azure Setup Notes - Cloud Setup Notes.txt
+* Codenvy, OpenShift, and Azure Cloud Setup Notes - [Cloud Setup Notes](Cloud%20Setup%20Notes.txt)
 * Codenvy Tomcat / MySQL Stack Recipe - Codeenvy Custom Tomcat MySQL Stack Recipe.txt
 * Codenvy PHP Workspace Recipe - Codenvy CloudApp Recipe.txt
 * Codenvy Tomcat / MySQL Workspace Recipe - Codenvy CloudServices Recipe.txt
