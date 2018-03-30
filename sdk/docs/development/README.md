@@ -28,13 +28,18 @@ If you plan on using the IoT Reference apps to start your development then pleas
  
  There are a number of training screencasts to help you with your development. All of the screencasts are in the SDK and located in the **/sdk/docs/training/screencasts** directory.
  
-Other documents located in this directory that you need to review and reference include:
+Additional documents located in this directory that you need to review and reference include:
 
 * Codenvy, OpenShift, and Azure Setup Notes - Cloud Setup Notes.txt
 * Codenvy Tomcat / MySQL Stack Recipe - Codeenvy Custom Tomcat MySQL Stack Recipe.txt
 * Codenvy PHP Workspace Recipe - Codenvy CloudApp Recipe.txt
 * Codenvy Tomcat / MySQL Workspace Recipe - Codenvy CloudServices Recipe.txt
 * OpenShift Getting Started Guide - OpenShift_Online-3-Getting_Started-en-US.pdf
+
+There are API documentation for each application:
+* [REST API] {https://markreha.github.io/cloudworkshop/sdk/docs/swagger/}
+[javadoc]: https://markreha.github.io/cloudworkshop/sdk/docs/javadoc/
+[phpdoc]: https://markreha.github.io/cloudworkshop/sdk/docs/phpdoc/
 
 You can now use the steps outlined below for setting up your development environment and building the IoT Template applications or building the IoT Reference applications.
 
