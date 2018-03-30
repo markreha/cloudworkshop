@@ -9,7 +9,7 @@ The Cloud Workshop SDK contains all the documentation, tools, and sample templat
 Follow These Easy Steps
 -----------------------
 
-Step 1: [Get the Code and Read the Documentation](#get-the-sDK-and-code)
+Step 1: [Get the SDK and Read the Documentation](#get-the-sDK-and-code)
 
 Step 2: [Setup IoT Services Application Development Environment](#setup-your-java-mysql-development-environment)
 
