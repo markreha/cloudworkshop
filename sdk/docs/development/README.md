@@ -5,11 +5,26 @@ The Cloud Workshop SDK contains all the documentation, tools, and sample templat
 ![IoT Logical Architecture](../architecture/images/logical.png)
 
 
+Follow These Easy Steps
+-----------------------
+
 [Step 1: Get the Code and Docs](#get-the-sDK-and-code)
 
-[Step 2: Setup IoT Services Development Environment](#setup-your-java-mysql-development-environment)
+[Step 2: Setup IoT Services Application Development Environment](#setup-your-java-mysql-development-environment)
 
-[Step 3: Setup IoT Reporting Application Development Environment](#setup-your-php-development-environment)
+[Step 3: Setup the IoT Reporting Application Development Environment](#setup-your-php-development-environment)
+
+[Step 4: Build and configure the IoT Services Application](#build0-the-iot-services-app)
+
+[Step 5: Deploy the IoT Services Application to the Cloud](#deploy-the-iot-services-app-to-openShift)
+
+[Step 6: Build and configure the IoT Reporting Application](#build0-the-iot-reporting-app)
+
+[Step 7: Deploy the IoT Reporting Application to the Cloud](#deploy-the-iot-reporting-app-to-openShift)
+
+
+
+----------
 
 
 Get the SDK and Code
@@ -55,7 +70,7 @@ Setup your Java MySQL Development Environment
 --------------------
 It is recommended to use the Cloud based Codenvy IDE as your development environment. This saves you from all the time and complexity of setting up Eclipse, MySQL, and Tomcat in your local environment. However, if you wish, the Template and Reference apps have been built and validated in both the Codenvy IDE and Eclipse IDE so you are also free to setup a local development environment using Eclipse, MySQL, and Tomcat. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.
 
-Codenvy Setup Instructions:
+To build in Codenvy:
  1. Log onto Codenvy. 
  2. Click on the Stacks menu from the left Main Menu.
  3. Scroll down to the Java-MySQL stack and click the 'Duplicate stack'
@@ -70,20 +85,20 @@ Codenvy Setup Instructions:
  12. Click the Save button.
  13. It is also recommended that you install the Postman Chrome Plugin and MySQL Admin Chrome Plugin.
 
-Eclipse Neon and MySQL Setup Instructions:
+To build in Eclipse and MAMP:
  1. Install Eclipse EE Neon. Start Eclipse and create a new empty Workspace. 
  2. Click on the Servers tab. Click on the 'create new server' link.
  3. Select Tomcat 8.5 under the Apache section. Click the Next button.
  4. Click the Browse button and navigate to the root directory of the Tomcat installation. Click the Next button.
  5. Click the Finish button. The new Tomcat server should be listed in the Servers tab.
  6. Click the Start icon to validate that the Tomcat server starts and runs without errors.
- 7.  Start MySQL Workbench and connect MySQL Workbench to your local MySQL database to ensure that you can connect to the database.
+ 7. Start MySQL Workbench and connect MySQL Workbench to your local MySQL database to ensure that you can connect to the database.
  
 Setup your PHP Development Environment
 --------------------
 It is recommended to use the Cloud based Codenvy IDE as your development environment. This saves you from all the time and complexity of setting up Eclipse and MAMP in your local environment. However, if you wish, the Template and Reference apps have been built and validated in both the Codenvy IDE and Eclipse IDE so you are also free to setup a local development environment using Eclipse, and MAMP. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.
 
-Codenvy Setup Instructions:
+To build in Codenvy:
  1. Log onto Codenvy. 
  2. Click on the Workspaces menu from the left Main Menu.
  3. Click the Add Workspace button.
@@ -92,8 +107,8 @@ Codenvy Setup Instructions:
  6. Select the PHP runtime.
  7. Click the Save button.
 
-Eclipse Neon and MAMP Setup Instructions:
- 1. Install Eclipse PHP Neon. Start Eclipse and create a new empty Workspace. 
+To build in Eclipse and MAMP:
+ 1. Install Eclipse PHP Oxygen. Start Eclipse and create a new empty Workspace. 
  2. Install MAMP.
 
 Build the IoT Services App
@@ -160,7 +175,7 @@ Eclipse Build Instructions:
 
 Build the IoT Reporting App
 --------
-To build in Codenvy:
+Codenvy Build Instructions:
 
  1. Start your 'cloudapp' Workspace. Once the environment is up and running click the 'Import Project...' link in the left project pane. 
  2. Select the GITHUB option under the Source Control section. Enter the URL for your Github 'cloudapp' repository.
@@ -182,7 +197,7 @@ To build in Codenvy:
 
 ----------
 
-To build in Eclipse Neon:
+Eclipse Build Instructions:
 
  1. Open your Eclipse 'cloudapp' Workspace.
  2. Import the 'cloudapp' Template app from the SDK or the 'cloudapp' Reference app from your local GIT repository. Importing the project into Eclipse can be done by selecting the File->Import menu options in Eclipse, under the General section select the 'Existing Projects into Workspace' open, navigate to the root of the SDK to import the Template app or navigate to one folder higher than were the 'cloudapp' repository was cloned to, **make sure you check the 'copy' checkbox when importing**, and click the Finish button.
@@ -192,7 +207,11 @@ To build in Eclipse Neon:
 
 Next Steps
 --------
-After you are able to build the Template applications or the Reference applications you are then ready to start customizing the applications functionality as per your own IoT requirements or per the functionality implemented in the Reference applications. Remember, all code should be maintained in the Github Cloud based source control system because code deployed to the Codenvy Cloud IDE and OpenShift PaaS Cloud both uses Github as the source repository.
+After you are able to build the Template applications or the Reference applications you are then ready to start customizing the applications functionality as per your own IoT requirements or per the functionality implemented in the Reference applications. 
+
+Remember, all code should be maintained in the Github Cloud based source control system because code deployed to the Codenvy Cloud IDE and OpenShift PaaS Cloud both uses Github as the source repository.
+
+You shoudl now be ready to deploy your applications to the Cloud!
 
 [Back to Top](#getting-started-building-the-iot-apps)
 
