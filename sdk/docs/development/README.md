@@ -4,6 +4,7 @@ The Cloud Workshop SDK contains all the documentation, tools, and sample templat
 
 ![IoT Logical Architecture](../architecture/images/logical.png)
 
+----------
 
 Follow These Easy Steps
 -----------------------
