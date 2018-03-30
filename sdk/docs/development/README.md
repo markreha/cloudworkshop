@@ -14,11 +14,11 @@ Follow These Easy Steps
 
 [Step 3: Setup the IoT Reporting Application Development Environment](#setup-your-php-development-environment)
 
-[Step 4: Build and configure the IoT Services Application](#build0-the-iot-services-app)
+[Step 4: Build and configure the IoT Services Application](#build-the-iot-services-app)
 
 [Step 5: Deploy the IoT Services Application to the Cloud](#deploy-the-iot-services-app-to-openShift)
 
-[Step 6: Build and configure the IoT Reporting Application](#build0-the-iot-reporting-app)
+[Step 6: Build and configure the IoT Reporting Application](#build-the-iot-reporting-app)
 
 [Step 7: Deploy the IoT Reporting Application to the Cloud](#deploy-the-iot-reporting-app-to-openShift)
 
