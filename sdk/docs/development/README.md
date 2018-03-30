@@ -8,20 +8,23 @@ The Cloud Workshop SDK contains all the documentation, tools, and sample templat
 Follow These Easy Steps
 -----------------------
 
-[Step 1: Get the Code and Docs](#get-the-sDK-and-code)
+Step 1: [Get the Code and Docs](#get-the-sDK-and-code)
 
-[Step 2: Setup IoT Services Application Development Environment](#setup-your-java-mysql-development-environment)
+Step 2: [Setup IoT Services Application Development Environment](#setup-your-java-mysql-development-environment)
 
-[Step 3: Setup the IoT Reporting Application Development Environment](#setup-your-php-development-environment)
+Step 3: [Setup the IoT Reporting Application Development Environment](#setup-your-php-development-environment)
 
-[Step 4: Build and configure the IoT Services Application](#build-the-iot-services-app)
+Step 4: [Build and configure the IoT Services Application](#build-the-iot-services-app)
 
-[Step 5: Deploy the IoT Services Application to the Cloud](#deploy-the-iot-services-app-to-openshift)
+Step 5a: [Deploy the IoT Services Application to the OpenShift Cloud](#deploy-the-iot-services-app-to-openshift)
+OR
+Step 5b: [Deploy the IoT Services Application to the Azure Cloud](#deploy-the-iot-services-app-to-azure)
 
-[Step 6: Build and configure the IoT Reporting Application](#build-the-iot-reporting-app)
+Step 6: [Build and configure the IoT Reporting Application](#build-the-iot-reporting-app)
 
-[Step 7: Deploy the IoT Reporting Application to the Cloud](#deploy-the-iot-reporting-app-to-openshift)
-
+Step 7a: [Deploy the IoT Reporting Application to the OpenShift Cloud](#deploy-the-iot-reporting-app-to-openshift)
+OR
+Step 7b: [Deploy the IoT Reporting Application to the Azure Cloud](#deploy-the-iot-reporting-app-to-azure)
 
 
 ----------
