@@ -16,11 +16,11 @@ Follow These Easy Steps
 
 [Step 4: Build and configure the IoT Services Application](#build-the-iot-services-app)
 
-[Step 5: Deploy the IoT Services Application to the Cloud](#deploy-the-iot-services-app-to-openShift)
+[Step 5: Deploy the IoT Services Application to the Cloud](#deploy-the-iot-services-app-to-openshift)
 
 [Step 6: Build and configure the IoT Reporting Application](#build-the-iot-reporting-app)
 
-[Step 7: Deploy the IoT Reporting Application to the Cloud](#deploy-the-iot-reporting-app-to-openShift)
+[Step 7: Deploy the IoT Reporting Application to the Cloud](#deploy-the-iot-reporting-app-to-openshift)
 
 
 
