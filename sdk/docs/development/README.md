@@ -18,15 +18,11 @@ Step 4: [Build and configure the IoT Services Application](#build-the-iot-servic
 
 Step 5a: [Deploy the IoT Services Application to the OpenShift Cloud](#deploy-the-iot-services-app-to-openshift)
 
-AND/OR
-
 Step 5b: [Deploy the IoT Services Application to the Azure Cloud](#deploy-the-iot-services-app-to-azure)
 
 Step 6: [Build and configure the IoT Reporting Application](#build-the-iot-reporting-app)
 
 Step 7a: [Deploy the IoT Reporting Application to the OpenShift Cloud](#deploy-the-iot-reporting-app-to-openshift)
-
-AND/OR
 
 Step 7b: [Deploy the IoT Reporting Application to the Azure Cloud](#deploy-the-iot-reporting-app-to-azure)
 
@@ -122,16 +118,21 @@ Build the IoT Services App
 --------
 The following steps can be used to configure and build the IoT Services app. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK for how to setup the database and command tools in Codeny as well as setup PHP auto deployment in your local Eclipse PHP environment.
 
-Codenvy Build Instructions:
+Codenvy Build and Configuration Instructions:
 
  1. Start/open your 'cloudservices' Workspace. 
  2. Once the environment is up and running click the 'Import Project...' link in the left project pane. 
  3. Select the GITHUB option under the Source Control section. Enter the URL for your Github 'cloudservices' repository. Click the Import button.
  4. Select the Java Project Configuration and click the Next button.
  5. Click the Save button.
- 6. Setup your MySQL Database. Select the Workspaces menu from the left Main Menu in Codenvy. Select your Workspace. Under the Workspace Runtime configuration expand the DB Machine,  scroll down to the Servers section, and note the address DB URL in the dbserver-3306-tcp entry. This address (URL hostname and port) will be used in MySQL Workbench OR MySQL Admin Chrome Plugin.  Start  MySQL Workbench or log into MySQL Admin as root user (username of root and password of password) and then run the IoT.sql DDL script located in the ***docs\database*** folder within the SDK. You will also need to set the privileges for the *iot* schema for the pet clinic user (username of petclinic and password of password).
- 7. Setup the Commands below by selecting the Commands tab (far left under the Projects tab in the Project pane). You can create a new Command by clicking the + icon next to the Command Category. These Custom Commands should be added under the Common Commands.
- 8. To build and run the project invoke the following commands from the Custom Commands:
+ 6. Configure the application:
+	 - In the src/config/dev directory update the config.properties file with your proper database credentials
+	 - In the src/config/openshift directory update the config.properties file with your proper database credentials
+	 - In the src/config/azure directory update the config.properties file with your proper database credentials
+	 - Invoke Maven with the 'dev' Profile to build for your development environment
+ 7. Setup your MySQL Database. Select the Workspaces menu from the left Main Menu in Codenvy. Select your Workspace. Under the Workspace Runtime configuration expand the DB Machine,  scroll down to the Servers section, and note the address DB URL in the dbserver-3306-tcp entry. This address (URL hostname and port) will be used in MySQL Workbench OR MySQL Admin Chrome Plugin.  Start  MySQL Workbench or log into MySQL Admin as root user (username of root and password of password) and then run the IoT.sql DDL script located in the ***docs\database*** folder within the SDK. You will also need to set the privileges for the *iot* schema for the pet clinic user (username of petclinic and password of password).
+ 8. Setup the Commands below by selecting the Commands tab (far left under the Projects tab in the Project pane). You can create a new Command by clicking the + icon next to the Command Category. These Custom Commands should be added under the Common Commands.
+ 9. To build and run the project invoke the following commands from the Custom Commands:
 	 - Run 'Start Tomcat' to start the Tomcat Server.
 	 - Run 'Build and Deploy' to do a clean Maven build and deployment to the Tomcat Server.
  
@@ -167,12 +168,17 @@ NOTE: you should create a backup of the Workspace and environment by selecting t
 ----------
 
 
-Eclipse Build Instructions:
+Eclipse Build and Configuration Instructions:
  1. Setup your MySQL Database. Startup MySQL Workbench as root user (username of root and password of root), create a schema named 'iot' (without quotes), and then run the IoT.sql DDL script located in the ***docs\database*** folder within the SDK. You will also need to set the privileges for the *iot* schema for the pet clinic user (username of petclinic and password of password).
  2. Make sure your MySQL database is running.
  3. Open your Eclipse 'cloudservices' Workspace.
  4. Import the 'cloudservices' Template app from the SDK or the 'cloudservices' Reference app from your local GIT repository. Importing the project into Eclipse can be done by selecting the File->Import menu options in Eclipse, under the General section select the 'Existing Projects into Workspace' open, navigate to the root of the SDK to import the Template app or navigate to one folder higher than were the 'cloudservices' repository was cloned to, **make sure you check the 'copy' checkbox when importing**, and click the Finish button.
- 5. To build and run the project invoke the following:
+ 5. Configure the application:
+	 - In the src/config/dev directory update the config.properties file with your proper database credentials
+	 - In the src/config/openshift directory update the config.properties file with your proper database credentials
+	 - In the src/config/azure directory update the config.properties file with your proper database credentials
+	 - Invoke Maven with the 'dev' Profile to build for your development environment
+ 6. To build and run the project invoke the following:
 	 - Build the Project by selecting the Run->Run Configurations, select the Maven Build type, click the New Icon, and then set the name to My Cloudservices Build, set the Goals to clean package, set the Profiles to dev, and click the Run button. This build configuration will now be available when you select the Run Icon from the toolbar.
 	 - Refresh your Eclipse Workspace by right clicking on the project and selecting the Refresh menu option.
 	 - Add the Project to your Tomcat Server. This can be done by right clicking on the Tomcat Server in the Servers tab and adding the 'cloudservices' project to the Configured section. Your should also make sure you use the /cloudservices path for your web module. This can be done by double clicking on the Tomcat Server in the Servers tab, selecting the Modules tab from the Server configuration page, adding or editing the cloudservices Web Module.
@@ -182,17 +188,20 @@ Eclipse Build Instructions:
 
 Build the IoT Reporting App
 --------
-Codenvy Build Instructions:
+Codenvy Build and Configuration Instructions:
 
  1. Start your 'cloudapp' Workspace. Once the environment is up and running click the 'Import Project...' link in the left project pane. 
  2. Select the GITHUB option under the Source Control section. Enter the URL for your Github 'cloudapp' repository.
  3. Click the Import button.
  4. Select the PHP Project Configuration and click the Next button.
  5. Click the Save button.
- 6. In order for Laravel to run properly requires some file level permissions to be setup and the Apache configuration updated to allow HTTP filters to be run. The following needs to be done only once and the first time you run your PHP environment:
- 7. To run the project invoke the following (you must do the one time configuration in next step):
+ 6. Configure the application:
+	 - In the app/http/controllers directory update the WeatherController.php file with your proper IoT Service URL's
+	 - In the root directory of the project update the .env file and set the APP_ENV variable to openshift, azure, or local values
+ 7. In order for Laravel to run properly requires some file level permissions to be setup and the Apache configuration updated to allow HTTP filters to be run. The following needs to be done only once and the first time you run your PHP environment:
+ 8. To run the project invoke the following (you must do the one time configuration in next step):
  	 - Run 'Start Apache' from the Command Tools
- 8. Fix permissions on Codenvy (one time setup issue): 
+ 9. Fix permissions on Codenvy (one time setup issue): 
 	 - Run the following in Codenvy Terminal: sudo find /projects/cloudapp -type d -exec chmod 777 {} \;
 	 - Fix up .htaccess for Laravel project by updating apache2.conf:
 	 -- cd /etc/apache2
@@ -204,21 +213,24 @@ Codenvy Build Instructions:
 
 ----------
 
-Eclipse Build Instructions:
+Eclipse Build and Configuration Instructions:
 
  1. Open your Eclipse 'cloudapp' Workspace.
  2. Import the 'cloudapp' Template app from the SDK or the 'cloudapp' Reference app from your local GIT repository. Importing the project into Eclipse can be done by selecting the File->Import menu options in Eclipse, under the General section select the 'Existing Projects into Workspace' open, navigate to the root of the SDK to import the Template app or navigate to one folder higher than were the 'cloudapp' repository was cloned to, **make sure you check the 'copy' checkbox when importing**, and click the Finish button.
  3. It should be noted that both the Template app and the Reference app have setup an ANT build file to automatically copy files from your Workspace to your MAMP runtime *htdocs* directory (i.e. auto-deployment). For examples, see the 'build.properties and 'build.xml' files from the Template app or the Reference app and the documentation in the ***developer/eclipsePHP*** directory in the SDK.
+ 4. Configure the application:
+	 - In the app/http/controllers directory update the WeatherController.php file with your proper IoT Service URL's
+	 - In the root directory of the project update the .env file and set the APP_ENV variable to openshift, azure, or local values
 
 ----------
 
 Next Steps
 --------
-After you are able to build the Template applications or the Reference applications you are then ready to start customizing the applications functionality as per your own IoT requirements or per the functionality implemented in the Reference applications. 
+After you are able to build and configure the Template applications or the Reference applications you are then ready to start customizing the applications functionality as per your own IoT requirements or per the functionality implemented in the Reference applications. 
 
-Remember, all code should be maintained in the Github Cloud based source control system because code deployed to the Codenvy Cloud IDE and OpenShift PaaS Cloud both uses Github as the source repository.
+Remember, all code should be maintained in the Github Cloud based source control system because code deployed to the Codenvy Cloud IDE and OpenShift PaaS Cloud both uses Github as the source repository. Currently deploying code to the Azure PaaS Cloud is done manually.
 
-You shoudl now be ready to deploy your applications to the Cloud!
+You should now be ready to deploy your applications to the Cloud!
 
 [Back to Top](#getting-started-building-the-iot-apps)
 
