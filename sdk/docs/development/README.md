@@ -22,6 +22,9 @@ Step 6: [Build and configure the IoT Reporting Application](#build-the-iot-repor
 
 Step 7: [Deploy the IoT Reporting Application to the OpenShift Cloud](#deploy-the-iot-reporting-app-to-openshift) or [the Azure Cloud](#deploy-the-iot-reporting-app-to-azure)
 
+After you are able to build and configure the Template applications or the Reference applications you are then ready to start customizing the applications functionality as per your own IoT requirements or per the functionality implemented in the Reference applications. 
+
+Remember, all code should be maintained in the Github Cloud based source control system because code deployed to the Codenvy Cloud IDE and OpenShift PaaS Cloud both uses Github as the source repository. Currently deploying code to the Azure PaaS Cloud is done manually.
 
 ----------
 
@@ -217,16 +220,6 @@ Eclipse Build and Configuration Instructions:
  4. Configure the application:
 	 - In the app/http/controllers directory update the WeatherController.php file with your proper IoT Service URL's
 	 - In the root directory of the project update the .env file and set the APP_ENV variable to openshift, azure, or local values
-
-----------
-
-Next Steps
---------
-After you are able to build and configure the Template applications or the Reference applications you are then ready to start customizing the applications functionality as per your own IoT requirements or per the functionality implemented in the Reference applications. 
-
-Remember, all code should be maintained in the Github Cloud based source control system because code deployed to the Codenvy Cloud IDE and OpenShift PaaS Cloud both uses Github as the source repository. Currently deploying code to the Azure PaaS Cloud is done manually.
-
-You should now be ready to deploy your applications to the Cloud!
 
 [Back to Top](#getting-started-building-the-iot-apps)
 
