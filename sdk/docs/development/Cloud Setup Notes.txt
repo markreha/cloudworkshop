@@ -5,7 +5,8 @@ Create a Codenvy Account and create a PHP Workspace.
 This is checked into GitHub but if you start from SDK Laravel Template then you will need to install:
 	Install Guzzle for a HTTP Client to make REST API calls easy
 		1. See instructions at: http://guzzle.readthedocs.io/en/latest/overview.html
-		2. Update composer.json file in project under requires add "guzzlehttp/guzzle": "~6.0",
+		2. Update composer.json file in project located in the root of the project:
+			- Under the requires section add entry "guzzlehttp/guzzle": "~6.0"
 		3. Run composer to install Guzzle: php ../composer.phar require guzzlehttp/guzzle:~6.0 (assuming composer.phar is one directory up from project)
 
 	Install Lavacharts for Charting made easy
