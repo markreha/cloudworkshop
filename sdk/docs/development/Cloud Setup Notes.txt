@@ -9,7 +9,7 @@ This is checked into GitHub but if you start from SDK Laravel Template then you 
 			- Under the requires section add entry "guzzlehttp/guzzle": "~6.0"
 		3. Update project in Eclipse:
 			- Right click on project in Eclipse and select the Composter->Update Build Path menu options
-			- OR run composer to install Guzzle: php ../composer.phar require guzzlehttp/guzzle:~6.0 (assuming composer.phar is one directory up from project)
+			- Run composer to install Guzzle: php ../composer.phar require guzzlehttp/guzzle:~6.0 (assuming composer.phar is one directory up from project)
 
 	Install Lavacharts for Charting made easy
 		1. See instructions at: http://lavacharts.com
