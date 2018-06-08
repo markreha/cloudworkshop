@@ -1,7 +1,7 @@
 
 **Getting Started with the Cloud Workshop SDK**
 ==================
-The Cloud Workshop SDK contains all the documentation, tools, and sample template applications required to build a simple, scalable, Cloud based suite of IoT applications.
+The Cloud Workshop SDK contains all the documentation, tools, and sample template applications required to build a simple, scalable, suige of Cloud based IoT applications: the [IoT Device Raspberry Pi Sense HAT](https://github.com/markreha/cloudpi/blob/master/README.md) application, the [IoT Services Reference](https://github.com/markreha/cloudservices/blob/master/README.md) application, and the [IoT Reporting Reference](https://github.com/markreha/cloudapp/blob/master/README.md) application.
 
 <p align="center">
 	<img src="sdk/docs/architecture/images/cloud.png" alt="IoT Logical Architecture"/>
