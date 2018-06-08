@@ -9,7 +9,8 @@ The Cloud Workshop SDK contains all the documentation, tools, and sample templat
 
 What's New
 --------
-  - 03-22-2018: Added support for Azure PaaS Cloud.
+- 06-08-2018: Updated Reference Applications to use Plotly and jQuery DataTable.
+- 03-22-2018: Added support for Azure PaaS Cloud.
 - 07-21-2017: Added new screencasts on desktop setup for Eclipse EE and MySQL Workbench . See the  [***screencasts***](sdk/docs/training/screencasts) directory in the SDK.
 
 SDK Contents
