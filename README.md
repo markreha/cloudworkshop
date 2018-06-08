@@ -1,7 +1,7 @@
 
 **Getting Started with the Cloud Workshop SDK**
 ==================
-The Cloud Workshop SDK contains all the documentation, tools, and sample reference applications required to build a simple, scalable, suite of Cloud based IoT applications that includes the [IoT Device Raspberry Pi Sense HAT](https://github.com/markreha/cloudpi/blob/master/README.md) application, the [IoT Services Reference](https://github.com/markreha/cloudservices/blob/master/README.md) application, and the [IoT Reporting Reference](https://github.com/markreha/cloudapp/blob/master/README.md) application. The Cloud Workshop SDK currently supports the Redhat OpenShift PasS Cloud and the Microsoft Azure PaaS Cloud.
+The Cloud Workshop SDK contains all the documentation, tools, and sample reference applications required to build a simple, scalable, suite of Cloud based IoT applications that includes the [IoT Device Raspberry Pi Sense HAT](https://github.com/markreha/cloudpi/blob/master/README.md) application, the [IoT Services Reference](https://github.com/markreha/cloudservices/blob/master/README.md) application, and the [IoT Reporting Reference](https://github.com/markreha/cloudapp/blob/master/README.md) application. The Cloud Workshop SDK currently supports the Redhat OpenShift PasS Cloud and the Microsoft Azure PaaS Cloud (the Amazon AWS PaaS Cloud coming soon!).
 
 <p align="center">
 	<img src="sdk/docs/architecture/images/cloud.png" alt="IoT Logical Architecture"/>
