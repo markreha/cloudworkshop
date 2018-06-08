@@ -9,14 +9,14 @@ The Cloud Workshop SDK contains all the documentation, tools, and example refere
 
 What's New
 --------
-- 06-08-2018: Updated Reporting Reference Application to use Plotly and the jQuery Data Table.
+- 06-08-2018: Updated Reporting Reference Application to integrate Plotly Charts and the jQuery Data Table.
 - 03-22-2018: Added support for Azure PaaS Cloud.
 - 07-21-2017: Added new screencasts on desktop setup for Eclipse EE and MySQL Workbench . See the  [***screencasts***](sdk/docs/training/screencasts) directory in the SDK.
 
 Comming Soon
 --------
 - Support for Amazon AWS PaaS Cloud.
-- Support for Amazon Cloud 9 IDE and Cloud Code Services.
+- Support for Amazon Cloud9 IDE and Cloud Code Services.
 
 SDK Contents
 --------
