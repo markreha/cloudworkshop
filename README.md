@@ -1,7 +1,7 @@
 
 **Getting Started with the Cloud Workshop SDK**
 ==================
-The Cloud Workshop SDK contains all the documentation, tools, and example reference applications required to build a simple, scalable, suite of Cloud based IoT applications that includes an [IoT Device Raspberry Pi Sense HAT](https://github.com/markreha/cloudpi/blob/master/README.md) application, [IoT Services Reference](https://github.com/markreha/cloudservices/blob/master/README.md) application, and a [IoT Reporting Reference](https://github.com/markreha/cloudapp/blob/master/README.md) application. The Cloud Workshop SDK currently supports the Redhat OpenShift PasS Cloud and the Microsoft Azure PaaS Cloud with support for the Amazon AWS PaaS Cloud coming soon!
+The Cloud Workshop SDK contains all the documentation, tools, and example reference applications required to build a simple, scalable, suite of Cloud based IoT applications that includes an [IoT Device Raspberry Pi Sense HAT](https://github.com/markreha/cloudpi/blob/master/README.md) application, [IoT Services Reference](https://github.com/markreha/cloudservices/blob/master/README.md) application, and a [IoT Reporting Reference](https://github.com/markreha/cloudapp/blob/master/README.md) application. The Cloud Workshop SDK currently supports the Redhat OpenShift PasS Cloud and the Microsoft Azure PaaS Cloud.
 
 <p align="center">
 	<img src="sdk/docs/architecture/images/cloud.png" alt="IoT Logical Architecture"/>
@@ -12,6 +12,11 @@ What's New
 - 06-08-2018: Updated Reporting Reference Application to use Plotly and the jQuery Data Table.
 - 03-22-2018: Added support for Azure PaaS Cloud.
 - 07-21-2017: Added new screencasts on desktop setup for Eclipse EE and MySQL Workbench . See the  [***screencasts***](sdk/docs/training/screencasts) directory in the SDK.
+
+Comming Soon
+--------
+- Support for Amazon AWS PaaS Cloud.
+- Support for Amazon Cloud 9 IDE and Cloud Code Services.
 
 SDK Contents
 --------
