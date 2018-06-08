@@ -27,7 +27,7 @@ This SDK is organized into a number of folders. It should be noted that all dire
 
 Getting Started
 --------
-You should start by first reading the Architecture decks and JavaDoc as well as the PhpDoc all located in the [***docs***](sdk/docs/development/README.md) directory in the SDK. You should also make sure you are comfortable with the following technologies, frameworks, and tools. There are many [tutorials](#tutorials) available to help you come up to speed. If you are doing development using desktop tools you will also need to [install](#development-tools-installation) all the development tools.
+You should start by first reading the Architecture decks, JavaDoc, and the PhpDoc, which are all located in the [***docs***](sdk/docs/development/README.md) directory in the SDK. You should also make sure you are comfortable with the following technologies, frameworks, and tools. There are many [tutorials](#tutorials) available to help you come up to speed. If you are doing development using desktop tools you will also need to [install](#development-tools-installation) all the development tools.
 1)  Java, Spring Framework (Core, Security, JDBC), Maven, and JAX-RS. These technologies and frameworks will be used to build the IoT Services application.
 2) Laravel PHP, LavaCharts, Plotly, jQuery Data Table, and Guzzle. These technologies and frameworks will be used to build the IoT Reporting application.
 3) Github, SourceTree, MAMP, Eclipse Neon, MySQL Workbench, Apache Tomcat 8.5, and PostMan. These tools will be used to support building all of the IoT applications.
