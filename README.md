@@ -15,7 +15,7 @@ What's New
 
 Comming Soon
 --------
-- Support for Amazon AWS PaaS Cloud.
+- Support for Amazon AWS PaaS Cloud. <span style="color:blue">some *blue* text</span>
 - Support for Amazon Cloud9 IDE and Cloud Code Services.
 
 SDK Contents
