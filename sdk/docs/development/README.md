@@ -445,6 +445,7 @@ If you need to configure your own application the following steps need to be com
 * To Update your APP_KEY in the app.yaml run: php artisan key:generate --show
 * NOTE: Apache Web Server is not used in Google App Engine so the public rewrite rule is invalid, you must set your document_root to public and copy all JS, CSS, and IMG from /resources/assets to /public/resources/assets. 			
 2. Update composer.son require section (PHP v7.2 does not work at this point) and some post install commands to be ran:
+```xml
         "php": "7.1.*",
 		"post-install-cmd": [
 			"Illuminate\\Foundation\\ComposerScripts::postInstall",
@@ -456,6 +457,7 @@ If you need to configure your own application the following steps need to be com
 			"mkdir -p storage/logs",
 			"php artisan cache:clear"
 	],			
+```
 3. Update Service Endpoint URL:
  	Update APP_ENV in .env to google 
 	
