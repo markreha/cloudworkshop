@@ -401,6 +401,7 @@ If you need to configure your own application the following steps need to be com
 		<artifactId>google-api-client-appengine</artifactId>
 		<version>1.21.0</version>
 	</dependency>
+ ```
  2. Add appengine.xml to WEB-INF. See example the Cloud Workshop SDK. 
  3. Update appengine-web.xml to set path for log file to /tmp/cloudservices/logs/iotWeatherApp.log. See example the Cloud Workshop SDK. 
  4. Update config.properties to setup db.connection property for Google MySQL database. See example the Cloud Workshop SDK.
@@ -460,4 +461,5 @@ If you need to configure your own application the following steps need to be com
 	
 See https://cloud.google.com/community/tutorials/run-laravel-on-appengine-flexible
 
+[Back to Top](#getting-started-building-the-iot-apps)
 
