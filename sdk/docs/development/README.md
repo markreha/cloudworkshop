@@ -381,30 +381,28 @@ If you need to configure your own application the following steps need to be com
  1. Update POM file:
  ```xml
 	<plugin>
-	   <groupId>com.google.cloud.tools</groupId>
-	   <artifactId>appengine-maven-plugin</artifactId>
-	   <version>1.3.1</version>
+		<groupId>com.google.cloud.tools</groupId>
+		<artifactId>appengine-maven-plugin</artifactId>
+		<version>1.3.1</version>
 	</plugin>
 	
 	<dependency>
-  		<groupId>com.google.cloud.sql</groupId>
-  		<artifactId>mysql-socket-factory</artifactId>
-  		<version>1.0.5</version>
+		<groupId>com.google.cloud.sql</groupId>
+		<artifactId>mysql-socket-factory</artifactId>
+		<version>1.0.5</version>
 	</dependency>
 	<dependency>
-  		<groupId>com.google.api-client</groupId>
+		<groupId>com.google.api-client</groupId>
 		<artifactId>google-api-client</artifactId>
 		<version>1.21.0</version>
 	</dependency>
 	<dependency>
-  		<groupId>com.google.api-client</groupId>
-  		<artifactId>google-api-client-appengine</artifactId>
-  		<version>1.21.0</version>
+		<groupId>com.google.api-client</groupId>
+		<artifactId>google-api-client-appengine</artifactId>
+		<version>1.21.0</version>
 	</dependency>
- 2. Add appengine.xml to WEB-INF. See example the Cloud Workshop SDK.
- 
- 3. Update appengine-web.xml to set path for log file to /tmp/cloudservices/logs/iotWeatherApp.log. See example the Cloud Workshop SDK.
- 
+ 2. Add appengine.xml to WEB-INF. See example the Cloud Workshop SDK. 
+ 3. Update appengine-web.xml to set path for log file to /tmp/cloudservices/logs/iotWeatherApp.log. See example the Cloud Workshop SDK. 
  4. Update config.properties to setup db.connection property for Google MySQL database. See example the Cloud Workshop SDK.
 
 See https://cloud.google.com/appengine/docs/flexible/java/dev-jetty9
