@@ -430,7 +430,6 @@ Create PHP Container and deploy your application in the Google App Engine (GAE):
 
 1. Create an App Engine application of type PHP.
 2. Build and deploy (from Google Cloud Shell):
-
 * git clone [URL to Cloud App Repo]
 * cd to cloudapp
 * Update .env to set APP_ENV to google
@@ -445,7 +444,6 @@ If you need to configure your own application the following steps need to be com
 * To Update your APP_KEY in the app.yaml run: php artisan key:generate --show
 * NOTE: Apache Web Server is not used in Google App Engine so the public rewrite rule is invalid, you must set your document_root to public and copy all JS, CSS, and IMG from /resources/assets to /public/resources/assets. 			
 2. Update composer.son require section (PHP v7.2 does not work at this point) and some post install commands to be ran:
-```xml
         "php": "7.1.*",
 		"post-install-cmd": [
 			"Illuminate\\Foundation\\ComposerScripts::postInstall",
