@@ -364,7 +364,9 @@ NOTE: You will need to create a Google Cloud Platform account (this requires a c
 
 Create Java (Jetty) Container and deploy your application in the Google App Engine (GAE):
  1: Create an App Engine application of type Java.
+ 
  2: Build and deploy (from Google Cloud Shell):
+ 
 	a. git clone [URL to Cloud Services Repo]
 	b. cd to cloudservices
 	c. Test locally in Shell: mvn -Pgoogle clean appengine:run
@@ -377,6 +379,7 @@ Create Java (Jetty) Container and deploy your application in the Google App Engi
 
 If you need to configure your own application the following steps need to be completed:
  1: Update POM file:
+ 
 	<plugin>
 	   <groupId>com.google.cloud.tools</groupId>
 	   <artifactId>appengine-maven-plugin</artifactId>
@@ -399,7 +402,9 @@ If you need to configure your own application the following steps need to be com
   		<version>1.21.0</version>
 	</dependency>
  2: Add appengine.xml to WEB-INF. See example the Cloud Workshop SDK.
+ 
  3: Update appengine-web.xml to set path for log file to /tmp/cloudservices/logs/iotWeatherApp.log. See example the Cloud Workshop SDK.
+ 
  4: Update config.properties to setup db.connection property for Google MySQL database. See example the Cloud Workshop SDK.
 
 See https://cloud.google.com/appengine/docs/flexible/java/dev-jetty9
