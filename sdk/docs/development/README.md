@@ -365,9 +365,7 @@ NOTE: You will need to create a Google Cloud Platform account (this requires a c
 Create Java (Jetty) Container and deploy your application in the Google App Engine (GAE):
 
  1. Create an App Engine application of type Java.
- 
- 2. Build and deploy (from Google Cloud Shell):
- 
+ 2. Build and deploy (from Google Cloud Shell): 
 	a. git clone [URL to Cloud Services Repo]
 	b. cd to cloudservices
 	c. Test locally in Shell: mvn -Pgoogle clean appengine:run
