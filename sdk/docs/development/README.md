@@ -366,14 +366,14 @@ Create Java (Jetty) Container and deploy your application in the Google App Engi
 
  1. Create an App Engine application of type Java.
  2. Build and deploy (from Google Cloud Shell): 
-	a. git clone [URL to Cloud Services Repo]
-	b. cd to cloudservices
-	c. Test locally in Shell: mvn -Pgoogle clean appengine:run
+* a. git clone [URL to Cloud Services Repo]
+* b. cd to cloudservices
+* c. Test locally in Shell: mvn -Pgoogle clean appengine:run
 		i. NOTE: comment out the google-api-client and google-api-client-appengine as dependencies in your maven file
 		ii. TEST: click on the Web Preview icon in the Shell and go to https://[project name].appspot.com/rest/weather/get/0/1
-	d. In the Google Cloud Dashboard go to APIs & Services and make sure Google Cloud SQL is enabled
-	e. Deploy: mvn -Pgoogle clean appengine:deploy
-	f. Test at https://[project name].appspot.com/rest/weather/get/0/1
+* d. In the Google Cloud Dashboard go to APIs & Services and make sure Google Cloud SQL is enabled
+* e. Deploy: mvn -Pgoogle clean appengine:deploy
+* f. Test at https://[project name].appspot.com/rest/weather/get/0/1
 		i. To view logs go to App Engine Versions and select Logs from the Tools dropdown
 
 If you need to configure your own application the following steps need to be completed:
