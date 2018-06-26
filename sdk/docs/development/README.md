@@ -365,8 +365,8 @@ NOTE: You will need to create a Google Cloud Platform account (this requires a c
 Create Java (Jetty) Container and deploy your application in the Google App Engine (GAE):
 1: Create an App Engine application of type Java.
 2: Build and deploy (from Google Cloud Shell):
- 	a. git clone [URL to Cloud Services Repo]
- 	b. cd to cloudservices
+	a. git clone [URL to Cloud Services Repo]
+	b. cd to cloudservices
 	c. Test locally in Shell: mvn -Pgoogle clean appengine:run
 		i. NOTE: comment out the google-api-client and google-api-client-appengine as dependencies in your maven file
 		ii. TEST: click on the Web Preview icon in the Shell and go to https://[project name].appspot.com/rest/weather/get/0/1
@@ -376,7 +376,7 @@ Create Java (Jetty) Container and deploy your application in the Google App Engi
 		i. To view logs go to App Engine Versions and select Logs from the Tools dropdown
 
 If you need to configure your own application the following steps need to be completed:
-Step 1: Update POM file:
+1: Update POM file:
 	<plugin>
 	   <groupId>com.google.cloud.tools</groupId>
 	   <artifactId>appengine-maven-plugin</artifactId>
@@ -398,12 +398,11 @@ Step 1: Update POM file:
   		<artifactId>google-api-client-appengine</artifactId>
   		<version>1.21.0</version>
 	</dependency>
-Step 2: Add appengine.xml to WEB-INF. See example the Cloud Workshop SDK.
-Step 3: Update appengine-web.xml to set path for log file to /tmp/cloudservices/logs/iotWeatherApp.log. See example the Cloud Workshop SDK.
-Step 4: Update config.properties to setup db.connection property for Google MySQL database. See example the Cloud Workshop SDK.
+2: Add appengine.xml to WEB-INF. See example the Cloud Workshop SDK.
+3: Update appengine-web.xml to set path for log file to /tmp/cloudservices/logs/iotWeatherApp.log. See example the Cloud Workshop SDK.
+4: Update config.properties to setup db.connection property for Google MySQL database. See example the Cloud Workshop SDK.
 
 See https://cloud.google.com/appengine/docs/flexible/java/dev-jetty9
-
 
 Create the MySQL Database Container and initialzie the schema in the Google Cloud Platform:
 1: Create a SQL MySQL instance (of type Second Generation).
