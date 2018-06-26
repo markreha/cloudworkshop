@@ -363,6 +363,7 @@ Once you have tested your IoT Services app you can then setup Cloud Containers i
 NOTE: You will need to create a Google Cloud Platform account (this requires a credit card and is free for 12 months).
 
 Create Java (Jetty) Container and deploy your application in the Google App Engine (GAE):
+
  1: Create an App Engine application of type Java.
  
  2: Build and deploy (from Google Cloud Shell):
@@ -378,6 +379,7 @@ Create Java (Jetty) Container and deploy your application in the Google App Engi
 		i. To view logs go to App Engine Versions and select Logs from the Tools dropdown
 
 If you need to configure your own application the following steps need to be completed:
+
  1: Update POM file:
  
 	<plugin>
@@ -409,15 +411,24 @@ If you need to configure your own application the following steps need to be com
 
 See https://cloud.google.com/appengine/docs/flexible/java/dev-jetty9
 
-Create the MySQL Database Container and initialzie the schema in the Google Cloud Platform:
-1: Create a SQL MySQL instance (of type Second Generation).
-2: Go to a browser and search for My IP. Note your IP Address.
-3: Open the instance of the new database.
-4. Under Users create a new user test/test that is available for all hosts. Click the Create button.
-5. Under Authorization click Add Network, name of DevAccess, network of your IP Address, click Done and Save buttons.
-6: Under IP Address request an IPv4 address.
-7. Setup a MySQL Workbench connection using the databases IP address and user.
-8: Connect to the database in MySQL Workbench and run the IoT.sql DDL script.
+Create the MySQL Database Container and initialzie the schema in the Google Cloud Platform.
+
+ 1: Create a SQL MySQL instance (of type Second Generation).
+
+ 2: Go to a browser and search for My IP. Note your IP Address.
+ 
+ 3: Open the instance of the new database.
+ 
+ 4. Under Users create a new user test/test that is available for all hosts. Click the Create button.
+ 
+ 5. Under Authorization click Add Network, name of DevAccess, network of your IP Address, click Done and Save buttons.
+ 
+ 6: Under IP Address request an IPv4 address.
+ 
+ 7. Setup a MySQL Workbench connection using the databases IP address and user.
+ 
+ 8: Connect to the database in MySQL Workbench and run the IoT.sql DDL script.
+ 
 
 [Back to Top](#getting-started-building-the-iot-apps)
 
@@ -428,8 +439,11 @@ Once you have tested your IoT Reporting app you can then setup a Cloud Container
 NOTE: You will need to create a Google Cloud Platform account (this requires a credit card and is free for 12 months).
 
 Create PHP Container and deploy your application in the Google App Engine (GAE):
+
 1: Create an App Engine application of type PHP.
+
 2: Build and deploy (from Google Cloud Shell):
+
  	a. git clone [URL to Cloud App Repo]
  	b. cd to cloudapp
  	c. Update .env to set APP_ENV to google
@@ -438,11 +452,13 @@ Create PHP Container and deploy your application in the Google App Engine (GAE):
  	f. Test at https://[project name].appspot.com/weather
 
 If you need to configure your own application the following steps need to be completed:
+
 1: Add app.yaml for PHP app into the root directory of the application. See example the Cloud Workshop SDK.
 		To Update your APP_KEY in the app.yaml run: php artisan key:generate --show
 		NOTE: Apache Web Server is not used in Google App Engine so the public rewrite rule is invalid, 
 			you must set your document_root to public and copy all JS, CSS, and IMG from /resources/assets 
 			to /public/resources/assets. 
+			
 2: Update composer.son require section (PHP v7.2 does not work at this point) and some post install commands to be ran:
         "php": "7.1.*",
 		"post-install-cmd": [
@@ -457,7 +473,8 @@ If you need to configure your own application the following steps need to be com
 	],
 			
 3: Update Service Endpoint URL:
- 	Update APP_ENV in .env to google 	
+ 	Update APP_ENV in .env to google 
+	
 See https://cloud.google.com/community/tutorials/run-laravel-on-appengine-flexible
 
 [Back to Top](#getting-started-building-the-iot-apps)
