@@ -88,15 +88,29 @@ To build in Codenvy:
  12. Click the Save button.
  13. It is also recommended that you install the Postman Chrome Plugin and MySQL Admin Chrome Plugin.
 
-To build in Eclipse and MAMP:
- 1. Install Eclipse EE Neon. Start Eclipse and create a new empty Workspace. 
+To build in Eclipse, Tomcat, and MAMP:
+ 1. Install Eclipse EE. Start Eclipse and create a new empty Workspace. 
  2. Click on the Servers tab. Click on the 'create new server' link.
- 3. Select Tomcat 8.5 under the Apache section. Click the Next button.
+ 3. Select Tomcat 8.5 under the Apache section. Click the Next button. 
  4. Click the Browse button and navigate to the root directory of the Tomcat installation. Click the Next button.
  5. Click the Finish button. The new Tomcat server should be listed in the Servers tab.
  6. Click the Start icon to validate that the Tomcat server starts and runs without errors.
  7. Start MySQL Workbench and connect MySQL Workbench to your local MySQL database to ensure that you can connect to the database.
- 
+
+To build in Eclipse, Jetty, and MAMP:
+ 1. Install Eclipse EE. Start Eclipse and create a new empty Workspace. 
+ 2. Go to Eclipse Marketplace, search for Jetty, and install the Eclipse Jetty plugin.
+ 3. Setup Run Configuration in Eclipse:
+* Set Project to local Eclipse Project
+* Scan for WebApp Folder, select WebContent option
+* Set context to /cloudservices
+* Under Options select the option to use the external Jetty runtime
+* Under Environment set a variable JVM variable -Djetty.come=[path to your Jetty install]
+* Under Dependencies uncheck all the Tomcat librarires
+* Under Classpath add a Classpath entry to config/dev directory to pick up config.properties, web.xml, and log4j.xml configuration files
+* Click the Run menu to run Jetty
+4. Start MySQL Workbench and connect MySQL Workbench to your local MySQL database to ensure that you can connect to the database.
+
 Setup your PHP Development Environment
 --------------------
 It is recommended to use the Cloud based Codenvy IDE as your development environment. This saves you from all the time and complexity of setting up Eclipse and MAMP in your local environment. However, if you wish, the Template and Reference apps have been built and validated in both the Codenvy IDE and Eclipse IDE so you are also free to setup a local development environment using Eclipse, and MAMP. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.
@@ -287,7 +301,7 @@ Deploy the IoT Services App to Azure
 --------
 Once you have tested your IoT Services app you can then setup Cloud Containers in Azure and then build and deploy your application to Azure. Your IoT Services should FIRST be regression tested using the Postman Test Scripts located in the ***/sdk/developer/testing*** directory in the SDK before building and deploying your application. You may have to customize the hostnames and ports in the Test Scripts from the SDK. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.A future update to these instructions will include building the application from GitHub in Azure.
 
-NOTE: You will need to Create Azure accounts (this is available for free if you are a Grand Canyon University student).
+NOTE: You will need to a create an Azure account (this is available for free if you are a Grand Canyon University student).
 
 Create Tomcat 8.5 and MySQL Container in Azure:
  1. Log into the Azure Portal.
@@ -322,9 +336,9 @@ Build and deploy your application:
 
 Deploy the IoT Reporting App to Azure
 --------
-Once you have tested your IoT Reporting app you can then setup Cloud Containers in Azure and then build and deploy your application to Azure. A future update to these instructions will include building the application from GitHub in Azure.
+Once you have tested your IoT Reporting app you can then setup a Cloud Container in Azure and then build and deploy your application to Azure. A future update to these instructions will include building the application from GitHub in Azure.
 
-NOTE: You will need to Create Azure accounts (this is available for free if you are a Grand Canyon University student).
+NOTE: You will need to create an Azure accounts (this is available for free if you are a Grand Canyon University student).
 
 Create PHP Container in Azure:
  1. Log into the Azure Portal.
@@ -339,5 +353,107 @@ Build and deploy your application:
  4. Under the Development Tools section click the Advanced Tools icon, select the Go link, and select the Tools->Zip Push Deploy menu.
  5. Delete the Azure created default files from the application (if they exist).
  6. Drag and drop your zip file onto the page.
+
+----------
+
+Deploy the IoT Services App to Google Cloud Platform
+--------
+Once you have tested your IoT Services app you can then setup Cloud Containers in Google and then build and deploy your application to the Google Cloud Platform. Your IoT Services should FIRST be regression tested using the Postman Test Scripts located in the ***/sdk/developer/testing*** directory in the SDK before building and deploying your application. You may have to customize the hostnames and ports in the Test Scripts from the SDK. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.
+
+NOTE: You will need to create a Google Cloud Platform account (this requires a credit card and is free for 12 months).
+
+Create Java (Jetty) Container and deploy your application in the Google App Engine (GAE):
+1: Create an App Engine application of type Java.
+2: Build and deploy (from Google Cloud Shell):
+ 	a. git clone [URL to Cloud Services Repo]
+ 	b. cd to cloudservices
+	c. Test locally in Shell: mvn -Pgoogle clean appengine:run
+		i. NOTE: comment out the google-api-client and google-api-client-appengine as dependencies in your maven file
+		ii. TEST: click on the Web Preview icon in the Shell and go to https://[project name].appspot.com/rest/weather/get/0/1
+	d. In the Google Cloud Dashboard go to APIs & Services and make sure Google Cloud SQL is enabled
+	e. Deploy: mvn -Pgoogle clean appengine:deploy
+	f. Test at https://[project name].appspot.com/rest/weather/get/0/1
+		i. To view logs go to App Engine Versions and select Logs from the Tools dropdown
+
+If you need to configure your own application the following steps need to be completed:
+Step 1: Update POM file:
+	<plugin>
+	   <groupId>com.google.cloud.tools</groupId>
+	   <artifactId>appengine-maven-plugin</artifactId>
+	   <version>1.3.1</version>
+	</plugin>
+	
+	<dependency>
+  		<groupId>com.google.cloud.sql</groupId>
+  		<artifactId>mysql-socket-factory</artifactId>
+  		<version>1.0.5</version>
+	</dependency>
+	<dependency>
+  		<groupId>com.google.api-client</groupId>
+		<artifactId>google-api-client</artifactId>
+		<version>1.21.0</version>
+	</dependency>
+	<dependency>
+  		<groupId>com.google.api-client</groupId>
+  		<artifactId>google-api-client-appengine</artifactId>
+  		<version>1.21.0</version>
+	</dependency>
+Step 2: Add appengine.xml to WEB-INF. See example the Cloud Workshop SDK.
+Step 3: Update appengine-web.xml to set path for log file to /tmp/cloudservices/logs/iotWeatherApp.log. See example the Cloud Workshop SDK.
+Step 4: Update config.properties to setup db.connection property for Google MySQL database. See example the Cloud Workshop SDK.
+
+See https://cloud.google.com/appengine/docs/flexible/java/dev-jetty9
+
+
+Create the MySQL Database Container and initialzie the schema in the Google Cloud Platform:
+1: Create a SQL MySQL instance (of type Second Generation).
+2: Go to a browser and search for My IP. Note your IP Address.
+3: Open the instance of the new database.
+4. Under Users create a new user test/test that is available for all hosts. Click the Create button.
+5. Under Authorization click Add Network, name of DevAccess, network of your IP Address, click Done and Save buttons.
+6: Under IP Address request an IPv4 address.
+7. Setup a MySQL Workbench connection using the databases IP address and user.
+8: Connect to the database in MySQL Workbench and run the IoT.sql DDL script.
+
+[Back to Top](#getting-started-building-the-iot-apps)
+
+Deploy the IoT Reporting App to Google Cloud Platform
+--------
+Once you have tested your IoT Reporting app you can then setup a Cloud Container in Google and then build and deploy your application to Google.
+
+NOTE: You will need to create a Google Cloud Platform account (this requires a credit card and is free for 12 months).
+
+Create PHP Container and deploy your application in the Google App Engine (GAE):
+1: Create an App Engine application of type PHP.
+2: Build and deploy (from Google Cloud Shell):
+ 	a. git clone [URL to Cloud App Repo]
+ 	b. cd to cloudapp
+ 	c. Update .env to set APP_ENV to google
+ 	d. Test locally in Shell: php -S 0.0.0.0:8080 -t ./
+ 	e. Deploy: gcloud app deploy --project cloud-workshop-207715
+ 	f. Test at https://[project name].appspot.com/weather
+
+If you need to configure your own application the following steps need to be completed:
+1: Add app.yaml for PHP app into the root directory of the application. See example the Cloud Workshop SDK.
+		To Update your APP_KEY in the app.yaml run: php artisan key:generate --show
+		NOTE: Apache Web Server is not used in Google App Engine so the public rewrite rule is invalid, 
+			you must set your document_root to public and copy all JS, CSS, and IMG from /resources/assets 
+			to /public/resources/assets. 
+2: Update composer.son require section (PHP v7.2 does not work at this point) and some post install commands to be ran:
+        "php": "7.1.*",
+		"post-install-cmd": [
+			"Illuminate\\Foundation\\ComposerScripts::postInstall",
+			"chmod -R 755 app bootstrap storage",
+			"mkdir -p storage/app",
+			"mkdir -p storage/framework/cache",
+			"mkdir -p storage/framework/sessions",
+			"mkdir -p storage/framework/views",
+			"mkdir -p storage/logs",
+			"php artisan cache:clear"
+	],
+			
+3: Update Service Endpoint URL:
+ 	Update APP_ENV in .env to google 	
+See https://cloud.google.com/community/tutorials/run-laravel-on-appengine-flexible
 
 [Back to Top](#getting-started-building-the-iot-apps)
