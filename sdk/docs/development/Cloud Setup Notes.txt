@@ -80,7 +80,7 @@ Other Tools:
 ================================ OPENSHIFT V3 =======================================
 
 Create two OpenShift v3 accounts: use one account for the Java REST API Spring MySQL project and use another account for the PHP Laravel project.
-	Project Type: OPenShift Wildfly image for the REST API Spring MySQL project
+	Project Type: OpenShift Wildfly image for the REST API Spring MySQL project
 	Project Type: MySQL datastore image for the REST API Spring MySQL project
 	Project Type: PHP 7.0 image for PHP Laravel project
 	
@@ -102,16 +102,31 @@ Initialize MySQl Database (https://docs.openshift.com/online/dev_guide/migrating
 Issue: You many not have enough POD quota during build and deployment.
 Resolution: Applications -> Deployments -> select app -> Actions -> Edit and change deployment strategy from Rolling to Recreate.
 
+Create two OpenShift v3 accounts: use one account for the Java REST API Spring MySQL project and use another account for the PHP Laravel project.
+
 ================================ AZURE =============================================
 
 Create an Azure account. If you are a Grand Canyon University student this is free via your Microsoft Imagine account. You will need to create the following containers in Azure:
 	1. Log into the Azure Portal.
 	1. Click the '+ Create a resource' icon from the Azure Portal and search for PHP.
 	2. Select the PHP Starter Kit Application to create a PHP container.
+		- See the Getting Started Building the IoT Apps on Github for details on how to build and deploy the Reporting Application.
 	3. Click the '+ Create a resource' icon from the Azure Portal and search for Tomcat.
 	4. Select the Apache Tomcat 8 Application from Microsoft to create a Tomcat / MySQL Container.
+		- See the Getting Started Building the IoT Apps on Github for details on how to build and deploy the Services Application.
+
+================================ GOOGLE =============================================
+
+Create a Google Cloud Platform account. This requires a credit card but is absolutely free for 12 months. 
+You will need to create the following containers in the Google Cloud Platform:
+	1. Log into the Google Cloud Platform.
+	2. Create a Project for the PHP Reporting Application.
+	3. Click the App Engine menu. Create an App Engine application of type PHP.
+		- See the Getting Started Building the IoT Apps on Github for details on how to build and deploy the Reporting Application.
+	4. Create another Project for the Java Services Application and MySQL Database.
+	5. Click the SQL menu. Create a SQL MySQL instance (of type Second Generation).
+		- See the Getting Started Building the IoT Apps on Github for details on how to setup the schema for the MySQL Database.
+	6. Click the App Engine menu. Create an App Engine application of type Java.
+		- See the Getting Started Building the IoT Apps on Github for details on how to build and deploy the Services Application.
 
 
-
-
-Create two OpenShift v3 accounts: use one account for the Java REST API Spring MySQL project and use another account for the PHP Laravel project.
