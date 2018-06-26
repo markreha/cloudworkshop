@@ -333,6 +333,7 @@ Build and deploy your application:
  5. Under the Deploy section use the ‘WAR file to deploy’ to upload your WAR file created from step 3. After a few minutes your application should be listed in Applications with a Running state.
 
 [Back to Top](#getting-started-building-the-iot-apps)
+----------
 
 Deploy the IoT Reporting App to Azure
 --------
@@ -354,6 +355,7 @@ Build and deploy your application:
  5. Delete the Azure created default files from the application (if they exist).
  6. Drag and drop your zip file onto the page.
 
+[Back to Top](#getting-started-building-the-iot-apps)
 ----------
 
 Deploy the IoT Services App to Google Cloud Platform
@@ -462,4 +464,6 @@ See https://cloud.google.com/community/tutorials/run-laravel-on-appengine-flexib
 
 
 
+----------
 [Back to Top](#getting-started-building-the-iot-apps)
+
