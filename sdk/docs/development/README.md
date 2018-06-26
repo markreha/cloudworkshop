@@ -379,7 +379,7 @@ Create Java (Jetty) Container and deploy your application in the Google App Engi
 If you need to configure your own application the following steps need to be completed:
 
  1. Update POM file:
- 
+ ```xml
 	<plugin>
 	   <groupId>com.google.cloud.tools</groupId>
 	   <artifactId>appengine-maven-plugin</artifactId>
