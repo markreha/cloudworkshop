@@ -1,0 +1,33 @@
+1. Access Google Cloud Platform Project:
+	- Create a new Project (or create the existing Project)
+2. To Build the Docker image:
+	- Open a Cloud Shell.
+	- Create a directory 'tomcat' and change to this directory
+	- Upload app.yaml, Dockerfile, and support Tomcat Admin XML files from Cloud Shell into the 'tomcat' directory
+		- NOTE: the Tomcat Users and Manager can be configured manually by SSH (see below)
+	- Run gcloud app deploy --project [project name]
+3. Enable Google Cloud SQL:
+	- Go to API's & Services.
+	- Click on Library
+	- Search for SQL
+	- Click on Google Cloud SQL API and enable the service	
+4. If MySQL Container is in another project then:
+	- Go to Tomcat Project, select IAM & admin menu, click Service accounts menu, copy the Service Account email address
+	- Go to MySQL Project, select IAM & admin menu, click IAM menu, click Add, enter new user with Tomcat Service Account email address in Editor Role, click the Save button
+5. Build and Deploy Application WAR File:
+	- Build the application using Maven using either the Azure or Google Profile (first you will need to fix up the log4j.xml log file configuration setting)
+	- Go to the Tomcat Manager at https://[project name].appspot.com/manager/
+	- Login using tomcat/admin (or what users are configured in the tomcat-users.xml file in docker project)
+	- Upload the WAR file using the Tomcat Manager (Chrome seemed to work better, if the upload times out just retry again)
+	- Access the application at https://[project name].appspot.com/[WAR filename]
+	- For Cloud Workshop access the application at https://[project name].appspot.com//cloudservices/rest/weather/get/0/1
+6. View Log Files and Debugging:
+	- System Log Files: Go to the Project, click on App Engine, click on Version, from your Version select the Tools dropdown and the Logs menu option	
+	- Application Log Files: Go to the location configured in the log4j.xml file (by default this would be under the tomcat/logs directory)
+	- SSH: Go to the Project, click on App Engine, click on Instances, from your Instance select the SSH dropdown and Open in browser window menu option
+		- Get Docker Image ID: run sudo docker ps
+		- Locate the Tomcat Docker Image and copy its ID to the clipboard
+		- Start Docker Image Shell: docker exec -it [ID] /bin/bash
+		- Tomcat is installed at /usr/local/tomcat
+	- See https://cloud.google.com/logging/docs/view/overview
+	- See https://cloud.google.com/appengine/docs/flexible/java/debugging-an-instance	
