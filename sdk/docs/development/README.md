@@ -421,7 +421,7 @@ Create the MySQL Database Container and initialzie the schema in the Google Clou
 
 Deploy the IoT Services App to Google Cloud Platform using Docker
 --------
-You can also use the Google Cloud Platform along with a Docker File to build a Tomcat Container, which can be used to deploy the IoT Services App. Documentation for how to build a Docker Image (using a Docker File provided in the SDK) and deploy the IoT Services app can be found in ***/sdk/docs/docker/tomat*** directory in the SDK. You may have to customize the Docker File as necessary from the SDK. You will also want to reference the [Google Notes](Google%20Notes.txt) in the SDK.
+You can also use the Google Cloud Platform along with a Docker File to build a Tomcat Container, which can be used to deploy the IoT Services App. Documentation for how to build a Docker Image (using a Docker File provided in the SDK) and deploy the IoT Services app can be found in ***/sdk/docs/docker/tomat*** directory in the SDK. You may have to customize the Docker File as necessary from the SDK. You will also want to reference the [Google Notes](/sdk/docs/docker/tomcat/Google%20Notes.txt) in the SDK.
 
 NOTE: You will need to create a Google Cloud Platform account (this requires a credit card and is free for 12 months).
 
