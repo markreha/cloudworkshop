@@ -1,7 +1,7 @@
 
 **Getting Started with the Cloud Workshop SDK**
 ==================
-The Cloud Workshop SDK contains all the documentation, tools, and example reference applications required to build a simple, scalable, suite of Cloud based IoT applications that includes an [IoT Device Raspberry Pi Sense HAT](https://github.com/markreha/cloudpi/blob/master/README.md) application, [IoT Services Reference](https://github.com/markreha/cloudservices/blob/master/README.md) application, and a [IoT Reporting Reference](https://github.com/markreha/cloudapp/blob/master/README.md) application. The Cloud Workshop SDK currently supports the Redhat OpenShift PasS Cloud, the Microsoft Azure PaaS Cloud, and the Google PaaS Cloud Platform.
+The Cloud Workshop SDK contains all the documentation, tools, and example reference applications required to build a simple, scalable, suite of Cloud based IoT applications that includes an [IoT Device Raspberry Pi Sense HAT](https://github.com/markreha/cloudpi/blob/master/README.md) application, [IoT Services Reference](https://github.com/markreha/cloudservices/blob/master/README.md) application, and a [IoT Reporting Reference](https://github.com/markreha/cloudapp/blob/master/README.md) application. The Cloud Workshop SDK currently supports the Redhat OpenShift  Cloud, the Microsoft Azure Cloud, and the Google Cloud Platform.
 
 <p align="center">
 	<img src="sdk/docs/architecture/images/cloud.png" alt="IoT Logical Architecture"/>
@@ -9,14 +9,15 @@ The Cloud Workshop SDK contains all the documentation, tools, and example refere
 
 What's New
 --------
-- 06-26-2018: Add support for the Google PaaS Cloud Platform.
+- 06-28-2018: Add support for Docker on the Google Cloud Platform.
+- 06-26-2018: Add support for the Google Cloud Platform.
 - 06-08-2018: Updated Reporting Reference Application to integrate Plotly Charts and the jQuery Data Table.
-- 03-22-2018: Added support for the Azure PaaS Cloud.
+- 03-22-2018: Added support for the Azure Cloud.
 - 07-21-2017: Added new screencasts on desktop setup for Eclipse EE and MySQL Workbench . See the  [***screencasts***](sdk/docs/training/screencasts) directory in the SDK.
 
 Comming Soon
 --------
-- Support for Amazon AWS PaaS Cloud.
+- Support for Amazon AWS Cloud.
 - Support for Amazon Cloud9 IDE and Cloud Code Services.
 
 SDK Contents
@@ -36,8 +37,8 @@ You should start by first reading the Architecture decks, JavaDoc, and the PhpDo
 Development Tools Installation
 --------
 For desktop development you will need to download and install the following tools. If you use the Cloud based Codeenvy IDE than you will not be required to install ANY development tools!
-1. Eclipse Oxygen for Java EE platform: Download [here](http://www.eclipse.org/downloads/eclipse-packages/) and/or use cloud based the Codenvy IDE.
-2. Eclipse Oxygen for PHP platform: Download [here](http://www.eclipse.org/downloads/eclipse-packages/) and/or use the cloud based Codenvy IDE.
+1. Eclipse for Java EE platform: Download [here](http://www.eclipse.org/downloads/eclipse-packages/) and/or use cloud based the Codenvy IDE.
+2. Eclipse for PHP platform: Download [here](http://www.eclipse.org/downloads/eclipse-packages/) and/or use the cloud based Codenvy IDE.
 3. Tomcat 8.5: Download [here](http://tomcat.apache.org/download-80.cgi) and/or use the cloud based Codenvy IDE. It should be noted that Jetty 9.4 has also been validated.
 4. MAMP: Download [here](https://www.mamp.info/en/downloads/).
 5. SourceTree: Download [here](https://www.sourcetreeapp.com) and/or use the Chrome Browser.
@@ -46,7 +47,7 @@ For desktop development you will need to download and install the following tool
 
 Next Steps
 --------
-After you are become familiar with the architecture, example applications, and tools you can start building your own IoT applications using the sample Reference applications in the SDK as a guide. As a developer, there are application build instructions for developing in the Cloud based Cloudenvy IDE or desktop Eclipse Oxygen IDE. All code is maintained in the Github Cloud based source control system and deployed to the Cloud based Redhat OpenShift PaaS or Microsoft Azure PaaS or Google Cloud Platform. It should be noted that there is nothing technically preventing you from deploying these application to other Clouds, such as Amazon AWS. See the [README](sdk/docs/development/README.md) file and 'Cloud Setup Notes text' file located in the [***docs/development***](sdk/docs/development/README.md) folder to get started building your own IoT applications.
+After you are become familiar with the architecture, example applications, and tools you can start building your own IoT applications using the sample Reference applications in the SDK as a guide. As a developer, there are application build instructions for developing in the Cloud based Cloudenvy IDE or desktop Eclipse Oxygen IDE. All code is maintained in the Github Cloud based source control system and deployed to the Cloud based Redhat OpenShift or Microsoft Azure or Google Cloud Platform. It should be noted that there is nothing technically preventing you from deploying these application to other Cloud Platforms, such as Amazon AWS. See the [README](sdk/docs/development/README.md) file and 'Cloud Setup Notes text' file located in the [***docs/development***](sdk/docs/development/README.md) folder to get started building your own IoT applications.
 
 Get [started](sdk/docs/development/README.md) now!
 
