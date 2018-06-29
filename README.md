@@ -9,7 +9,7 @@ The Cloud Workshop SDK contains all the documentation, tools, and example refere
 
 What's New
 --------
-- 06-28-2018: Added support for Docker on the Google Cloud Platform.
+- 06-29-2018: Added support for Tomcat and JBoss Wildfly Dockerfiles on the Google Cloud Platform.
 - 06-26-2018: Added support for the Google Cloud Platform.
 - 06-08-2018: Updated the Reporting Reference Application to integrate Plotly Charts and the jQuery Data Table.
 - 03-22-2018: Added support for the Azure Cloud.
