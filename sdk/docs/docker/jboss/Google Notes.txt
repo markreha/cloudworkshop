@@ -1,0 +1,49 @@
+1. Access Google Cloud Platform Project:
+	- Create a new Project (or create the existing Project)
+2. To Build the Docker image:
+	- Open a Cloud Shell.
+	- Create a directory 'jboss' and change to this directory
+	- Upload app.yaml and Dockerfile from the Cloud Shell into the 'jboss' directory
+	- Run gcloud app deploy --project [project name]
+	- See https://hub.docker.com/r/jboss/wildfly/
+	- Go to the JBoss at https://[project name].appspot.com/ to verify JBoss Wildfly main page is accessible
+3. Enable Google Cloud SQL:
+	- Go to API's & Services.
+	- Click on Library
+	- Search for SQL
+	- Click on Google Cloud SQL API and enable the service	
+4. If MySQL Container is in another project then:
+	- Go to JBoss Project, select IAM & admin menu, click Service accounts menu, copy the Service Account email address
+	- Go to MySQL Project, select IAM & admin menu, click IAM menu, click Add, enter new user with JBoss Service Account email address in Editor Role, click the Save button
+5. Build and Deploy Application WAR File:
+	- Build the application using Maven using Openshift Profile (first you will need to fix up db.connection configuration setting)
+	- Deploy the WAR file to JBoss:
+		Option 1: Include the WAR file with the Dockerfile:
+			1. See example Dockerfile in the SDK.
+		Option 2: Use Cloud Shell, Gcloud, and Docker CLI:
+			1. Go to App Engine and select the Instances menu. Note the Instance ID and Version (get from SSH->View gcloud command menu).
+			2. From Cloud Shell run: gcloud app instances scp [FILE-TO-COPY] [INSTANCE-ID]:./ --service "default" --version [INSTANCE-VERSION]
+			3. SSH into Container and deploy WAR File:
+				a. Go to App Engine and select the Instances menu
+				b. Select the SSH Open in browser window
+				c. From SSH Shell run: sudo docker ps (and note the Container ID for the JBoss Wildfly application)
+				d. From SSH Shell run: docker cp [WAR-FILE-TO-COPY] [CONTAINER-ID]:/opt/jboss/wildfly/standalone/deployments/ 
+		Option 3: Use SSH Shell and Docker CLI:
+			2. SSH into Container and deploy WAR File:
+				a. Go to App Engine and select the Instances menu
+				b. Select the SSH Open in browser window
+				c. From the SSH Shell Gear Menu select Upload File to upload [WAR-FILE-TO-COPY]
+				d. From SSH Shell run: sudo docker ps (and note the Container ID for the JBoss Wildfly application)
+				e. From SSH Shell run: docker cp [WAR-FILE-TO-COPY] [CONTAINER-ID]:/opt/jboss/wildfly/standalone/deployments/
+	- Access the application at https://[project name].appspot.com/[WAR filename]
+	- For Cloud Workshop access the application at https://[project name].appspot.com//cloudservices/rest/weather/get/0/1
+6. View Log Files and Debugging:
+	- System Log Files: Go to the Project, click on App Engine, click on Version, from your Version select the Tools dropdown and the Logs menu option	
+	- Application Log Files: Go to the location configured in the log4j.xml file (by default this would be under the /opt/jboss/wildfly/standalong/logs directory)
+	- SSH: Go to the Project, click on App Engine, click on Instances, from your Instance select the SSH dropdown and Open in browser window menu option
+		- Get Docker Container ID then run: sudo docker ps
+		- Locate the JBoss Wildfly Docker Image and copy its Cotainer ID to the clipboard
+		- Start Docker Image Shell then run: docker exec -it [CONTAINER-ID] /bin/bash
+		- JBoss is installed at /opt/jboss/wildfly
+	- See https://cloud.google.com/logging/docs/view/overview
+	- See https://cloud.google.com/appengine/docs/flexible/java/debugging-an-instance	
