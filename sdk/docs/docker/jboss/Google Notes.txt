@@ -28,13 +28,16 @@
 				b. Select the SSH Open in browser window
 				c. From SSH Shell run: sudo docker ps (and note the Container ID for the JBoss Wildfly application)
 				d. From SSH Shell run: docker cp [WAR-FILE-TO-COPY] [CONTAINER-ID]:/opt/jboss/wildfly/standalone/deployments/ 
+			4. Repeat steps 1 thru 3 for each instance
 		Option 3: Use SSH Shell and Docker CLI:
+			1. Go to App Engine and select the Instances menu. Note the Instance ID and Version (get from SSH->View gcloud command menu).
 			2. SSH into Container and deploy WAR File:
 				a. Go to App Engine and select the Instances menu
 				b. Select the SSH Open in browser window
 				c. From the SSH Shell Gear Menu select Upload File to upload [WAR-FILE-TO-COPY]
 				d. From SSH Shell run: sudo docker ps (and note the Container ID for the JBoss Wildfly application)
 				e. From SSH Shell run: docker cp [WAR-FILE-TO-COPY] [CONTAINER-ID]:/opt/jboss/wildfly/standalone/deployments/
+			3. Repeat steps 1 thru 3 for each instance
 	- Access the application at https://[project name].appspot.com/[WAR filename]
 	- For Cloud Workshop access the application at https://[project name].appspot.com//cloudservices/rest/weather/get/0/1
 6. View Log Files and Debugging:
