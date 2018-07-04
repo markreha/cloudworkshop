@@ -21,7 +21,7 @@ Step 5: [Deploy the IoT Services Application to the OpenShift Cloud](#deploy-the
 
 Step 6: [Build and configure the IoT Reporting Application](#build-the-iot-reporting-app)
 
-Step 7: [Deploy the IoT Reporting Application to the OpenShift Cloud](#deploy-the-iot-reporting-app-to-openshift) or [the Azure Cloud](#deploy-the-iot-reporting-app-to-azure) or [the Google Cloud Platform](#deploy-the-iot-services-app-to-google-cloud-platform)
+Step 7: [Deploy the IoT Reporting Application to the OpenShift Cloud](#deploy-the-iot-reporting-app-to-openshift) or [the Azure Cloud](#deploy-the-iot-reporting-app-to-azure) or [the Google Cloud Platform](#deploy-the-iot-reporting-app-to-google-cloud-platform)
 
 After you are able to build and configure the Template applications or the Reference applications you are then ready to start customizing the applications functionality as per your own IoT requirements or per the functionality implemented in the Reference applications. 
 
