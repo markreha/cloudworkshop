@@ -1,4 +1,4 @@
-## DevOps in the Cloud Workshop
+** DevOps in the Cloud Workshop **
 Some principles of DevOps are demonstrated in the IoT Reference Applications. The following diagram illustrates where DevOps principles are demonstrated in the Cloud Workshop SDK. Return to the [Cloud Workshop SDK](https://github.com/markreha/cloudworkshop/blob/master/README.md).
 
 <p align="center">
