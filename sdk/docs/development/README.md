@@ -17,7 +17,7 @@ Step 3: [Setup the IoT Reporting Application Development Environment](#setup-you
 
 Step 4: [Build and configure the IoT Services Application](#build-the-iot-services-app)
 
-Step 5: [Deploy the IoT Services Application to the OpenShift Cloud](#deploy-the-iot-services-app-to-openshift) or [the Azure Cloud](#deploy-the-iot-services-app-to-azure) or [the Google Cloud Platform](#deploy-the-iot-services-app-to-google-cloud-platform)
+Step 5: [Deploy the IoT Services Application to the OpenShift Cloud](#deploy-the-iot-services-app-to-openshift) or [the Azure Cloud](#deploy-the-iot-services-app-to-azure) or [the Google Cloud Platform](#deploy-the-iot-services-app-to-google-cloud-platform) or [the Heroku Cloud](#deploy-the-iot-services-app-to-heroku-cloud)
 
 Step 6: [Build and configure the IoT Reporting Application](#build-the-iot-reporting-app)
 
@@ -469,9 +469,50 @@ If you need to configure your own application the following steps need to be com
 	
 See https://cloud.google.com/community/tutorials/run-laravel-on-appengine-flexible
 
+Deploy the IoT Services App to Heroku Cloud
+--------
+Once you have tested your IoT Services app you can then setup an Application in Heroku and then build and deploy your application to Heroku.
+
+NOTE: You will need to create a Heroku account (this is free and most services you will need do not require a credit card).
+
+1. Create app in Heroku
+* Add heroku/java buildpack
+* Add JawsDB MySQL Add-on
+* Set variable MAVEN_CUSTOM_OPTS to -Pheroku
+2. Update app code in source control or Heroku GIT(see SDK):
+* Add webapp-runner to POM file
+```xml
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>3.0.2</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals><goal>copy</goal></goals>
+                    <configuration>
+                        <artifactItems>
+                            <artifactItem>
+                                <groupId>com.github.jsimone</groupId>
+                                <artifactId>webapp-runner</artifactId>
+                                <version>8.5.31.0</version>
+                                <destFileName>webapp-runner.jar</destFileName>
+                            </artifactItem>
+                        </artifactItems>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+```
+* Add Maven Heroku Profile (see SDK, the build should be invoked using mvn -Pheroku clean package)
+3. Create Heroku Pipeline and add the Java app to it
+4. Start a Build:
+* Go to Heroku Pipeline and under the Java App select the Deploy a branch menu option OR push your code to Heroku GIT
+* Test the app: https://[APP NAME].herokuapp.com/rest/weather/get/0/1
+
 Deploy the IoT Reporting App to Heroku Cloud
 --------
-Once you have tested your IoT Reporting app you can then setup a Cloud Container in Google and then build and deploy your application to Heroku.
+Once you have tested your IoT Reporting app you can then setup an Application in Heroku and then build and deploy your application to Heroku.
 
 NOTE: You will need to create a Heroku account (this is free and most services you will need do not require a credit card).
 
