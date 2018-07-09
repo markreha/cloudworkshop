@@ -1,7 +1,8 @@
 
 **Getting Started with the Cloud Workshop SDK**
 ==================
-The Cloud Workshop SDK contains all the documentation, tools, and example reference applications required to build a simple, scalable, suite of Cloud based IoT applications that includes an [IoT Device Raspberry Pi Sense HAT](https://github.com/markreha/cloudpi/blob/master/README.md) application, [IoT Services Reference](https://github.com/markreha/cloudservices/blob/master/README.md) application, and a [IoT Reporting Reference](https://github.com/markreha/cloudapp/blob/master/README.md) application. The Cloud Workshop SDK currently supports the Redhat OpenShift  Cloud, the Microsoft Azure Cloud, the Google Cloud Platform, and the Heroku Cloud.
+The Cloud Workshop SDK contains all the documentation, tools, and example reference applications required to build a simple, scalable, suite of Cloud based IoT applications that includes an [IoT Device Raspberry Pi Sense HAT](https://github.com/markreha/cloudpi/blob/master/README.md) application, [IoT Services Reference](https://github.com/markreha/cloudservices/blob/master/README.md) application, and a [IoT Reporting Reference](https://github.com/markreha/cloudapp/blob/master/README.md) application. The Cloud Workshop SDK currently supports the Redhat OpenShift  Cloud, the Microsoft Azure Cloud, the Google Cloud Platform, and the Heroku Cloud. The instructions for supporting DevOps in the IoT Reference application can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/devops/README.md).
+
 
 <p align="center">
 	<img src="sdk/docs/architecture/images/cloud.png" alt="IoT Logical Architecture"/>
@@ -9,7 +10,7 @@ The Cloud Workshop SDK contains all the documentation, tools, and example refere
 
 What's New
 --------
-- 07-09-2018: Added support for the Heroku Cloud.
+- 07-09-2018: Added support for the Heroku Cloud and added support documentation for DevOps.
 - 06-29-2018: Added support for Tomcat and JBoss Wildfly Dockerfiles on the Google Cloud Platform.
 - 06-26-2018: Added support for the Google Cloud Platform.
 - 06-08-2018: Updated the Reporting Reference Application to integrate Plotly Charts and the jQuery Data Table.
