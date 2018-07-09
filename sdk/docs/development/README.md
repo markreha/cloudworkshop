@@ -1,6 +1,6 @@
 **Getting Started Building the IoT Apps**
 ==================
-The Cloud Workshop SDK contains all the documentation, tools, and sample template applicationsrequired to build a simple, scalable, Cloud based suite of IoT applications. The following assumes you have setup Github, Codenvy, and OpenShift, Azure, or Google Cloud accounts.
+The Cloud Workshop SDK contains all the documentation, tools, and sample template applicationsrequired to build a simple, scalable, Cloud based suite of IoT applications. The following assumes you have setup Github, Codenvy, and OpenShift, Azure, Google Cloud, or Heroku accounts.
 
 ![IoT Logical Architecture](../architecture/images/logical.png)
 
@@ -21,7 +21,7 @@ Step 5: [Deploy the IoT Services Application to the OpenShift Cloud](#deploy-the
 
 Step 6: [Build and configure the IoT Reporting Application](#build-the-iot-reporting-app)
 
-Step 7: [Deploy the IoT Reporting Application to the OpenShift Cloud](#deploy-the-iot-reporting-app-to-openshift) or [the Azure Cloud](#deploy-the-iot-reporting-app-to-azure) or [the Google Cloud Platform](#deploy-the-iot-reporting-app-to-google-cloud-platform)
+Step 7: [Deploy the IoT Reporting Application to the OpenShift Cloud](#deploy-the-iot-reporting-app-to-openshift) or [the Azure Cloud](#deploy-the-iot-reporting-app-to-azure) or [the Google Cloud Platform](#deploy-the-iot-reporting-app-to-google-cloud-platform) or [the Heroku Cloud](#deploy-the-iot-reporting-app-to-heroku-cloud)
 
 After you are able to build and configure the Template applications or the Reference applications you are then ready to start customizing the applications functionality as per your own IoT requirements or per the functionality implemented in the Reference applications. 
 
@@ -468,6 +468,22 @@ If you need to configure your own application the following steps need to be com
  	Update APP_ENV in .env to google 
 	
 See https://cloud.google.com/community/tutorials/run-laravel-on-appengine-flexible
+
+Deploy the IoT Reporting App to Heroku Cloud
+--------
+Once you have tested your IoT Reporting app you can then setup a Cloud Container in Google and then build and deploy your application to Heroku.
+
+NOTE: You will need to create a Heroku account (this is free and most services you will need do not require a credit card).
+
+1. Create app in Heroku
+* Add heroku/php buildpack
+2. Update app code in source control or Heroku GIT:
+* Update APP_ENV to heroku in .env
+3. Create Heroku Pipeline and add the PHP app to it
+4. Start a Build:
+* Go to Heroku Pipeline and under the PHP App select the Deploy a branch menu option OR push your code to Heroku GIT
+* Test the app: https://[APP NAME].herokuapp.com
+	
 
 [Back to Top](#getting-started-building-the-iot-apps)
 
