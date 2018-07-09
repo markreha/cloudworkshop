@@ -504,7 +504,7 @@ NOTE: You will need to create a Heroku account (this is free and most services y
             </executions>
         </plugin>
 ```
-* Add Maven Heroku Profile (see SDK, the build should be invoked using mvn -Pheroku clean package)
+* Add Maven Heroku Procfile (see the SDK, the build should be invoked using mvn -Pheroku clean package and use the webapp runner)
 3. Create Heroku Pipeline and add the Java app to it
 4. Start a Build:
 * Go to Heroku Pipeline and under the Java App select the Deploy a branch menu option OR push your code to Heroku GIT
