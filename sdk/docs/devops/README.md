@@ -2,12 +2,13 @@
 ==================
 Some principles of DevOps are demonstrated in the IoT Reference Applications. The following diagram illustrates where DevOps principles are demonstrated in the [Cloud Workshop SDK](https://github.com/markreha/cloudworkshop/blob/master/README.md).
 
-<p align="center">
-	![IoT DevOps Reference Architecture](../architecture/images/devops.png)
-</p>
+![IoT DevOps Reference Architecture](../architecture/images/devops.png)
 
-**Resources:**
- - TODO
+**Tutorials and Resources:**
+ - https://www.tutorialspoint.com/devops_tutorials.htm
+ - https://www.guru99.com/devops-tutorial.html
+ - http://www.devopsschool.com
+ - https://dzone.com/devops-tutorials-tools-news
 
 **Logging, Monitoring, and Alerts:**
  - Logging:
@@ -24,7 +25,7 @@ Some principles of DevOps are demonstrated in the IoT Reference Applications. Th
 	 - Application Availability: 
 		 - To be notified that your application is not running you can use a free service such as Uptime Robot (at https://uptimerobot.com). This service will monitor a URL of your application and notify via email is your application is not running. For the IoT Reporting Application you can simply test access by using the Root URL. For the IoT Services Application you can simply test access by using the Test URL (at /rest/weather/test).
  - Alerts:
-	 - In an ideal DevOps design your log files would be pushed to a platform like Splunk where rules and alerts could be setup.
+	 - In an ideal DevOps design your log files would be pushed to a platform like Splunk or Loggly where rules and alerts could be setup.
 	 - In an ideal DevOps design your APM (Application Performance Monitor) tool and your Availability Monitoring tool would generate alerts if there were issues with your application.
 
 **Continuous Integration/Continuous Deployment:**
