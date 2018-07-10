@@ -1,10 +1,8 @@
-**DevOps support in the IoT Reference Applications**
+**DevOps Reference Architecture**
 ==================
 Some principles of DevOps are demonstrated in the IoT Reference Applications. The following diagram illustrates where DevOps principles are demonstrated in the [Cloud Workshop SDK](https://github.com/markreha/cloudworkshop/blob/master/README.md).
 
-<p align="center">
-	<img src="ssdk/docs/architecture/images/devops.png" alt="IoT DevOps Architecture"/>
-</p>
+![IoT DevOps Reference Architecture](../architecture/images/devops.png)
 
 **Resources:**
  - TODO
