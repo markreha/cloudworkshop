@@ -25,7 +25,7 @@ Some principles of DevOps are demonstrated in the IoT Reference Applications. Th
 	 - Application Availability: 
 		 - To be notified that your application is not running you can use a free service such as Uptime Robot (at https://uptimerobot.com). This service will monitor a URL of your application and notify via email is your application is not running. For the IoT Reporting Application you can simply test access by using the Root URL. For the IoT Services Application you can simply test access by using the Test URL (at /rest/weather/test).
  - Alerts:
-	 - In an ideal DevOps design your log files would be pushed to a platform like Splunk or Loggly where rules and alerts could be setup.
+	 - In an ideal DevOps design your log files would be pushed to a platform like Splunk or Loggly (at https://www.loggly.com) where rules and alerts could be setup.
 	 - In an ideal DevOps design your APM (Application Performance Monitor) tool and your Availability Monitoring tool would generate alerts if there were issues with your application.
 
 **Continuous Integration/Continuous Deployment:**
@@ -42,5 +42,5 @@ Some principles of DevOps are demonstrated in the IoT Reference Applications. Th
 	 - The example CI/CD configuration file in the SDK provides examples how to deploy the PHP application or the the Java Spring application to the OpenShift, Azure, Google, and Heroku Cloud Platforms using a GitLab project that mirrors GIT repositories located on GitHub.
 	 - To start using GitLab create a new Project, mirror your GitHub repository (or use GitLab as your GIT repo), add a .gitlab-ci.yml to the root of your project (using the examples in the SDK as a guide), setup any Environment Variables (located in the Settings->CI/CD->Variables menu options), and finally create a Pipeline (located in the CI/CD->Pipelines menu options).
  - Jenkins CI/CD Pipeline:
-	 - This will be added in a future release of the Cloud Workshop SDK. 
+	 - It is possible from Openshift to deploy a Jenkins container. Another option is to download Jenkins (at https://jenkins.io/download/) and install Jenkins yourself either as a WAR fle or by using one of the other install options on the Jenkins download site.
 
