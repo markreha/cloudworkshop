@@ -4,6 +4,7 @@
 The Cloud Workshop SDK contains all the documentation, tools, and example reference applications required to build a simple, scalable, suite of Cloud based IoT applications that includes an [IoT Device Raspberry Pi Sense HAT](https://github.com/markreha/cloudpi/blob/master/README.md) application, [IoT Services Reference](https://github.com/markreha/cloudservices/blob/master/README.md) application, and a [IoT Reporting Reference](https://github.com/markreha/cloudapp/blob/master/README.md) application. 
 
 A Cloud Reference Architefture overview can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/architecture/Cloud%20Workshop%20Architecture.pdf).
+
 You can download the Cloud Workshop Training deck [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/training/Cloud%20Workshop%20Training.pdf).
 
 The Cloud Workshop SDK currently supports the Redhat OpenShift  Cloud, the Microsoft Azure Cloud, the Google Cloud Platform, and the Heroku Cloud. The instructions for supporting DevOps in the IoT Reference applications can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/devops/README.md).
