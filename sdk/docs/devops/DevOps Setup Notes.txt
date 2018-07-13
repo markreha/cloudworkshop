@@ -59,6 +59,11 @@ tests are ran in the CI/CD Pipeline. This will be demonstrated in a future relea
 [TOKEN]
 ./oc logout
 
+# To validate Azure builds
+1. Go to Advanced Tools
+2. Select CMD from The Debug Console menu
+3. Drill into site/deployments/tempXXXXX directory and inspect the log.log file
+
 # Setup GitLab
 1. Add a .gitlab-ci.yml file to the root of your project. See the References Applications for examples.
 2. Log into GitLab
