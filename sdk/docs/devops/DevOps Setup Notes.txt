@@ -51,10 +51,19 @@ Reference Architecture, GitLabs is setup currently to invoke a build and deploym
 simply changing the configuration in the .gitlab-ci.yml file. Currently, no unit tests, code coverage, code analysis, or performance
 tests are ran in the CI/CD Pipeline. This will be demonstrated in a future release of the Reference Applications.
 
+# Create a System Account, give it the admin role, get the Secret Token, and log off
+./oc login -u=[USERNAME] -p=[PASSWORD] https://console.starter-us-west-2.openshift.com/console/
+./oc create sa mybuilder
+./oc policy add-role-to-user admin system:serviceaccount:[APP_NAME]:mybuilder
+./oc sa get-token mybuilder
+[TOKEN]
+./oc logout
+
 # Setup GitLab
 1. Add a .gitlab-ci.yml file to the root of your project. See the References Applications for examples.
 2. Log into GitLab
 3. Create a new Project, mirror your GitHub repository, and then setup a new CD/CD Pipeline.
+4. Setup environment variables under Settings->CI/CD->Variables menu options.
 
 # Setup Jenkins
 This will be documented in a future release in the SDK.
