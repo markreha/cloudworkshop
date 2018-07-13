@@ -1,0 +1,60 @@
+================================ LOGGING =======================================
+
+You will need to setup logging using SLF4J (and use Log4j as a provider). Most but not all (like Azure) recommend logging to STDOUT 
+and this is what will be sent to a Log Analysis Tool. In the DevOps Reference Architecture, Loggly is used as a Cloud based free Log 
+Analysis Tool. 
+
+Is the setup below, for Azure, a manual and scheduled bash script is setup in a Azure WebJob. The log files from the
+IoT Services Reference Application is sent at 1:00AM (or manually) to Loggly. 
+
+In the setup below, for Heroku, a Drain is configured to capture  the logs in "real time" from the IoT Services Reference Application.
+
+# To setup a Job from Azure to send logs to Loggly
+1. Get the Send Log Scripts from the SDK at /sdk/docs/devops/scripts directory.
+2. Customize the scripts as needed.
+3. Add a manual or scheduled WebJob for your application.
+4. Search in Loggly using tag:iot_logfile_azure_upload.
+
+# Heroku has a Drain that will send logs in "real time" to Loggly
+1. Log into Heroku CLI.
+2. Run the command: heroku drains:add http://logs-01.loggly.com/bulk/[LOGGLY_TOKEN]/tag/iot_logfile_heroku_upload --app [APP_NAME].
+3. Search in Loggly using tag:iot_logfile_heroku_upload.
+See https://devcenter.heroku.com/articles/log-drains.
+
+# To download logs directly from OpenShift use the CLI
+./oc rsync [POD ID]:/wildfly/standalone/log/iotWeatherApp.log ./
+
+================================ MONITORING AND ALERTS ===========================
+
+Setting up application monitoring can be done with both external tools and even some tools available in the Cloud Platform. In the
+DevOps Reference Architecture, Application Availability, which detects if your application is up or down is done with the free Uptime
+Robot tool. Monitors are easily setup in Uptime Robot using the root URL of the IoT Reporting Reference application and using the root
+URL of the IoT Services Reference Application.
+
+For Alerts, the DevOps Reference Architecture configures an email alert in Loggly if the Test URL of the IoT Services Reference Application
+was invoked. Alerts can also be setup in GitLab to notify you when build and deployments have been completed.
+
+# Application Availability
+1. Log into Uptime Robot.
+2. Setup a Monitor using a URL to an application.
+
+# Application Performance Monitoring
+This will be documented in a future release in the SDK. It should be noted that New Relic and App Dynamics are available as an add-on in Heroku.
+
+# Alerts
+1. Setup an Alert in Loggly based on a Tag and Search Text.
+
+================================ CI/CD ===========================================
+
+Setting up a CI/CD Pipeline can be done using a number of tools or even use tools built into the Cloud Platforms. In the DevOps 
+Reference Architecture, GitLabs is setup currently to invoke a build and deployment manually. This can be changed to automatic by
+simply changing the configuration in the .gitlab-ci.yml file. Currently, no unit tests, code coverage, code analysis, or performance
+tests are ran in the CI/CD Pipeline. This will be demonstrated in a future release of the Reference Applications.
+
+# Setup GitLab
+1. Add a .gitlab-ci.yml file to the root of your project. See the References Applications for examples.
+2. Log into GitLab
+3. Create a new Project, mirror your GitHub repository, and then setup a new CD/CD Pipeline.
+
+# Setup Jenkins
+This will be documented in a future release in the SDK.
