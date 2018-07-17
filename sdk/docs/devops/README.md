@@ -45,9 +45,9 @@ Some principles of DevOps are demonstrated in the IoT Reference Applications. Th
 	 - The DevOps Reference Architecture demonstrates the use of Loggly as a free Log Analysis Tool. See the [DevOps Setup Notes](DevOps%20Setup%20Notes.txt) for details on how to integrate Loggly into your application.
  - Jenkins CI/CD Pipeline:
 	 - It is possible from Openshift to deploy a Jenkins container. Another option is to download Jenkins (at https://jenkins.io/download/) and install Jenkins yourself either as a WAR file on a local instance of Tomcat or JBoss Wildfly. The following instructions outline the steps to setup a build job on Jenkins in support of a GIT Push Build to Heroku.
-    1. Create a New Item, name your Jenkins Project, select the Freestyle Project type, and click the OK button.
+1. Create a New Item, name your Jenkins Project, select the Freestyle Project type, and click the OK button.
     - Configure a Build:
-	 - - - - Under Source Code Management Section check the Git option.
+    - - Under Source Code Management Section check the Git option.
 	 - - - - In the Repository URL enter the GitHub Repo URL. This is will be your source clone repo.
 	 - - - - Click the Add Repository button.
 	 - - - - In the Repository URL enter the Heroku Repo URL. Add credentials of [Heroku Username]/[Heroku API Key]. Click the Advanced button and enter heroku as the Name. This is will be your remote push repo.
