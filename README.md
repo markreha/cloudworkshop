@@ -18,6 +18,7 @@ The instructions for supporting DevOps in the IoT Reference applications can be 
 
 What's New
 --------
+- 07-18-2018: Added DevOps Reference Architecture (using Jenkins, GitLabs, Loggly, and Uptime Robot).
 - 07-10-2018: Added support for the Heroku Cloud and added support documentation for DevOps.
 - 06-29-2018: Added support for Tomcat and JBoss Wildfly Dockerfiles on the Google Cloud Platform.
 - 06-26-2018: Added support for the Google Cloud Platform.
