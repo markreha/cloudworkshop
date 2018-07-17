@@ -48,14 +48,14 @@ Some principles of DevOps are demonstrated in the IoT Reference Applications. Th
 1. Create a New Item, name your Jenkins Project, select the Freestyle Project type, and click the OK button.
     - Configure a Build:
     - - Under Source Code Management Section check the Git option.
-	 - - - - In the Repository URL enter the GitHub Repo URL. This is will be your source clone repo.
-	 - - - - Click the Add Repository button.
-	 - - - - In the Repository URL enter the Heroku Repo URL. Add credentials of [Heroku Username]/[Heroku API Key]. Click the Advanced button and enter heroku as the Name. This is will be your remote push repo.
-	 - - - - Under the Build Section click the the 'Add build step' dropdown and the 'Execute shell' option. Enter any custom bash commands to support the build.
-	 - - - - Under the Post-build Actions section click the 'Post post-build action' dropdown and the 'Git Publisher' option. Check the 'Push Only If Build Succeeds' option and 'Force Push' option. In the Branches enter master for the Branch to push and heroku as the Target remote name.
-	 - - - - Click the Save button.  
-	 - - - Start a Build:
-	 - - - - From the Jenkins Dashboard select your Project.
-	 - - - - Click the Build Now button.
+    - - In the Repository URL enter the GitHub Repo URL. This is will be your source clone repo.
+    - - Click the Add Repository button.
+    - - In the Repository URL enter the Heroku Repo URL. Add credentials of [Heroku Username]/[Heroku API Key]. Click the Advanced button and enter heroku as the Name. This is will be your remote push repo.
+    - - Under the Build Section click the the 'Add build step' dropdown and the 'Execute shell' option. Enter any custom bash commands to support the build.
+    - - Under the Post-build Actions section click the 'Post post-build action' dropdown and the 'Git Publisher' option. Check the 'Push Only If Build Succeeds' option and 'Force Push' option. In the Branches enter master for the Branch to push and heroku as the Target remote name.
+    - - Click the Save button.  
+2. Start a Build:
+    - From the Jenkins Dashboard select your Project.
+    - Click the Build Now button.
 
 
