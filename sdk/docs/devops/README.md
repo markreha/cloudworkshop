@@ -46,8 +46,8 @@ Some principles of DevOps are demonstrated in the IoT Reference Applications. Th
  - Jenkins CI/CD Pipeline:
 	 - It is possible from Openshift to deploy a Jenkins container. Another option is to download Jenkins (at https://jenkins.io/download/) and install Jenkins yourself either as a WAR file on a local instance of Tomcat or JBoss Wildfly. The following instructions outline the steps to setup a build job on Jenkins in support of a GIT Push Build to Heroku:
 
-<ol type="n" style="PADDING-LEFT: 12px">
-  <li>Create a New Item, name your Jenkins Project, select the Freestyle Project type, and click the OK button</li>
+<ol type="n">
+  <li style="PADDING-LEFT: 12px">Create a New Item, name your Jenkins Project, select the Freestyle Project type, and click the OK button</li>
   <li>Configure a Build</li>
        <ul>
             <li>Under Source Code Management Section check the Git option.</li>
