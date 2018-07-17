@@ -60,7 +60,9 @@ Some principles of DevOps are demonstrated in the IoT Reference Applications. Th
     - Click the Build Now button.
 
 <ol type="n">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
+  <li>Create a New Item, name your Jenkins Project, select the Freestyle Project type, and click the OK button</li>
+	<ul>Under Source Code Management Section check the Git option.</ul>
+	<ul>Under Source Code Management Section check the Git option.</ul>
+  <li>Configure a Build</li>
+  <li>Start a Build</li>
 </ol>
