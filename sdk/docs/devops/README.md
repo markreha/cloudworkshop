@@ -48,7 +48,7 @@ Some principles of DevOps are demonstrated in the IoT Reference Applications. Th
 
 1. Create a New Item, name your Jenkins Project, select the Freestyle Project type, and click the OK button.
     - Configure a Build:
-    - - Under Source Code Management Section check the Git option.
+        - Under Source Code Management Section check the Git option.
     - - In the Repository URL enter the GitHub Repo URL. This is will be your source clone repo.
     - - Click the Add Repository button.
     - - In the Repository URL enter the Heroku Repo URL. Add credentials of [Heroku Username]/[Heroku API Key]. Click the Advanced button and enter heroku as the Name. This is will be your remote push repo.
