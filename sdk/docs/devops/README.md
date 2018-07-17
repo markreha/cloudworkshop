@@ -44,8 +44,8 @@ Some principles of DevOps are demonstrated in the IoT Reference Applications. Th
 	 - To start using GitLab create a new Project, mirror your GitHub repository (or use GitLab as your GIT repo), add a .gitlab-ci.yml to the root of your project (using the examples in the SDK as a guide), setup any Environment Variables (located in the Settings->CI/CD->Variables menu options), and finally create a Pipeline (located in the CI/CD->Pipelines menu options). See the [DevOps Setup Notes](DevOps%20Setup%20Notes.txt) for details on how to integrate GitLab into your application.
 	 - The DevOps Reference Architecture demonstrates the use of Loggly as a free Log Analysis Tool. See the [DevOps Setup Notes](DevOps%20Setup%20Notes.txt) for details on how to integrate Loggly into your application.
  - Jenkins CI/CD Pipeline:
-	 - It is possible from Openshift to deploy a Jenkins container. Another option is to download Jenkins (at https://jenkins.io/download/) and install Jenkins yourself either as a WAR file on a local instance of Tomcat or JBoss Wildfly. The following instructions outline the steps to setup a build job on Jenkins in support of a GIT Push Build to Heroku.
-<p>
+	 - It is possible from Openshift to deploy a Jenkins container. Another option is to download Jenkins (at https://jenkins.io/download/) and install Jenkins yourself either as a WAR file on a local instance of Tomcat or JBoss Wildfly. The following instructions outline the steps to setup a build job on Jenkins in support of a GIT Push Build to Heroku:
+
 1. Create a New Item, name your Jenkins Project, select the Freestyle Project type, and click the OK button.
     - Configure a Build:
     - - Under Source Code Management Section check the Git option.
@@ -58,5 +58,5 @@ Some principles of DevOps are demonstrated in the IoT Reference Applications. Th
 2. Start a Build:
     - From the Jenkins Dashboard select your Project.
     - Click the Build Now button.
-</p>
+
 
