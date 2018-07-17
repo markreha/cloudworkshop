@@ -24,7 +24,7 @@ What's New
 - 06-26-2018: Added support for the Google Cloud Platform.
 - 06-08-2018: Updated the Reporting Reference Application to integrate Plotly Charts and the jQuery Data Table.
 - 03-22-2018: Added support for the Azure Cloud.
-- 07-21-2017: Added new screencasts on desktop setup for Eclipse EE and MySQL Workbench . See the  [***screencasts***](sdk/docs/training/screencasts) directory in the SDK.
+- 07-21-2017: Added new screencasts for how to setup using the Eclipse EE and MySQL Workbench.
 
 Comming Soon
 --------
