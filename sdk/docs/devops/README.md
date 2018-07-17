@@ -59,4 +59,8 @@ Some principles of DevOps are demonstrated in the IoT Reference Applications. Th
     - From the Jenkins Dashboard select your Project.
     - Click the Build Now button.
 
-
+<ol type="n">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
