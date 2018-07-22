@@ -3,7 +3,7 @@
 ==================
 The Cloud Workshop SDK contains all the documentation, tools, and example reference applications required to build a simple, scalable, suite of Cloud based IoT applications that includes an [IoT Device Raspberry Pi Sense HAT](https://github.com/markreha/cloudpi/blob/master/README.md) application, [IoT Services Reference](https://github.com/markreha/cloudservices/blob/master/README.md) application, and a [IoT Reporting Reference](https://github.com/markreha/cloudapp/blob/master/README.md) application. 
 
-The Cloud Workshop SDK currently supports the Redhat OpenShift  Cloud, the Microsoft Azure Cloud, the Google Cloud Platform, and the Heroku Cloud.
+The Cloud Workshop SDK currently supports the Redhat OpenShift  Cloud, the Microsoft Azure Cloud, the Google Cloud Platform, the Heroku Cloud, and AWS Cloud.
 
 A Cloud Reference Architefture overview can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/architecture/Cloud%20Workshop%20Architecture.pdf).
 
@@ -18,6 +18,7 @@ The instructions for supporting DevOps in the IoT Reference applications can be 
 
 What's New
 --------
+- 07-22-2018: Added support for the AWS Cloud.
 - 07-18-2018: Added DevOps Reference Architecture (using Jenkins, GitLabs, Loggly, and Uptime Robot).
 - 07-10-2018: Added support for the Heroku Cloud and added support documentation for DevOps.
 - 06-29-2018: Added support for Tomcat and JBoss Wildfly Dockerfiles on the Google Cloud Platform.
@@ -28,7 +29,6 @@ What's New
 
 Comming Soon
 --------
-- Support for Amazon AWS Cloud.
 - Support for Amazon Cloud9 IDE and Cloud Code Services.
 
 SDK Contents
@@ -58,7 +58,7 @@ For desktop development you will need to download and install the following tool
 
 Next Steps
 --------
-After you are become familiar with the architecture, example applications, and tools you can start building your own IoT applications using the sample Reference applications in the SDK as a guide. As a developer, there are application build instructions for developing in the Cloud based Cloudenvy IDE or desktop Eclipse IDE. All code is maintained in the Github Cloud based source control system and deployed to the Cloud based Redhat OpenShift or Microsoft Azure or Google Cloud Platform or the Heroku Cloud. It should be noted that there is nothing technically preventing you from deploying these application to other Cloud Platforms, such as Amazon AWS. See the [README](sdk/docs/development/README.md) file and 'Cloud Setup Notes text' file located in the [***docs/development***](sdk/docs/development/README.md) folder to get started building your own IoT applications.
+After you are become familiar with the architecture, example applications, and tools you can start building your own IoT applications using the sample Reference applications in the SDK as a guide. As a developer, there are application build instructions for developing in the Cloud based Cloudenvy IDE or desktop Eclipse IDE. All code is maintained in the Github Cloud based source control system and deployed to the Cloud based Redhat OpenShift or Microsoft Azure or Google Cloud Platform or the Heroku Cloud or the AWS Cloud. See the [README](sdk/docs/development/README.md) file and 'Cloud Setup Notes text' file located in the [***docs/development***](sdk/docs/development/README.md) folder to get started building your own IoT applications.
 
 Get [started](sdk/docs/development/README.md) now!
 
