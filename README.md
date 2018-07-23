@@ -7,7 +7,7 @@ The Cloud Workshop SDK currently supports the Redhat OpenShift  Cloud, the Micro
 
 Use the following links to get started with the Cloud Workshop SDK:
 * An overview of the Cloud Reference Architefture can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/architecture/Cloud%20Workshop%20Architecture.pdf).
-* You can download the Cloud Workshop Training deck [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/training/Cloud%20Workshop%20Training.pdf).
+* You can view the Cloud Workshop Training deck [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/training/Cloud%20Workshop%20Training.pdf).
 * You can access the Cloud Workshop Training Video Library [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/training/screencasts/README.md).
 
 
