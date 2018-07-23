@@ -17,9 +17,9 @@ Step 3: [Setup the IoT Reporting Application Local and Codenvy Cloud IDE Develop
 
 Step 4: [Build and configure the IoT Services Application Locally and on Codenvy Cloud IDE](#build-the-iot-services-app)
 
-Step 5: [Deploy the IoT Services Application to the OpenShift Cloud](#deploy-the-iot-services-app-to-openshift) or [the Azure Cloud](#deploy-the-iot-services-app-to-azure) or [the Google Cloud Platform](#deploy-the-iot-services-app-to-google-cloud-platform) or [the Heroku Cloud](#deploy-the-iot-services-app-to-heroku-cloud) or [the Amazon Cloud](#deploy-the-iot-services-app-to-amazon-cloud)
+Step 5: [Build and configure the IoT Reporting Application Locally and on Codenvy Cloud IDE](#build-the-iot-reporting-app)
 
-Step 6: [Build and configure the IoT Reporting Application](#build-the-iot-reporting-app)
+Step 6: [Deploy the IoT Services Application to the OpenShift Cloud](#deploy-the-iot-services-app-to-openshift) or [the Azure Cloud](#deploy-the-iot-services-app-to-azure) or [the Google Cloud Platform](#deploy-the-iot-services-app-to-google-cloud-platform) or [the Heroku Cloud](#deploy-the-iot-services-app-to-heroku-cloud) or [the Amazon Cloud](#deploy-the-iot-services-app-to-amazon-cloud)
 
 Step 7: [Deploy the IoT Reporting Application to the OpenShift Cloud](#deploy-the-iot-reporting-app-to-openshift) or [the Azure Cloud](#deploy-the-iot-reporting-app-to-azure) or [the Google Cloud Platform](#deploy-the-iot-reporting-app-to-google-cloud-platform) or [the Heroku Cloud](#deploy-the-iot-reporting-app-to-heroku-cloud) or [the Amazon Cloud](#deploy-the-iot-reporting-app-to-amazon-cloud)
 
