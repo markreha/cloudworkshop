@@ -17,15 +17,15 @@ Step 3: [Setup the IoT Reporting Application Development Environment](#setup-you
 
 Step 4: [Build and configure the IoT Services Application](#build-the-iot-services-app)
 
-Step 5: [Deploy the IoT Services Application to the OpenShift Cloud](#deploy-the-iot-services-app-to-openshift) or [the Azure Cloud](#deploy-the-iot-services-app-to-azure) or [the Google Cloud Platform](#deploy-the-iot-services-app-to-google-cloud-platform) or [the Heroku Cloud](#deploy-the-iot-services-app-to-heroku-cloud)
+Step 5: [Deploy the IoT Services Application to the OpenShift Cloud](#deploy-the-iot-services-app-to-openshift) or [the Azure Cloud](#deploy-the-iot-services-app-to-azure) or [the Google Cloud Platform](#deploy-the-iot-services-app-to-google-cloud-platform) or [the Heroku Cloud](#deploy-the-iot-services-app-to-heroku-cloud) or [the Amazon Cloud](#deploy-the-iot-services-app-to-amazon-cloud)
 
 Step 6: [Build and configure the IoT Reporting Application](#build-the-iot-reporting-app)
 
-Step 7: [Deploy the IoT Reporting Application to the OpenShift Cloud](#deploy-the-iot-reporting-app-to-openshift) or [the Azure Cloud](#deploy-the-iot-reporting-app-to-azure) or [the Google Cloud Platform](#deploy-the-iot-reporting-app-to-google-cloud-platform) or [the Heroku Cloud](#deploy-the-iot-reporting-app-to-heroku-cloud)
+Step 7: [Deploy the IoT Reporting Application to the OpenShift Cloud](#deploy-the-iot-reporting-app-to-openshift) or [the Azure Cloud](#deploy-the-iot-reporting-app-to-azure) or [the Google Cloud Platform](#deploy-the-iot-reporting-app-to-google-cloud-platform) or [the Heroku Cloud](#deploy-the-iot-reporting-app-to-heroku-cloud) or [the Amazon Cloud](#deploy-the-iot-reporting-app-to-amazon-cloud)
 
 After you are able to build and configure the Template applications or the Reference applications you are then ready to start customizing the applications functionality as per your own IoT requirements or per the functionality implemented in the Reference applications. 
 
-Remember, all code should be maintained in the Github Cloud based source control system because code deployed to the Codenvy Cloud IDE and OpenShift PaaS Cloud both uses Github as the source repository. Currently deploying code to the Azure PaaS Cloud is done manually.
+Remember, all code should be maintained in the Github Cloud based source control system because code deployed to the Codenvy Cloud IDE and all PaaS Clouds both uses Github as the source repository.
 
 ----------
 
@@ -143,18 +143,21 @@ Codenvy Build and Configuration Instructions:
 	 - In the src/config/dev directory update the config.properties file with your proper database credentials
 	 - In the src/config/openshift directory update the config.properties file with your proper database credentials
 	 - In the src/config/azure directory update the config.properties file with your proper database credentials
+	 - In the src/config/heroku directory update the config.properties file with your proper database credentials
+	 - In the src/config/amazon directory update the config.properties file with your proper database credentials
 	 - Invoke Maven with the 'dev' Profile to build for your development environment
  7. Setup your MySQL Database. Select the Workspaces menu from the left Main Menu in Codenvy. Select your Workspace. Under the Workspace Runtime configuration expand the DB Machine,  scroll down to the Servers section, and note the address DB URL in the dbserver-3306-tcp entry. This address (URL hostname and port) will be used in MySQL Workbench OR MySQL Admin Chrome Plugin.  Start  MySQL Workbench or log into MySQL Admin as root user (username of root and password of password) and then run the IoT.sql DDL script located in the ***docs\database*** folder within the SDK. You will also need to set the privileges for the *iot* schema for the pet clinic user (username of petclinic and password of password).
  8. Setup the Commands below by selecting the Commands tab (far left under the Projects tab in the Project pane). You can create a new Command by clicking the + icon next to the Command Category. These Custom Commands should be added under the Common Commands.
  9. To build and run the project invoke the following commands from the Custom Commands:
 	 - Run 'Start Tomcat' to start the Tomcat Server.
-	 - Run 'Build and Deploy' to do a clean Maven build and deployment to the Tomcat Server.
+	 - Run 'Build and Deploy' to do a clean Maven build and deployment to the Tomcat Server using the desired Maven Profile.
  
 **Maven Build and Deployment Command**
+The IoT Services Reference Application uses Maven Profiles to select the appropriate configuration files for the target Cloud Platform. The Maven Profiles are setup on the Maven POM file located in the SDK. The Maven Profile names basically use the platform folder in the src/config/[PROFILE] directory structure.
  Command Name: 
  	<pre>Build and Deploy</pre>
  Command Line:
-	<pre>mvn clean package -f ${current.project.path} -Pdev
+	<pre>mvn clean package -f ${current.project.path} -P[MAVEN_PROFILE]
 	echo Deploying ${current.project.path}/target/cloadservices.war to $TOMCAT_HOME/webapps/cloudservices.war ......
 	cp ${current.project.path}/target/cloadservices.war $TOMCAT_HOME/webapps/cloudservices.war
 	echo Deployed ${current.project.path}/target/cloadservices.war</pre>
@@ -183,6 +186,8 @@ NOTE: you should create a backup of the Workspace and environment by selecting t
 
 
 Eclipse Build and Configuration Instructions:
+This IoT Services Reference Application uses Maven Profiles to select the appropriate configuration files for the target Cloud Platform. The Maven Profiles are setup on the Maven POM file located in the SDK. The Maven Profile names basically use the platform folder in the src/config/[PROFILE] directory structure.
+
  1. Setup your MySQL Database. Startup MySQL Workbench as root user (username of root and password of root), create a schema named 'iot' (without quotes), and then run the IoT.sql DDL script located in the ***docs\database*** folder within the SDK. You will also need to set the privileges for the *iot* schema for the pet clinic user (username of petclinic and password of password).
  2. Make sure your MySQL database is running.
  3. Open your Eclipse 'cloudservices' Workspace.
@@ -191,6 +196,8 @@ Eclipse Build and Configuration Instructions:
 	 - In the src/config/dev directory update the config.properties file with your proper database credentials
 	 - In the src/config/openshift directory update the config.properties file with your proper database credentials
 	 - In the src/config/azure directory update the config.properties file with your proper database credentials
+	 - In the src/config/heroku directory update the config.properties file with your proper database credentials
+	 - In the src/config/amazon directory update the config.properties file with your proper database credentials
 	 - Invoke Maven with the 'dev' Profile to build for your development environment
  6. To build and run the project invoke the following:
 	 - Build the Project by selecting the Run->Run Configurations, select the Maven Build type, click the New Icon, and then set the name to My Cloudservices Build, set the Goals to clean package, set the Profiles to dev, and click the Run button. This build configuration will now be available when you select the Run Icon from the toolbar.
@@ -198,7 +205,7 @@ Eclipse Build and Configuration Instructions:
 	 - Add the Project to your Tomcat Server. This can be done by right clicking on the Tomcat Server in the Servers tab and adding the 'cloudservices' project to the Configured section. Your should also make sure you use the /cloudservices path for your web module. This can be done by double clicking on the Tomcat Server in the Servers tab, selecting the Modules tab from the Server configuration page, adding or editing the cloudservices Web Module.
 	 - Locate the config.properties files located in the src folder of the Eclipse project. Modify the user credentials to match the user that was setup in step 1.
 	 - From the Servers tab click the Start icon for Tomcat to start the Tomcat Server. Make sure you MySQL database is setup and running or you will get an error starting the application. 
-	 - You will also want to make sure the Maven Build is part of your Build Class Path and so Tomcat picks up your changed files. To do this right click on your Project and select the Properties menu option. Select the Order and Export tabe. Make sure the Maven Dependencies checkbox is checked. 
+	 - You will also want to make sure the Maven Build is part of your Build Class Path and so Tomcat picks up your changed files. To do this right click on your Project and select the Properties menu option. Select the Order and Export tabe. Make sure the Maven Dependencies checkbox is checked. The IoT Services Reference Application uses Maven Profiles to select the appropriate configuration files for the target Cloud Platform. The Maven Profiles are setup on the Maven POM file located in the SDK. The Maven Profile names basically use the platform folder in the src/config/[PROFILE] directory structure.
 
 Build the IoT Reporting App
 --------
@@ -525,6 +532,117 @@ NOTE: You will need to create a Heroku account (this is free and most services y
 * Go to Heroku Pipeline and under the PHP App select the Deploy a branch menu option OR push your code to Heroku GIT
 * Test the app: https://[APP NAME].herokuapp.com
 	
+Deploy the IoT Services App to Amazon Cloud
+--------
+Once you have tested your IoT Services app you can then setup an Application in Amazon and then build and deploy your application to AWS Elastic Beanstalk and a RDS MySQL Database.
+
+NOTE: You will need to create an AWS account (this is free 12 month service you will need a credit card).
+
+Create and configure an AWS MySQL databsae:
+1. Log into AWS and select Services from the main menu.
+2. Select RDS.
+3. Under the Create database section click the Create database button.
+4. Select the MySQL engine option and the 5.6 version edition radio button. Check the 'Enable options for free tier'. Click the Next button.
+5. Fill out the Specify DB details form:
+* From Settings enter DB instance identifier enter instance name (i.e. mydatabaseinstance).
+* From Settings enter Master username and password.
+* Click the Next button.
+* Leave all defaults in the Configure advanced settings form.
+6. From the RDS Dashboard select your database instance.
+* Your database URL is listed under the Connect section under the Endpoint value.
+* In MySQL Workbench setup a connection using the AWS Database Endpoint URI and credentials. Create the 'iot' schema and tables by running the DDL script from the SDK.
+* Make your database accessible from a Java application by clicking the Security groups link under the Details section for the database.
+* In the Security Group setup select the Inbound tab. Click the Edit button. Under the Source dropdown select the Anywhere option.
+
+Create and configure an AWS Tomcat Application:
+1. Update app code in source control (see SDK):
+* Set up config folder and Maven Profile. 
+2. Log into AWS and select Services from the main menu.
+3. Select Elastic Beanstalk service.
+4. Click the 'Create new Application' link from the top right menu.
+5. Give your Application Name (i.e. ServicesApp). Click the Create button.
+6. Create your Application Environment by clicking the 'Create one now' link.
+7. Select the 'Web server environment' and click the Select button.
+8. Fill out the following fields in the Creating web server environment form:
+* From Environment information Domain:  Give your Application a name (i.e. services-app).
+* From Base configuration: Select Tomcat from the Preconfigured platform options. Upload a WAR file of your Java application.
+* Click the Create Environment button. Wait for environment to get built.
+* From the Elastic Beanstalk application screen click the App URL to validate application is running properly.
+
+Deploying Manually:
+1. Create a WAR file using Maven (make sure to set the Maven Profile to amazon).
+2. Log into AWS and select Services from the main menu.
+3. Select Elastic Beanstalk. Select your Application.
+4. Click the Upload and Deploy button. Upload your WAR file and give your build a label. Click the Deploy button. 
+
+Deploying using a AWS Code Pipeline:
+1. Add a buildspec.yml to the root of your application code (see SDK for example).
+2. Log into AWS and select Services from the main menu.
+3. Select the CodePipeline service.
+4. Click the Create Pipeline button.
+5. Give your pipeline a name (i.e. ReportingAppPipeline). Click the Next step button.
+6. Select GitHub from the Source provider dropdown. Click the Connect to GitHub button and select your repo and master branch. Click the Next step button.
+7. Select AWS CodeBuild from the Build provider dropdown. Select the Create a new build project option. Give your build a name. Select Ubuntu operating system with the Java OpenJDK 8 runtime. 
+8. Create a Service Role with a name (i.e. servicesapp-build-role)
+9. Click the Save build project button. Click the Next step button.
+10. Select AWS Elastic Beanstalk from the Deployment provider dropdown. Chose your Application and Environment from the dropdowns. Click the Next step button.
+11. Create an AWS Service Role. Click the Next step button.
+12. Click the Create pipeline button.
+13. To build and deploy your application:
+* Select the CodePipeline service from the Services dashboard. Open the Pipeline.
+* Either make a change to code in GitHub or click the Release change button to start a build and deployment.
+14. To access your application:
+* Select the Elastic Beanstalk service from the Services dashboard. Open your Application.
+* Test your application: https://[APP NAME].[AWS REGION].elasticbeanstalk.com/rest/weather/get/0/1
+
+Deploy the IoT Reporting App to Amazon Cloud
+--------
+Once you have tested your IoT Reporting app you can then setup an Application in Amazon and then build and deploy your application to AWS Elastic Beanstalk.
+
+NOTE: You will need to create an AWS account (this is free 12 month service you will need a credit card).
+
+Create and configure the AWS PHP Application:
+1. Update app code in source control (see SDK):
+* Update APP_ENV to amazon in .env 
+2. Log into AWS and select Services from the main menu.
+3. Select Elastic Beanstalk service.
+4. Click the 'Create new Application' link from the top right menu.
+5. Give your Application Name (i.e. ReportingApp). Click the Create button.
+6. Create your Application Environment by clicking the 'Create one now' link.
+7. Select the 'Web server environment' and click the Select button.
+8. Fill out the following fields in the Creating web server environment form:
+* From Environment information Domain: Give your Application a name (i.e. reporting-app).
+* From Base configuration: Select PHP from the Preconfigured platform options. Upload a ZIP file of your PHP application.
+* Click the Create Environment button. Wait for environment to get built.
+* From the Elastic Beanstalk application screen click the App URL to validate application is running properly.
+
+Deploy the IoT Reporting App to AWS:
+Deploy Manually:
+1. Create a ZIP file with all your code (make sure to update APP_ENV to amazon in .env).
+2. Log into AWS and select Services from the main menu.
+3. Select Elastic Beanstalk. Select your Application.
+4. Click the Upload and Deploy button. Upload your ZIP file and give your build a label. Click the Deploy button. 
+
+Deploy using a AWS Code Pipeline:
+1. Add a buildspec.yml to the root of your application code (see SDK for example).
+2. Log into AWS and select Services from the main menu.
+3. Select the CodePipeline service.
+4. Click the Create Pipeline button.
+5. Give your pipeline a name (i.e. ReportingAppPipeline). Click the Next step button.
+6. Select GitHub from the Source provider dropdown. Click the Connect to GitHub button and select your repo and master branch. Click the Next step button.
+7. Select AWS CodeBuild from the Build provider dropdown. Select the Create a new build project option. Give your build a name. Select Ubuntu operating system with the Base runtime. 
+8. Create a Service Role with a name (i.e. reportingapp-build-role)
+9. Click the Save build project button. Click the Next step button.
+10. Select AWS Elastic Beanstalk from the Deployment provider dropdown. Chose your Application and Environment from the dropdowns. Click the Next step button.
+11. Create an AWS Service Role. Click the Next step button.
+12. Click the Create pipeline button.
+13. To build and deploy your application:
+* Select the CodePipeline service from the Services dashboard. Open the Pipeline.
+* Either make a change to code in GitHub or click the Release change button to start a build and deployment.
+14. To access your application:
+* Select the Elastic Beanstalk service from the Services dashboard. Open your Application.
+* Test your application: https://[APP NAME].[AWS REGION].elasticbeanstalk.com/
+
 
 [Back to Top](#getting-started-building-the-iot-apps)
 
