@@ -4,9 +4,7 @@ All Cloud Workshop SDK training videos are hosted on YouTube. Use the links belo
 
 General Cloud Workshop Video's
 --------
-<pre>
-<a href="https://youtu.be/9LfZDMIIJQw"  target="_blank">Test</a>
-</pre>
+some text with a link <a href="http://www.google.com" target="blank">google</a>
 This is [a link](https://youtu.be/9LfZDMIIJQw){:target="_blank"} that opens in a new window.
 
 * [Cloud Workshop - Demo 1, Discrete Electronics and Python](https://youtu.be/9LfZDMIIJQw){:target="_blank"}
