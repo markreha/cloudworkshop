@@ -129,4 +129,59 @@ You will need to create the following containers in the Google Cloud Platform:
 	6. Click the App Engine menu. Create an App Engine application of type Java.
 		- See the Getting Started Building the IoT Apps on Github for details on how to build and deploy the Services Application.
 
+================================ AMAZON =============================================
+
+Create a Amazon AWS Cloud Platform account. This requires a credit card but is absolutely free for 12 months. 
+
+Create and configure the AWS PHP Application:
+1. Update app code in source control (see SDK):
+	- Update APP_ENV to amazon in .env 
+2. Log into AWS and select Services from the main menu.
+3. Select Elastic Beanstalk service.
+4. Click the 'Create new Application' link from the top right menu.
+5. Give your Application Name (i.e. ReportingApp). Click the Create button.
+6. Create your Application Environment by clicking the 'Create one now' link.
+7. Select the 'Web server environment' and click the Select button.
+8. Fill out the following fields in the Creating web server environment form:
+	a. From Environment information Domain: 
+		- Give your Application a name (i.e. reporting-app).
+	b. From Base configuration: 
+		- Select PHP from the Preconfigured platform options.
+		- Upload a ZIP file of your PHP application.
+	c. Click the Create Environment button. Wait for environment to get built.
+	d. From the Elastic Beanstalk application screen click the App URL to validate application is running properly.
+
+Create and configure the AWS MySQL databsae:
+1. Log into AWS and select Services from the main menu.
+2. Select RDS.
+3. Under the Create database section click the Create database button.
+4. Select the MySQL engine option and the 5.6 version edition radio button. Check the 'Enable options for free tier'. Click the Next button.
+5. Fill out the Specify DB details form:
+	a. From Settings enter DB instance identifier enter instance name (i.e. mydatabaseinstance).
+	b. From Settings enter Master username and password.
+	c. Click the Next button.
+	d. Leave all defaults in the Configure advanced settings form.
+6. From the RDS Dashboard select your database instance.
+	a. Your database URL is listed under the Connect section under the Endpoint value.
+	b. In MySQL Workbench setup a connection using the AWS Database Endpoint URI and credentials. Create the 'iot' schema and tables by running the DDL script from the SDK.
+	c. Make your database accessible from a Java application by clicking the Security groups link under the Details section for the database.
+		- In the Security Group setup select the Inbound tab. Click the Edit button. Under the Source dropdown select the Anywhere option.
+
+Create and configure the AWS Tomcat Application:
+1. Update app code in source control (see SDK):
+	- Set up config folder and Maven Profile. 
+2. Log into AWS and select Services from the main menu.
+3. Select Elastic Beanstalk service.
+4. Click the 'Create new Application' link from the top right menu.
+5. Give your Application Name (i.e. ServicesApp). Click the Create button.
+6. Create your Application Environment by clicking the 'Create one now' link.
+7. Select the 'Web server environment' and click the Select button.
+8. Fill out the following fields in the Creating web server environment form:
+	a. From Environment information Domain: 
+		- Give your Application a name (i.e. services-app).
+	b. From Base configuration: 
+		- Select Tomcat from the Preconfigured platform options.
+		- Upload a WAR file of your Java application.
+	c. Click the Create Environment button. Wait for environment to get built.
+	d. From the Elastic Beanstalk application screen click the App URL to validate application is running properly.
 
