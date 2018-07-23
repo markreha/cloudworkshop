@@ -5,13 +5,11 @@ The Cloud Workshop SDK contains all the documentation, tools, and example refere
 
 The Cloud Workshop SDK currently supports the Redhat OpenShift  Cloud, the Microsoft Azure Cloud, the Google Cloud Platform, the Heroku Cloud, and the Amazon AWS Cloud.
 
-The overview of the Cloud Reference Architefture can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/architecture/Cloud%20Workshop%20Architecture.pdf).
-
-You can download the Cloud Workshop Training deck [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/training/Cloud%20Workshop%20Training.pdf).
-
-You can access the Cloud Workshop Training Video Library [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/training/screencasts/README.md).
-
-You can access the DevOps Reference Architecture [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/devops/README.md).
+Use the following links to get started:
+* The overview of the Cloud Reference Architefture can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/architecture/Cloud%20Workshop%20Architecture.pdf).
+* You can download the Cloud Workshop Training deck [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/training/Cloud%20Workshop%20Training.pdf).
+* You can access the Cloud Workshop Training Video Library [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/training/screencasts/README.md).
+* You can access the DevOps Reference Architecture [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/devops/README.md).
 
 
 <p align="center">
