@@ -20,7 +20,7 @@ You can access the DevOps Reference Architecture [here](https://github.com/markr
 
 What's New
 --------
-- 07-22-2018: Added support for the AWS Cloud.
+- 07-22-2018: Added support for the Amazon AWS Cloud.
 - 07-18-2018: Added DevOps Reference Architecture (using Jenkins, GitLabs, Loggly, and Uptime Robot).
 - 07-10-2018: Added support for the Heroku Cloud and added support documentation for DevOps.
 - 06-29-2018: Added support for Tomcat and JBoss Wildfly Dockerfiles on the Google Cloud Platform.
