@@ -11,7 +11,7 @@ You can download the Cloud Workshop Training deck [here](https://github.com/mark
 
 You can access the Cloud Workshop Training Video Library [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/training/screencasts/README.md).
 
-The instructions for supporting DevOps in the IoT Reference applications can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/devops/README.md).
+The DevOps Reference Architecture can be found [here](https://github.com/markreha/cloudworkshop/blob/master/sdk/docs/devops/README.md).
 
 
 <p align="center">
