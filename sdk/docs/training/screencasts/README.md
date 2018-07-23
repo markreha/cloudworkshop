@@ -12,6 +12,10 @@ General Cloud Workshop Video's
 
 How To Video's
 --------
+* [Install the Oracle JDK](https://youtu.be/I08V0E5qi0o)
+* [Install the Eclipse IDE](https://youtu.be/cf8GoFr0QE0)
+* [Create an ER Diagram in MySQL Workbench](https://youtu.be/V7Un8NXAF0E)
 
-Cloud Hosting Video's
+Cloud Platform Video's
 --------
+* [How to deploy a PHP Application on Azure](https://youtu.be/BAbs4frlViY)
