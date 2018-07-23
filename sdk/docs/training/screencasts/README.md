@@ -1,6 +1,6 @@
 **Cloud Workshop Training Video Library**
 ==================
-All Cloud Workshop training videos are hosted on YouTube. Use the links below to access the desired video.
+All Cloud Workshop training videos are hosted on YouTube. Use the links below to access the desired video. Get the [Cloud Workshop SDK!](https://github.com/markreha/cloudworkshop/blob/master/README.md)
 
 <p align="center">
 	<img src="https://github.com/markreha/cloudworkshop/raw/master/sdk/docs/architecture/images/dilbert.gif" />
