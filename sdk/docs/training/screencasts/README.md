@@ -1,6 +1,10 @@
 **Cloud Workshop SDK Training Video Library**
 ==================
-All Cloud Workshop SDK training videos are hosted on YouTube. Use the links below to access the desired video:
+All Cloud Workshop SDK training videos are hosted on YouTube. Use the links below to access the desired video.
+
+<p align="center">
+	<img src="https://github.com/markreha/cloudworkshop/raw/master/sdk/docs/architecture/images/dilbert.gif" />
+</p>
 
 General Cloud Workshop Video's
 --------
