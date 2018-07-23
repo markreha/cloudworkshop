@@ -11,11 +11,11 @@ Follow These Easy Steps
 
 Step 1: [Get the SDK and read the Documentation](#get-the-sDK-and-code)
 
-Step 2: [Setup IoT Services Application Local and Codenvy Development Environment](#setup-your-java-mysql-development-environment)
+Step 2: [Setup IoT Services Application Local and Codenvy Cloud IDE Development Environment](#setup-your-java-mysql-development-environment)
 
-Step 3: [Setup the IoT Reporting Application Local and Codenvy Development Environment](#setup-your-php-development-environment)
+Step 3: [Setup the IoT Reporting Application Local and Codenvy Cloud IDE Development Environment](#setup-your-php-development-environment)
 
-Step 4: [Build and configure the IoT Services Application Localy and on Codenvy](#build-the-iot-services-app)
+Step 4: [Build and configure the IoT Services Application Locally and on Codenvy Cloud IDE](#build-the-iot-services-app)
 
 Step 5: [Deploy the IoT Services Application to the OpenShift Cloud](#deploy-the-iot-services-app-to-openshift) or [the Azure Cloud](#deploy-the-iot-services-app-to-azure) or [the Google Cloud Platform](#deploy-the-iot-services-app-to-google-cloud-platform) or [the Heroku Cloud](#deploy-the-iot-services-app-to-heroku-cloud) or [the Amazon Cloud](#deploy-the-iot-services-app-to-amazon-cloud)
 
