@@ -22,4 +22,4 @@ How To Video's
 
 Cloud Platform Video's
 --------
-* [How to deploy a PHP Application on Azure](https://youtu.be/BAbs4frlViY)
+* [How to deploy a PHP Application on Azure](https://youtu.be/jvL-ugcBE30)
