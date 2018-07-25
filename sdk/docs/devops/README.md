@@ -54,7 +54,7 @@ Some principles of DevOps are demonstrated in the IoT Reference Applications. Th
             <li>In the Repository URL enter the GitHub Repo URL. This is will be your source clone repo.</li>
             <li>Click the Add Repository button.</li>
             <li>In the Repository URL enter the Heroku Repo URL. Add credentials of [Heroku Username]/[Heroku API Key]. Click the Advanced button and enter heroku as the Name. This is will be your remote push repo.</li>
-            <li>nder the Build Section click the the 'Add build step' dropdown and the 'Execute shell' option. Enter any custom bash commands to support the build.</li>
+            <li>nder the Build Section click the the 'Add build step' dropdown and the 'Execute shell' option. Enter any custom bash commands to support the build. See the [DevOps Setup Notes](DevOps%20Setup%20Notes.txt) for example build scripts.</li>
             <li>Under the Post-build Actions section click the 'Post post-build action' dropdown and the 'Git Publisher' option. Check the 'Push Only If Build Succeeds' option and 'Force Push' option. In the Branches enter master for the Branch to push and heroku as the Target remote name.</li>
            <li>Click the Save button.</li>
        </ul>
