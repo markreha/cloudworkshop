@@ -22,5 +22,5 @@ How To Video's
 
 Cloud Platform Video's
 --------
-* [How to deploy a PHP and MySQL Application on Azure](https://youtu.be/jvL-ugcBE30)
+* [How to deploy a PHP and MySQL Application on Azure](https://youtu.be/EUI_OmP8X20)
 * [How to deploy a PHP and MySQL Application on Heroku](https://youtu.be/rn5XBBd-_J8)
