@@ -527,6 +527,9 @@ NOTE: You will need to create a Heroku account (this is free and most services y
 * Add heroku/php buildpack
 2. Update app code in source control or Heroku GIT:
 * Update APP_ENV to heroku in .env
+* For non Laravel apps add an empty file (one with just { } as contents) named composer.json to your GitHub repository
+* You can set the version of PHP using the following entry in your composer.json file: "require": { "php": "^7.1.0" }
+- See https://devcenter.heroku.com/articles/php-support
 3. Create Heroku Pipeline and add the PHP app to it
 4. Start a Build:
 * Go to Heroku Pipeline and under the PHP App select the Deploy a branch menu option OR push your code to Heroku GIT
@@ -642,7 +645,6 @@ Deploy using a AWS Code Pipeline:
 14. To access your application:
 * Select the Elastic Beanstalk service from the Services dashboard. Open your Application.
 * Test your application: https://[APP NAME].[AWS REGION].elasticbeanstalk.com/
-
 
 [Back to Top](#getting-started-building-the-iot-apps)
 
