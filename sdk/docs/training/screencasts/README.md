@@ -25,6 +25,5 @@ Cloud Platform Video's
 * [How to deploy a PHP and MySQL Application on Azure](https://youtu.be/EUI_OmP8X20)
 * [How to deploy a PHP and MySQL Application on Heroku](https://youtu.be/rn5XBBd-_J8)
 * [How to deploy a Tomcat Java and MySQL Application on Azure](https://youtu.be/7X2WRa-bjlg)
-
-https://youtu.be/I9XqYN920hI
+* [How to deploy a Tomcat Java and MySQL Application on Heroku](https://youtu.be/I9XqYN920hI)
 
