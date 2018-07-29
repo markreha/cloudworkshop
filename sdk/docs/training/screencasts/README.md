@@ -28,5 +28,5 @@ Cloud Platform Video's
 * [How to deploy a Tomcat Java and MySQL Application on Heroku](https://youtu.be/I9XqYN920hI)
 
 <div class="iframe_container1">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rn5XBBd-_J8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rn5XBBd-_J8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"> </iframe>
 </div>
