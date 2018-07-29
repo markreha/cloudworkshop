@@ -29,7 +29,8 @@ Cloud Platform Video's
 
 
 
-
+(setq markdown-xhtml-header-content
+      "<style type='text/css'>
 .iframe_container {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 - this is responsive by adjusting the hight according to the width! */
@@ -44,6 +45,7 @@ Cloud Platform Video's
 	width: 100%;
 	height: 100%;
 }
+</style>")
 
 <div class="iframe_container">
 	<iframe src="https://www.youtube.com/embed/rn5XBBd-_J8" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
