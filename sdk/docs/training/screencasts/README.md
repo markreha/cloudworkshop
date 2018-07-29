@@ -29,7 +29,6 @@ Cloud Platform Video's
 
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=7X2WRa-bjlg" target="_blank"><img src="http://img.youtube.com/vi/7X2WRa-bjlg/0.jpg" alt="HOWTO - Deploy a Tomcat Java Application on Azure" width="240" height="180" border="10" /></a>
-
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=I9XqYN920hI" target="_blank"><img src="http://img.youtube.com/vi/I9XqYN920hI/0.jpg" alt="HOWTO - Deploy a Tomcat Java Application on Heroku" width="240" height="180" border="10" /></a>
 
 
