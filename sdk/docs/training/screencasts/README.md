@@ -8,7 +8,7 @@ All Cloud Workshop training videos are hosted on YouTube. Use the links below to
 
 General Cloud Workshop Video's
 --------
-* [Cloud Workshop - Demo 1, Discrete Electronics and Python](https://youtu.be/9LfZDMIIJQw){:target="_blank"}
+* [Cloud Workshop - Demo 1, Discrete Electronics and Python](https://youtu.be/9LfZDMIIJQw)
 * [Cloud Workshop - Demo 2, Sense HAT and Python](https://youtu.be/7BcrK2IkN4w)
 * [Cloud Workshop - Demo 3, Start to Finish](https://youtu.be/gtfq57eYa7E)
 * [Setting up EclipseEE, Tomcat, and MySQL](https://youtu.be/OPoDh4BaPBo)
@@ -27,3 +27,6 @@ Cloud Platform Video's
 * [How to deploy a Tomcat Java and MySQL Application on Azure](https://youtu.be/7X2WRa-bjlg)
 * [How to deploy a Tomcat Java and MySQL Application on Heroku](https://youtu.be/I9XqYN920hI)
 
+<div class="iframe_container1">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rn5XBBd-_J8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+</div>
