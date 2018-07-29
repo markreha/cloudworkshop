@@ -8,11 +8,11 @@ All Cloud Workshop training videos are hosted on YouTube. Use the links below to
 
 General Cloud Workshop Video's
 --------
-* [Cloud Workshop - Demo 1, Discrete Electronics and Python](https://youtu.be/9LfZDMIIJQw)
-* [Cloud Workshop - Demo 2, Sense HAT and Python](https://youtu.be/7BcrK2IkN4w)
-* [Cloud Workshop - Demo 3, Start to Finish](https://youtu.be/gtfq57eYa7E)
-* [Setting up EclipseEE, Tomcat, and MySQL](https://youtu.be/OPoDh4BaPBo)
-* [Setting up MySQL Workbench](https://youtu.be/l8MFlvPn19o)
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=9LfZDMIIJQw" target="_blank"><img src="http://img.youtube.com/vi/9LfZDMIIJQw/0.jpg" alt="Demo 1, Discrete Electronics and Python" width="240" height="180" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=7BcrK2IkN4w" target="_blank"><img src="http://img.youtube.com/vi/7BcrK2IkN4w/0.jpg" alt="Demo 2, Sense HAT and Python" width="240" height="180" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=gtfq57eYa7E" target="_blank"><img src="http://img.youtube.com/vi/gtfq57eYa7E/0.jpg" alt="Demo 3, Start to Finish" width="240" height="180" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=OPoDh4BaPBo" target="_blank"><img src="http://img.youtube.com/vi/OPoDh4BaPBo/0.jpg" alt="Setting up EclipseEE, Tomcat, and MySQL" width="240" height="180" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=l8MFlvPn19o" target="_blank"><img src="http://img.youtube.com/vi/l8MFlvPn19o/0.jpg" alt="Setting up MySQL Workbench" width="240" height="180" border="10" /></a>
 
 How To Video's
 --------
