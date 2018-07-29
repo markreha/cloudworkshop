@@ -27,3 +27,5 @@ Cloud Platform Video's
 * [How to deploy a Tomcat Java and MySQL Application on Azure](https://youtu.be/7X2WRa-bjlg)
 * [How to deploy a Tomcat Java and MySQL Application on Heroku](https://youtu.be/I9XqYN920hI)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I9XqYN920hI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
