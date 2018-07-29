@@ -16,10 +16,6 @@ General Cloud Workshop Video's
 
 How To Video's
 --------
-* [Install the Oracle JDK](https://youtu.be/I08V0E5qi0o)
-* [Install the Eclipse IDE](https://youtu.be/cf8GoFr0QE0)
-* [Create an ER Diagram in MySQL Workbench](https://youtu.be/V7Un8NXAF0E)
-
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=I08V0E5qi0o" target="_blank"><img src="http://img.youtube.com/vi/I08V0E5qi0o/0.jpg" alt="HOWTO - Install the Oracle JDK" width="240" height="180" border="10" /></a>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=cf8GoFr0QE0" target="_blank"><img src="http://img.youtube.com/vi/cf8GoFr0QE0/0.jpg" alt="HOWTO - Install the Eclipse IDE" width="240" height="180" border="10" /></a>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=V7Un8NXAF0E" target="_blank"><img src="http://img.youtube.com/vi/V7Un8NXAF0E/0.jpg" alt="HOWTO - Create an ER Diagram in MySQL Workbench" width="240" height="180" border="10" /></a>
