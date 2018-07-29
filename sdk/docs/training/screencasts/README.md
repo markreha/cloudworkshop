@@ -28,25 +28,3 @@ Cloud Platform Video's
 * [How to deploy a Tomcat Java and MySQL Application on Heroku](https://youtu.be/I9XqYN920hI)
 
 
-
-(setq markdown-xhtml-header-content
-      "<style type='text/css'>
-.iframe_container {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 - this is responsive by adjusting the hight according to the width! */
-	padding-top: 25px;
-	height: 0;
-}
-
-.iframe_container iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-</style>")
-
-<div class="iframe_container">
-	<iframe src="https://www.youtube.com/embed/rn5XBBd-_J8" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
-</div>
