@@ -23,10 +23,10 @@ How To Video's
 
 Cloud Platform Video's
 --------
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=EUI_OmP8X20" target="_blank"><img src="http://img.youtube.com/vi/EUI_OmP8X20/0.jpg" alt="HOWTO - Deploy a PHP Application on Azure" width="120" height="90" border="10" /></a>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=rn5XBBd-_J8" target="_blank"><img src="http://img.youtube.com/vi/rn5XBBd-_J8/0.jpg" alt="HOWTO - Deploy a PHP Application on Heroku" width="120" height="90" border="10" /></a>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=7X2WRa-bjlg" target="_blank"><img src="http://img.youtube.com/vi/7X2WRa-bjlg/0.jpg" alt="HOWTO - Deploy a Tomcat Java Application on Azure" width="120" height="90" border="10" /></a>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=I9XqYN920hI" target="_blank"><img src="http://img.youtube.com/vi/I9XqYN920hI/0.jpg" alt="HOWTO - Deploy a Tomcat Java Application on Heroku" width="120" height="90" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=EUI_OmP8X20" target="_blank"><img src="http://img.youtube.com/vi/EUI_OmP8X20/0.jpg" alt="HOWTO - Deploy a PHP Application on Azure" width="200" height="140" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=rn5XBBd-_J8" target="_blank"><img src="http://img.youtube.com/vi/rn5XBBd-_J8/0.jpg" alt="HOWTO - Deploy a PHP Application on Heroku" width="200" height="140" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=7X2WRa-bjlg" target="_blank"><img src="http://img.youtube.com/vi/7X2WRa-bjlg/0.jpg" alt="HOWTO - Deploy a Tomcat Java Application on Azure" width="200" height="140" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=I9XqYN920hI" target="_blank"><img src="http://img.youtube.com/vi/I9XqYN920hI/0.jpg" alt="HOWTO - Deploy a Tomcat Java Application on Heroku" width="200" height="140" border="10" /></a>
 
 
 
