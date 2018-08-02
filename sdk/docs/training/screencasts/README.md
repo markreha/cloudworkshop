@@ -12,7 +12,6 @@ General Cloud Workshop Video's
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=7BcrK2IkN4w" target="_blank"><img src="http://img.youtube.com/vi/7BcrK2IkN4w/0.jpg" alt="Demo 2, Sense HAT and Python" width="200" height="140" border="10" /></a>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=gtfq57eYa7E" target="_blank"><img src="http://img.youtube.com/vi/gtfq57eYa7E/0.jpg" alt="Demo 3, Start to Finish" width="200" height="140" border="10" /></a>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=l8MFlvPn19o" target="_blank"><img src="http://img.youtube.com/vi/l8MFlvPn19o/0.jpg" alt="Setting up MySQL Workbench" width="200" height="140" border="10" /></a>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=PkHvBv4jGSI" target="_blank"><img src="http://img.youtube.com/vi/PkHvBv4jGSI/0.jpg" alt="Setup EclipseEE, Tomcat, and MySQL Database" width="200" height="140" border="10" /></a>
 
 How To Video's
 --------
@@ -20,6 +19,7 @@ How To Video's
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=cf8GoFr0QE0" target="_blank"><img src="http://img.youtube.com/vi/cf8GoFr0QE0/0.jpg" alt="HOWTO - Install the Eclipse IDE" width="200" height="140" border="10" /></a>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=OarbG3a38IY" target="_blank"><img src="http://img.youtube.com/vi/OarbG3a38IY/0.jpg" alt="HOWTO - Create an ER Diagram in MySQL Workbench" width="200" height="140" border="10" /></a>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Sm-nQBlCH9I" target="_blank"><img src="http://img.youtube.com/vi/Sm-nQBlCH9I/0.jpg" alt="HOWTO - Write a JAX-RS REST Service and Test with Postman" width="200" height="140" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=PkHvBv4jGSI" target="_blank"><img src="http://img.youtube.com/vi/PkHvBv4jGSI/0.jpg" alt="Setup EclipseEE, Tomcat, and MySQL Database" width="200" height="140" border="10" /></a>
 
 Cloud Platform Video's
 --------
