@@ -6,7 +6,7 @@ All Cloud Workshop training videos are hosted on YouTube. Use the links below to
 	<img src="https://github.com/markreha/cloudworkshop/raw/master/sdk/docs/architecture/images/dilbert.gif" />
 </p>
 
-Cloud Workshop Demo Video's
+Cloud Workshop Video's
 --------
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=9LfZDMIIJQw" target="_blank"><img src="http://img.youtube.com/vi/9LfZDMIIJQw/0.jpg" alt="Demo 1, Discrete Electronics and Python" width="200" height="140" border="10" /></a>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=7BcrK2IkN4w" target="_blank"><img src="http://img.youtube.com/vi/7BcrK2IkN4w/0.jpg" alt="Demo 2, Sense HAT and Python" width="200" height="140" border="10" /></a>
