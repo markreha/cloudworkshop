@@ -18,8 +18,10 @@ How To Video's
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=I08V0E5qi0o" target="_blank"><img src="http://img.youtube.com/vi/I08V0E5qi0o/0.jpg" alt="HOWTO - Install the Oracle JDK" width="200" height="140" border="10" /></a>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=cf8GoFr0QE0" target="_blank"><img src="http://img.youtube.com/vi/cf8GoFr0QE0/0.jpg" alt="HOWTO - Install the Eclipse IDE" width="200" height="140" border="10" /></a>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=OarbG3a38IY" target="_blank"><img src="http://img.youtube.com/vi/OarbG3a38IY/0.jpg" alt="HOWTO - Create an ER Diagram in MySQL Workbench" width="200" height="140" border="10" /></a>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=Sm-nQBlCH9I" target="_blank"><img src="http://img.youtube.com/vi/Sm-nQBlCH9I/0.jpg" alt="HOWTO - Write a JAX-RS REST Service and Test with Postman" width="200" height="140" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=o-IxLROusQ8" target="_blank"><img src="http://img.youtube.com/vi/o-IxLROusQ8/0.jpg" alt="HOWTO - Property copy Dynamic Web Projects in your Eclipse Workspace" width="200" height="140" border="10" /></a>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=OPoDh4BaPBo" target="_blank"><img src="http://img.youtube.com/vi/OPoDh4BaPBo/0.jpg" alt="Setup EclipseEE, Tomcat, and MySQL Database" width="200" height="140" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Sm-nQBlCH9I" target="_blank"><img src="http://img.youtube.com/vi/Sm-nQBlCH9I/0.jpg" alt="HOWTO - Write a JAX-RS REST Service and Test with Postman" width="200" height="140" border="10" /></a>
+
 
 Cloud Platform Video's
 --------
