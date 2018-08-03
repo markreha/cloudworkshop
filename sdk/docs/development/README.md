@@ -285,7 +285,7 @@ Initialize MySQl Database using Port Forwarding and MySQL Workbench [here](https
 	 - env | grep MYSQL
 	 - exit
  4. Run a Port Forward: ./oc port-forward [MYSQL_POD] [MYSQL_WORKBENCH_LOCAL_PORT]:[MYSQL_PORT]
-	 - This will not permanent and will do port forwarding as long as your Terminal Session is running
+	 - This will not be permanent and will do port forwarding as long as your Terminal Session is running
  5. Run MySQL Workbench connecting to 127.0.0.1, [MYSQL_WORKBENCH_LOCAL_PORT], your MySQL Database credentials
 	 - Run the IoT.sql DDL script from SDK
 	 - Exit MySQL Workbench
