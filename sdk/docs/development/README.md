@@ -274,20 +274,22 @@ Initialize the MySQL Database using RSH into the POD (also see the online help [
  9. Run the command: source all.sql
  9. Grant privileges to petclinic user: grant all privileges on iot.* to petclinic
  10. Run the command: flush privileges
+
 OR
+
 Initialize MySQl Database using Port Forwarding and MySQL Workbench [here](https://blog.openshift.com/openshift-connecting-database-using-port-forwarding/)
  1. Log into OpenShift: ./oc [OpenShift Online Web Console URL]
  2. Get your MySQL Pod Name: ./oc get pods
  3. To find your MySQL Database IP, Port, and Credentials using RSH into the MySQL Database Pod and dumping the environment variables related to MySQL:
-a) ./oc rsh [MYSQL_POD]
-b) env | grep MYSQL
-c) exit
+	 - ./oc rsh [MYSQL_POD]
+	 - env | grep MYSQL
+	 - exit
  4. Run a Port Forward: ./oc port-forward [MYSQL_POD] [MYSQL_WORKBENCH_LOCAL_PORT]:[MYSQL_PORT]
-a) This will not permanent and will do port forwarding as long as your Terminal Session is running
+	 - This will not permanent and will do port forwarding as long as your Terminal Session is running
  5. Run MySQL Workbench connecting to 127.0.0.1, [MYSQL_WORKBENCH_LOCAL_PORT], your MySQL Database credentials
-a) Run the IoT.sql DDL script from SDK
-b) Exit MySQL Workbench
-]c) Exit the Terminal Session by entering Ctrl-C
+	 - Run the IoT.sql DDL script from SDK
+	 - Exit MySQL Workbench
+	 - Exit the Terminal Session by entering Ctrl-C
 
 NOTE: Because you will not have enough quota during deployment you will need to change the Container deployment strategy for this project. This can be done by selecting the following menu options: click Applications -> Deployments main menu items, select the name of your application, select the Actions -> Edit drop down menu options, and change the Deployment Strategy Type from Rolling to Recreate.
 
