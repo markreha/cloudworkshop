@@ -31,6 +31,7 @@ Cloud Platform Video's
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=7X2WRa-bjlg" target="_blank"><img src="http://img.youtube.com/vi/7X2WRa-bjlg/0.jpg" alt="HOWTO - Deploy a Tomcat Java Application on Azure" width="200" height="140" border="10" /></a>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=I9XqYN920hI" target="_blank"><img src="http://img.youtube.com/vi/I9XqYN920hI/0.jpg" alt="HOWTO - Deploy a Tomcat Java Application on Heroku" width="200" height="140" border="10" /></a>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=m_7oEjKVo1E" target="_blank"><img src="http://img.youtube.com/vi/m_7oEjKVo1E/0.jpg" alt="HOWTO - Deploy a .NET MVC Application on Azure" width="200" height="140" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=h6D0Buz6sCs" target="_blank"><img src="http://img.youtube.com/vi/h6D0Buz6sCs/0.jpg" alt="HOWTO - Deploy JBoss Wildfly and MySQL Database on OpenShift" width="200" height="140" border="10" /></a>
 
 
 
