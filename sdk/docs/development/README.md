@@ -261,7 +261,7 @@ Setup and configure the OpenShift JBoss Tomcat MySQL Container:
  4. Add the following Data Store to the Project: MySQL datastore image for the MySQL database.
  5. Once you have added both Containers to your Project you will need to group the JBoss Tomcat Container with the MySQL Container.
 
-Initialize the MySQL Database (also see the online help [here](https://docs.openshift.com/online/dev_guide/migrating_applications/database_applications.html)):
+Initialize the MySQL Database using RSH into the POD (also see the online help [here](https://docs.openshift.com/online/dev_guide/migrating_applications/database_applications.html)):
  1. Download the OpenShift Command Line Interface tool from [here](https://console.starter-us-east-1.openshift.com/console/command-line).
  2. Open a Terminal Window or DOS Box. 
  3. Navigate to the path were the Command Line Tool was installed. 
@@ -274,6 +274,20 @@ Initialize the MySQL Database (also see the online help [here](https://docs.open
  9. Run the command: source all.sql
  9. Grant privileges to petclinic user: grant all privileges on iot.* to petclinic
  10. Run the command: flush privileges
+OR
+Initialize MySQl Database using Port Forwarding and MySQL Workbench [here](https://blog.openshift.com/openshift-connecting-database-using-port-forwarding/)
+ 1. Log into OpenShift: ./oc [OpenShift Online Web Console URL]
+ 2. Get your MySQL Pod Name: ./oc get pods
+ 3. To find your MySQL Database IP, Port, and Credentials using RSH into the MySQL Database Pod and dumping the environment variables related to MySQL:
+a) ./oc rsh [MYSQL_POD]
+b) env | grep MYSQL
+c) exit
+ 4. Run a Port Forward: ./oc port-forward [MYSQL_POD] [MYSQL_WORKBENCH_LOCAL_PORT]:[MYSQL_PORT]
+a) This will not permanent and will do port forwarding as long as your Terminal Session is running
+ 5. Run MySQL Workbench connecting to 127.0.0.1, [MYSQL_WORKBENCH_LOCAL_PORT], your MySQL Database credentials
+a) Run the IoT.sql DDL script from SDK
+b) Exit MySQL Workbench
+]c) Exit the Terminal Session by entering Ctrl-C
 
 NOTE: Because you will not have enough quota during deployment you will need to change the Container deployment strategy for this project. This can be done by selecting the following menu options: click Applications -> Deployments main menu items, select the name of your application, select the Actions -> Edit drop down menu options, and change the Deployment Strategy Type from Rolling to Recreate.
 
