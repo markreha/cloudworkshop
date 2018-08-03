@@ -84,7 +84,7 @@ Create two OpenShift v3 accounts: use one account for the Java REST API Spring M
 	Project Type: MySQL datastore image for the REST API Spring MySQL project
 	Project Type: PHP 7.0 image for PHP Laravel project
 	
-Initialize MySQl Database (https://docs.openshift.com/online/dev_guide/migrating_applications/database_applications.html)
+Initialize MySQl Database using RSH (https://docs.openshift.com/online/dev_guide/migrating_applications/database_applications.html)
 	1) Log into OpenShift: ./oc [OpenShift Online Web Console URL]
 	2) Get your MySQL Pod Name: ./oc get pods
 	3) Copy the IoT.sql DDL script from SDK into a directory called db under the folder where you run oc
@@ -98,6 +98,19 @@ Initialize MySQl Database (https://docs.openshift.com/online/dev_guide/migrating
 		a) grant all privileges on iot.* to [your MySQL username]
 		b) flush privileges
 		c) exit
+Initialize MySQl Database using Port Forwarding and MySQL Workbench (https://blog.openshift.com/openshift-connecting-database-using-port-forwarding/)
+	1) Log into OpenShift: ./oc [OpenShift Online Web Console URL]
+	2) Get your MySQL Pod Name: ./oc get pods
+	3) To find your MySQL Database IP, Port, and Credentials using RSH into the MySQL Database Pod and dumping the environment variables related to MySQL:
+		a) ./oc rsh [MYSQL_POD]
+		b) env | grep MYSQL
+		c) exit
+	4) Run a Port Forward: ./oc port-forward [MYSQL_POD] [MYSQL_WORKBENCH_LOCAL_PORT]:[MYSQL_PORT]
+		a) This will not permanent and will do port forwarding as long as your Terminal Session is running
+	5) Run MySQL Workbench connecting to 127.0.0.1, [MYSQL_WORKBENCH_LOCAL_PORT], your MySQL Database credentials
+		a) Run the IoT.sql DDL script from SDK
+		b) Exit MySQL Workbench
+		c) Exit the Terminal Session by entering Ctrl-C
 	
 Issue: You many not have enough POD quota during build and deployment.
 Resolution: Applications -> Deployments -> select app -> Actions -> Edit and change deployment strategy from Rolling to Recreate.
