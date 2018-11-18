@@ -272,21 +272,28 @@ Initialize the MySQL Database using RSH into the POD (also see the online help [
  8. Run the command: cd /var/lib/mysql/data
  8. Run the SQL DDL Script: mysql -u root
  9. Run the command: source all.sql
- 9. Grant privileges to petclinic user: grant all privileges on iot.* to petclinic
+ 9. Grant privileges to MySQL user (that you specified when you created the database): grant all privileges on iot.* to [MYSQL USER]
  10. Run the command: flush privileges
 
 OR
 
 Initialize MySQl Database using Port Forwarding and MySQL Workbench [here](https://blog.openshift.com/openshift-connecting-database-using-port-forwarding/)
  1. Log into OpenShift: ./oc [OpenShift Online Web Console URL]
- 2. Get your MySQL Pod Name: ./oc get pods
- 3. To find your MySQL Database IP, Port, and Credentials using RSH into the MySQL Database Pod and dumping the environment variables related to MySQL:
+ 2. If you have not granted your MySQL User (that you specified when you created the database) by running the following command: 
+ 	 - ./oc get pods
+ 	 - ./oc rsh <mysql_pod>
+ 	 - Run the MySQL CLI as root user: mysql -u root
+ 	 - Grant all privileges to MySQL User: grant all privileges on iot.* to [YOUR MYSQL-USER]
+  	 - Flush MySQL: flush privileges
+	 - Exit MySQL CLI: quit
+ 3. Get your MySQL Pod Name: ./oc get pods
+ 4. To find your MySQL Database IP, Port, and Credentials using RSH into the MySQL Database Pod and dumping the environment variables related to MySQL:
 	 - ./oc rsh [MYSQL_POD]
 	 - env | grep MYSQL
 	 - exit
- 4. Run a Port Forward: ./oc port-forward [MYSQL_POD] [MYSQL_WORKBENCH_LOCAL_PORT]:[MYSQL_PORT]
+ 5. Run a Port Forward: ./oc port-forward [MYSQL_POD] [MYSQL_WORKBENCH_LOCAL_PORT]:[MYSQL_PORT]
 	 - This will not be permanent and will do port forwarding as long as your Terminal Session is running
- 5. Run MySQL Workbench connecting to 127.0.0.1, [MYSQL_WORKBENCH_LOCAL_PORT], your MySQL Database credentials
+ 6. Run MySQL Workbench connecting to 127.0.0.1, [MYSQL_WORKBENCH_LOCAL_PORT], your MySQL Database credentials
 	 - Run the IoT.sql DDL script from SDK
 	 - Exit MySQL Workbench
 	 - Exit the Terminal Session by entering Ctrl-C
