@@ -252,6 +252,7 @@ Deploy the IoT Services App to OpenShift
 Once you have tested your IoT Services app you can then setup Cloud Containers in OpenShift and then build and deploy your application to OpenShift. Your IoT Services should FIRST be regression tested using the Postman Test Scripts located in the ***/sdk/developer/testing*** directory in the SDK before building and deploying your application. You may have to customize the hostnames and ports in the Test Scripts from the SDK. You will also want to reference the [Cloud Setup Notes](Cloud%20Setup%20Notes.txt) in the SDK.
 
 NOTE: You will need to Create two OpenShift v3 accounts: use one account for the IoT Services application and another account for the IoT Reporting application.
+NOTE: If your MySQL Persistent Volume runs out of Quota it might be necessary to delete the MySQL Pod and Storage to recreate your MySQL database. The MySQL Storage can be deleted using the OpenSHift CLI by using the following commands; ./oc get pvc to get the MySQL Persistent Storage name then delete it by running the command ./oc delete pvc [MYSQL STORAGE NAME]. 
 
 Setup and configure the OpenShift JBoss Tomcat MySQL Container:
  1. Create a new Project in OpenShift named Cloud Workshop.
