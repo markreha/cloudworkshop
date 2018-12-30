@@ -39,6 +39,7 @@ CREATE TABLE `device` (
 LOCK TABLES `device` WRITE;
 /*!40000 ALTER TABLE `device` DISABLE KEYS */;
 INSERT INTO `device` VALUES (0,'12946 W. Luchana Dr. Litchfield Park AZ 85340','Mark\'s Pi');
+INSERT INTO `device` VALUES (1,'12946 W. Luchana Dr. Litchfield Park AZ 85340','Mark\'s Arduino');
 /*!40000 ALTER TABLE `device` ENABLE KEYS */;
 UNLOCK TABLES;
 
