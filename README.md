@@ -17,6 +17,7 @@ Use the following links to get started with the Cloud Workshop SDK:
 
 What's New
 --------
+- 12-30-2018: Added support for an Arduino IoT Device.
 - 07-22-2018: Added support for the Amazon AWS Cloud.
 - 07-18-2018: Added DevOps Reference Architecture (using Jenkins, GitLabs, Loggly, and Uptime Robot).
 - 07-10-2018: Added support for the Heroku Cloud and added support documentation for DevOps.
