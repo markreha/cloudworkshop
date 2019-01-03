@@ -63,9 +63,9 @@ Additional documents located in this directory that you need to review and refer
 * OpenShift Getting Started Guide - OpenShift_Online-3-Getting_Started-en-US.pdf
 
 There are API documentation for each application:
-* [REST API](https://markreha.github.io/cloudworkshop/sdk/docs/swagger/)
-* [Service JavaDoc](https://markreha.github.io/cloudworkshop/sdk/docs/javadoc/)
-* [App PhpDpc](https://markreha.github.io/cloudworkshop/sdk/docs/phpdoc/)
+* [REST API](https://markreha.github.io/cloudworkshop/sdk/docs/swagger/site/index.html)
+* [Service JavaDoc](https://markreha.github.io/cloudworkshop/sdk/docs/javadoc/site/index.html)
+* [App PhpDpc](https://markreha.github.io/cloudworkshop/sdk/docs/phpdoc/site/index.html)
 
 You can now use the steps outlined below for setting up your development environment and building the IoT Template applications or building the IoT Reference applications.
 
