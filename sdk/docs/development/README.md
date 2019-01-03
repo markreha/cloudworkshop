@@ -64,8 +64,8 @@ Additional documents located in this directory that you need to review and refer
 
 There are API documentation for each application:
 * [REST API](https://markreha.github.io/cloudworkshop/sdk/docs/swagger/site/index.html)
-* [Service JavaDoc](https://markreha.github.io/cloudworkshop/sdk/docs/javadoc/site/index.html)
-* [App PhpDpc](https://markreha.github.io/cloudworkshop/sdk/docs/phpdoc/site/index.html)
+* [Service JavaDoc](https://markreha.github.io/cloudworkshop/sdk/docs/javadoc/index.html)
+* [App PhpDpc](https://markreha.github.io/cloudworkshop/sdk/docs/phpdoc/index.html)
 
 You can now use the steps outlined below for setting up your development environment and building the IoT Template applications or building the IoT Reference applications.
 
