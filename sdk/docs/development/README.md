@@ -497,7 +497,18 @@ If you need to configure your own application the following steps need to be com
 ```
 3. Update Service Endpoint URL:
  	Update APP_ENV in .env to google 
-	
+
+NOTE: the example app.yaml check into the Cloud Workshop is for the flex Google App Engine configuration. This is intended for production usage and will cost your about $50/month. The standard Google App Engine configuration deployment is not fully functional at this point despite following Google's Documentation at https://github.com/GoogleCloudPlatform/php-docs-samples and upgrading to the Laravel 5.7.x using the PHP 7.2.x runtimes. Upgrading the code in Cloud Workshop to Laravel 5.7.x on PHP 7.2.10 is all working with any known issues. For now you will need to used the flex Google App Engine configuration with caution. The following changes were attempted against the Cloud Workshop code checked into this repository.
+* Tested locally the Laravel upgrade from 5.4.x to 5.7.x on local sytem using PHP 7.2.10 runtime. This required updates to composer.json and running composer update on the GIT Clone from this repository.
+* Changed app.yaml to standard GAE configuration using PHP 7.2.x:
+	runtime: php72
+	env: standard
+* Updated the Laravel source files as documented in Google's documentation (see above link).
+* Checked all code into a Test Branch.
+* In Google Cloud cloned the Test Branch.
+* In Google Cloud updated the .gcloudignore to ensure the vendor directory is deployed (must run gcloud deploy once to get this file generated).
+Despite many attempts there continued to be runtime errors on Google Cloud with the most recent error related to not being able to write to the bootstrap/cache directory. At this point in time it is assumed this an an issue with the Google App Engine Standard Platform when using PHP 7.2, which is still in beta.
+
 See https://cloud.google.com/community/tutorials/run-laravel-on-appengine-flexible
 
 Deploy the IoT Services App to Heroku Cloud
