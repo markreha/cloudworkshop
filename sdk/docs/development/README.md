@@ -336,8 +336,8 @@ NOTE: You will need to a create an Azure account (this is available for free if 
 
 Create Tomcat 8.5 and MySQL Container in Azure:
  1. Log into the Azure Portal.
- 2. Click the '+ Create a resource' icon from the Azure Portal and search for Tomcat.
- 3. Select the Apache Tomcat 8 Application from Microsoft.
+ 2. Click the '+ Create a resource' icon from the Azure Portal and search for Azure Webapp.
+ 3. From the 'Everything' category select Web App + MySQL option. NOTE: with the Azure of Student account you can only provision 2 containers in the same App Service Plan (i.e. within the same Region). If you provision more than 2 containers Microsoft will shut down all your applications. You will then either have to delete some of your applications or start using a different App Service Plan.
  4. Open your application from your Dashboard. This is an important step! This will ensure that phpMyAdmin is accessible via single sign on.
 
 Initialize the MySQL Database:
@@ -346,15 +346,27 @@ Initialize the MySQL Database:
  3. Under the Development Tools section click the Console icon.
  4. Navigate to the D:\home\data\mysql directory and display the ‘MYSQLCONNSTR_localdb.txt' file using the type command to get your MySQL Connection Properties. Note the DB connection information to get your DB hostname, post, and credentials.
 
-Configure Tomcat Manager:
- 1. Open your application (by default Tomcat Manager will be invoked for the default URL).
- 2. Under the Development Tools section click the Advanced Tools icon, select the Go link, and select the Tools->Zip Push Deploy menu. 
- 3. Navigate into the bin->apache-tomcat-8.x.x->conf directory.
- 4. Edit the tomcat-users.xml file.
- 5. Add a Tomcat User under the manager-gui role within the <tomcat-users> tag. Use the following XML tags:
-    <role rolename="manager-gui"/>
-    <user username="tomcat" password="admin" roles="manager-gui"/>
- 6. Click the Save button.
+Configure your application:
+1. Under the Development Tools section click the Advanced Tools icon. Click on the Go hyperlink to open the Tool. Click on the CMD menu option under the Debug Console menu. Navigate to the site->wwwroot directory.
+2. Create a file named web.config in the wwwroot directory.
+3. Add the following content to the web.config file:
+ ```xml
+	<?xml version="1.0" encoding="UTF-8"?>
+		<configuration>
+		  <system.webServer>
+			<handlers>
+			  <remove name="httpPlatformHandlerMain" />
+			  <add name="httpPlatformHandlerMain" path="*" verb="*" modules="httpPlatformHandler" resourceType="Unspecified"/>
+			</handlers>
+			<httpPlatform processPath="D:\Program Files (x86)\apache-tomcat-8.5.34\bin\startup.bat" requestTimeout="00:04:00" arguments="start" startupTimeLimit="60" startupRetryCount="3" >
+				<environmentVariables>
+					<environmentVariable name="CATALINA_OPTS" value="-Xms256m -Xmx256m  -Dport.http=%HTTP_PLATFORM_PORT%" />
+				</environmentVariables>
+			  </httpPlatform>
+		  </system.webServer>
+		</configuration>
+ ```
+4. Stop your application. The start your application (do not restart but stop and start) for the configuration settings to take place
 
 Build and deploy your application:
  1. Open your application.
