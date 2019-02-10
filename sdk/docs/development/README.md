@@ -586,12 +586,13 @@ Create and configure an AWS MySQL databsae:
 * From Settings enter DB instance identifier enter instance name (i.e. mydatabaseinstance).
 * From Settings enter Master username and password.
 * Click the Next button.
+* Under Network and Security section set the Public Accessibility setting to Yes.
 * Leave all defaults in the Configure advanced settings form.
 6. From the RDS Dashboard select your database instance.
 * Your database URL is listed under the Connect section under the Endpoint value.
-* In MySQL Workbench setup a connection using the AWS Database Endpoint URI and credentials. Create the 'iot' schema and tables by running the DDL script from the SDK.
 * Make your database accessible from a Java application by clicking the Security groups link under the Details section for the database.
 * In the Security Group setup select the Inbound tab. Click the Edit button. Under the Source dropdown select the Anywhere option.
+* In MySQL Workbench setup a connection using the AWS Database Endpoint URI and credentials. Create the 'iot' schema and tables by running the DDL script from the SDK.
 
 Create and configure an AWS Tomcat Application:
 1. Update app code in source control (see SDK):
