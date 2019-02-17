@@ -407,21 +407,20 @@ NOTE: You will need to create a Google Cloud Platform account (this requires a c
 
 Create Java (Jetty) Container and deploy your application in the Google App Engine (GAE):
 
- 1. Create an App Engine application of type Java.
- 2. Build and deploy (from Google Cloud Shell): 
-* git clone [URL to Cloud Services Repo]
-* cd to cloudservices
-* Test locally in Shell: mvn -Pgoogle clean appengine:run
-	 - NOTE: comment out the google-api-client and google-api-client-appengine as dependencies in your maven file
-	 - TEST: click on the Web Preview icon in the Shell and go to https://[project name].appspot.com/rest/weather/get/0/1
-* In the Google Cloud Dashboard go to APIs & Services and make sure Google Cloud SQL is enabled
-* Deploy: mvn -Pgoogle clean appengine:deploy
-* Test at https://[project name].appspot.com/rest/weather/get/0/1
-	 - To view logs go to App Engine Versions and select Logs from the Tools dropdown
-
-If you need to configure your own application the following steps need to be completed:
-
- 1. Update POM file:
+1. Create an App Engine application of type Java using the following steps:
+* Select App Engine from the Main Menu.
+* Click the ‘Select a Project’ dropdown list and then click the New Project icon.
+* Give your Project a Name and click the Create button.
+* From the Welcome to App Engine screen click the Create Application button.
+* Select a Region from the US and click the Create App button.
+* Select Java from Language list and a Standard Environment. Click the Next button.
+2. Clone your Application Code from GIT (from Google Cloud Shell) using the following steps:
+* Open up a Cloud Shell from the Activate Cloud Shell icon in the top menu. From the Cloud Shell perform the following operations. 
+** NOTE: once you have a Cloud Shell open if you click on the Pencil icon from the Cloud Shell menu this will open a tree view of your code, which allows you to edit some of your configuration files. Once you are in the editor you can also upload files into your project.
+* Run the following command from the Cloud Shell:
+** git clone [URL to your Test App Repo]
+3. Configure your application using the following steps:
+* Update POM file:
  ```xml
 	<plugin>
 		<groupId>com.google.cloud.tools</groupId>
@@ -445,22 +444,35 @@ If you need to configure your own application the following steps need to be com
 		<version>1.21.0</version>
 	</dependency>
  ```
- 2. Add appengine.xml to WEB-INF. See example the Cloud Workshop SDK. 
- 3. Update appengine-web.xml to set path for log file to /tmp/cloudservices/logs/iotWeatherApp.log. See example the Cloud Workshop SDK. 
- 4. Update config.properties to setup db.connection property for Google MySQL database. See example the Cloud Workshop SDK.
+* Add appengine.xml to WEB-INF. See example the Cloud Workshop SDK. 
+* Update appengine-web.xml to set path for log file to /tmp/cloudservices/logs/iotWeatherApp.log. See example the Cloud Workshop SDK. 
+* Update config.properties to setup db.connection property for Google MySQL database. See example the Cloud Workshop SDK.
+4. Create the MySQL Database Container and initialize the schema in the Google Cloud Platform using the following steps:
+* Select SQL menu item from the Main Menu.
+* Select MySQL Database Engine and click the Next button.
+* Select the MySQL Second Generation type.
+* Fill out the Instance ID, root password, region, and click the Create button.
+* Open the instance of the new Database and note your Public IP Address.
+* Select the Users menu and then create a new user [DB_USERNAME]/[DB_PASSWORD] that is available for all hosts. Click the Create button.
+* Select the Database menu and then create a new Database (your schema).
+* Get your public IP Address by going to your browser and in the search bar enter ‘My IP’. Note your IP Address for the next step.
+* Select the Connections menu and under Authorization Networks click Add Network button, name of GCU, network of your IP Address (from previous step), click Done and Save buttons.
+* Setup a MySQL Workbench connection using the databases IP address (listed in the Overview menu) and your database credentials (setup from the prior step).
+* Connect to the database in MySQL Workbench and run your DDL script.
+* In the main Google menu go to APIs & Services, click on the Library menu, search for Google Cloud SQL, and make sure Google Cloud SQL is enabled.
+* Update your database configuration for your application (i.e. config.properties to setup db.connection property for Google MySQL database).
+** NOTE: the JDBC Connection String for MySQL requires the following format:
+jdbc:mysql://google/[SCHEMA]?socketFactory=com.google.cloud.sql.mysql.SocketFactory&cloudSqlInstance=[PROJECT_NAME_ID]:[DB_REGION]:[DB_INSTANCE_NAME]
+5. Build and Deploy your application using the following steps:
+* Open your Cloud Shell.
+* cd to your cloned project root directory
+* Deploy to App Engine: mvn -P[PROFILE] clean appengine:deploy
+** NOTE: use of Maven Profiles is options and if not used then leave the P command line option off when running mvn from the command line.
+* Test at https://[PROJECT_NAME].appspot.com/
+** To view application logs you can go to the Home menu item and go under the Error Reporting section to view your most recent errors.
+** To view application logs go to App Engine Versions and select Logs from the Tools dropdown.
 
 See https://cloud.google.com/appengine/docs/flexible/java/dev-jetty9
-
-Create the MySQL Database Container and initialzie the schema in the Google Cloud Platform.
-
- 1. Create a SQL MySQL instance (of type Second Generation).
- 2. Go to a browser and search for My IP. Note your IP Address. 
- 3. Open the instance of the new database. 
- 4. Under Users create a new user test/test that is available for all hosts. Click the Create button. 
- 5. Under Authorization click Add Network, name of DevAccess, network of your IP Address, click Done and Save buttons. 
- 6. Under IP Address request an IPv4 address. 
- 7. Setup a MySQL Workbench connection using the databases IP address and user. 
- 8. Connect to the database in MySQL Workbench and run the IoT.sql DDL script. 
 
 Deploy the IoT Services App to Google Cloud Platform using a Docker File
 --------
@@ -478,37 +490,60 @@ NOTE: You will need to create a Google Cloud Platform account (this requires a c
 
 Create PHP Container and deploy your application in the Google App Engine (GAE):
 
-1. Create an App Engine application of type PHP.
-2. Build and deploy (from Google Cloud Shell):
-* git clone [URL to Cloud App Repo]
-* cd to cloudapp
-* Update .env to set APP_ENV to google
-* Test locally in Shell: php -S 0.0.0.0:8080 -t ./
-* Deploy: gcloud app deploy --project cloud-workshop-207715
-* Test at https://[project name].appspot.com/weather
-
-If you need to configure your own application the following steps need to be completed:
-
-1. Add app.yaml for PHP app into the root directory of the application. See example the Cloud Workshop SDK.
-
+1. Create an App Engine application of type PHP using the following steps:
+* Select App Engine from the Main Menu.
+* Click the ‘Select a Project’ dropdown list and then click the New Project icon.
+* Give your Project a Name and click the Create button.
+* From the Welcome to App Engine screen click the Create Application button.
+* Select a Region from the US and click the Create App button.
+* Select PHP from Language list and a Flexible Environment. Click the Next button.
+2. Clone your Application Code from GIT (from Google Cloud Shell) using the following steps:
+* Open up a Cloud Shell from the Activate Cloud Shell icon in the top menu. From the Cloud Shell perform the following operations.
+** NOTE: if you click on the Pencil icon this will open a tree view of your code, which allows you to edit some of your configuration files.
+* Run the following command from the Cloud Shell:
+** git clone [URL to your Test App Repo]
+3. Configure your application using the following steps:
+* Add app.yaml for PHP app into the root directory of the application. See example the Cloud Workshop SDK.
 * To Update your APP_KEY in the app.yaml run: php artisan key:generate --show
 * NOTE: Apache Web Server is not used in Google App Engine so the public rewrite rule is invalid, you must set your document_root to public and copy all JS, CSS, and IMG from /resources/assets to /public/resources/assets. 			
-2. Update composer.son require section (PHP v7.2 does not work at this point) and some post install commands to be ran:
+* Update composer.son require section (PHP v7.2 does not work at this point) and some post install commands to be ran:
 ```xml
         "php": "7.1.*",
 		"post-install-cmd": [
 			"Illuminate\\Foundation\\ComposerScripts::postInstall",
+			"mkdir -p bootstrap/cache",
+			"mkdir -p storage”,
 			"chmod -R 755 app bootstrap storage",
 			"mkdir -p storage/app",
 			"mkdir -p storage/framework/cache",
 			"mkdir -p storage/framework/sessions",
 			"mkdir -p storage/framework/views",
-			"mkdir -p storage/logs",
-			"php artisan cache:clear"
+			"mkdir -p storage/logs"
 	],			
 ```
-3. Update Service Endpoint URL:
- 	Update APP_ENV in .env to google 
+4. Create the MySQL Database Container and initialize the schema in the Google Cloud Platform using the following steps:
+* Select SQL menu item from the Main Menu.
+* Select MySQL Database Engine and click the Next button.
+* Select the MySQL Second Generation type.
+* Fill out the Instance ID, root password, region, and click the Create button.
+* Open the instance of the new Database and note your Public IP Address.
+* Select the Users menu and then create a new user [DB_USERNAME]/[DB_PASSWORD] that is available for all hosts. Click the Create button.
+* Select the Database menu and then create a new Database (your schema).
+* Get your public IP Address by going to your browser and in the search bar enter ‘My IP’. Note your IP Address for the next step.
+* Select the Connections menu and under Authorization Networks click Add Network button, name of GCU, network of your IP Address (from previous step), click Done and Save buttons.
+* Setup a MySQL Workbench connection using the databases IP address (listed in the Overview menu) and your database credentials (setup from the prior step).
+* Connect to the database in MySQL Workbench and run your DDL script.
+* In the Google Cloud Dashboard go to APIs & Services and make sure Google Cloud SQL is enabled.
+* In the main Google menu go to APIs & Services, click on the Library menu, search for Google Cloud SQL, and make sure Google Cloud SQL is enabled.
+* Update your database configuration for your application (i.e. config.properties to setup db.connection property for Google MySQL database).
+** NOTE: the PHP Connection String for MySQL requires the following format:
+mysql:dbname=[SCHEMA];unix_socket=/cloudsql/[PROJECT_NAME_ID]:[DB_REGION]:[DB_INSTANCE_NAME]
+5. Build and deploy your application using the following steps:
+* Open your Cloud Shell
+* cd to your cloned project root directory
+* Optionally Test locally in Shell: php -S 0.0.0.0:8080 -t ./
+* Deploy to App Engine: gcloud app deploy –[PROJECT_NAME]
+* Test at https://[PROJECT_NAME].appspot.com/
 
 NOTE: the example app.yaml checked into the Cloud Workshop repository is for the flex Google App Engine configuration. This is intended for production usage and will cost you about $50/month. The standard Google App Engine configuration deployment is not fully functional at this point despite following Google's Documentation at https://github.com/GoogleCloudPlatform/php-docs-samples and upgrading to the Laravel 5.7.x using the PHP 7.2.x runtime. For now you will need to used the flex Google App Engine configuration with caution. The following changes were attempted against the Cloud Workshop code checked into this repository.
 * Upgrated Laravel from 5.4.x to 5.7.x on local system using the PHP 7.2.10 runtime. This required updates to composer.json and running 'composer update'. 
