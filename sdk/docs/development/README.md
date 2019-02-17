@@ -416,9 +416,9 @@ Create Java (Jetty) Container and deploy your application in the Google App Engi
 * Select Java from Language list and a Standard Environment. Click the Next button.
 2. Clone your Application Code from GIT (from Google Cloud Shell) using the following steps:
 * Open up a Cloud Shell from the Activate Cloud Shell icon in the top menu. From the Cloud Shell perform the following operations. 
-- NOTE: once you have a Cloud Shell open if you click on the Pencil icon from the Cloud Shell menu this will open a tree view of your code, which allows you to edit some of your configuration files. Once you are in the editor you can also upload files into your project.
++ NOTE: once you have a Cloud Shell open if you click on the Pencil icon from the Cloud Shell menu this will open a tree view of your code, which allows you to edit some of your configuration files. Once you are in the editor you can also upload files into your project.
 * Run the following command from the Cloud Shell:
-- git clone [URL to your Test App Repo]
++ git clone [URL to your Test App Repo]
 3. Configure your application using the following steps:
 * Update POM file:
  ```xml
@@ -461,7 +461,7 @@ Create Java (Jetty) Container and deploy your application in the Google App Engi
 * Connect to the database in MySQL Workbench and run your DDL script.
 * In the main Google menu go to APIs & Services, click on the Library menu, search for Google Cloud SQL, and make sure Google Cloud SQL is enabled.
 * Update your database configuration for your application (i.e. config.properties to setup db.connection property for Google MySQL database).
-- NOTE: the JDBC Connection String for MySQL requires the following format:
++ NOTE: the JDBC Connection String for MySQL requires the following format:
 jdbc:mysql://google/[SCHEMA]?socketFactory=com.google.cloud.sql.mysql.SocketFactory&cloudSqlInstance=[PROJECT_NAME_ID]:[DB_REGION]:[DB_INSTANCE_NAME]
 5. Build and Deploy your application using the following steps:
 * Open your Cloud Shell.
@@ -469,8 +469,8 @@ jdbc:mysql://google/[SCHEMA]?socketFactory=com.google.cloud.sql.mysql.SocketFact
 * Deploy to App Engine: mvn -P[PROFILE] clean appengine:deploy
 - NOTE: use of Maven Profiles is options and if not used then leave the P command line option off when running mvn from the command line.
 * Test at https://[PROJECT_NAME].appspot.com/
-** To view application logs you can go to the Home menu item and go under the Error Reporting section to view your most recent errors.
-- To view application logs go to App Engine Versions and select Logs from the Tools dropdown.
++ To view application logs you can go to the Home menu item and go under the Error Reporting section to view your most recent errors.
++ To view application logs go to App Engine Versions and select Logs from the Tools dropdown.
 
 See https://cloud.google.com/appengine/docs/flexible/java/dev-jetty9
 
@@ -499,13 +499,13 @@ Create PHP Container and deploy your application in the Google App Engine (GAE):
 * Select PHP from Language list and a Flexible Environment. Click the Next button.
 2. Clone your Application Code from GIT (from Google Cloud Shell) using the following steps:
 * Open up a Cloud Shell from the Activate Cloud Shell icon in the top menu. From the Cloud Shell perform the following operations.
-** NOTE: if you click on the Pencil icon this will open a tree view of your code, which allows you to edit some of your configuration files.
++ NOTE: if you click on the Pencil icon this will open a tree view of your code, which allows you to edit some of your configuration files.
 * Run the following command from the Cloud Shell:
 ** git clone [URL to your Test App Repo]
 3. Configure your application using the following steps:
 * Add app.yaml for PHP app into the root directory of the application. See example the Cloud Workshop SDK.
 * To Update your APP_KEY in the app.yaml run: php artisan key:generate --show
-- NOTE: Apache Web Server is not used in Google App Engine so the public rewrite rule is invalid, you must set your document_root to public and copy all JS, CSS, and IMG from /resources/assets to /public/resources/assets. 			
++ NOTE: Apache Web Server is not used in Google App Engine so the public rewrite rule is invalid, you must set your document_root to public and copy all JS, CSS, and IMG from /resources/assets to /public/resources/assets. 			
 * Update composer.son require section (PHP v7.2 does not work at this point) and some post install commands to be ran:
 ```xml
         "php": "7.1.*",
@@ -536,7 +536,7 @@ Create PHP Container and deploy your application in the Google App Engine (GAE):
 * In the Google Cloud Dashboard go to APIs & Services and make sure Google Cloud SQL is enabled.
 * In the main Google menu go to APIs & Services, click on the Library menu, search for Google Cloud SQL, and make sure Google Cloud SQL is enabled.
 * Update your database configuration for your application (i.e. config.properties to setup db.connection property for Google MySQL database).
-- NOTE: the PHP Connection String for MySQL requires the following format:
++ NOTE: the PHP Connection String for MySQL requires the following format:
 mysql:dbname=[SCHEMA];unix_socket=/cloudsql/[PROJECT_NAME_ID]:[DB_REGION]:[DB_INSTANCE_NAME]
 5. Build and deploy your application using the following steps:
 * Open your Cloud Shell
