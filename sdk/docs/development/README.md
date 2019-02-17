@@ -461,7 +461,7 @@ Create Java (Jetty) Container and deploy your application in the Google App Engi
 * Connect to the database in MySQL Workbench and run your DDL script.
 * In the main Google menu go to APIs & Services, click on the Library menu, search for Google Cloud SQL, and make sure Google Cloud SQL is enabled.
 * Update your database configuration for your application (i.e. config.properties to setup db.connection property for Google MySQL database).
-+ NOTE: the JDBC Connection String for MySQL requires the following format:
+*     NOTE: the JDBC Connection String for MySQL requires the following format:
 jdbc:mysql://google/[SCHEMA]?socketFactory=com.google.cloud.sql.mysql.SocketFactory&cloudSqlInstance=[PROJECT_NAME_ID]:[DB_REGION]:[DB_INSTANCE_NAME]
 5. Build and Deploy your application using the following steps:
 * Open your Cloud Shell.
