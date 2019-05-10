@@ -525,7 +525,9 @@ Create PHP Container and deploy your application in the Google App Engine (GAE):
 ```xml
 	$app->useStoragePath(env('APP_STORAGE', base_path() . '/storage'));
 ```
-* Update composer.son and use version 3.1.9 of Lavacharts (3.1.10 and greater did not work on GAE).
+* Run the following command: composer remove --dev beyondcode/laravel-dump-server
+* Update composer.son and use version 3.1.9 of Lavacharts (3.1.10 and greater did not work on GAE) and run: composer update
+* Rename server.php in the root directory to index.php to get rid of the need to use 'public' in your URL.
 4. Create the MySQL Database Container and initialize the schema in the Google Cloud Platform using the following steps:
 * Select SQL menu item from the Main Menu.
 * Select MySQL Database Engine and click the Next button.
