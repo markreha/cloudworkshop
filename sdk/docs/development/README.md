@@ -503,24 +503,29 @@ Create PHP Container and deploy your application in the Google App Engine (GAE):
 * Run the following command from the Cloud Shell:
 ** git clone [URL to your Test App Repo]
 3. Configure your application using the following steps:
-* Add app.yaml for PHP app into the root directory of the application. See example the Cloud Workshop SDK.
-* To Update your APP_KEY in the app.yaml run: php artisan key:generate --show
-*     NOTE: Apache Web Server is not used in Google App Engine so the public rewrite rule is invalid, you must set your document_root to public and copy all JS, CSS, and IMG from /resources/assets to /public/resources/assets. 			
-* Update composer.son require section (PHP v7.2 does not work at this point) and some post install commands to be ran:
+* Add app.yaml for PHP app into the root directory of the application.
 ```xml
-        "php": "7.1.*",
-		"post-install-cmd": [
-			"Illuminate\\Foundation\\ComposerScripts::postInstall",
-			"mkdir -p bootstrap/cache",
-			"mkdir -p storage”,
-			"chmod -R 755 app bootstrap storage",
-			"mkdir -p storage/app",
-			"mkdir -p storage/framework/cache",
-			"mkdir -p storage/framework/sessions",
-			"mkdir -p storage/framework/views",
-			"mkdir -p storage/logs"
-	],			
+	runtime: php72
+	env: standard
+
+	env_variables:
+  		APP_KEY: base64:VLHhOtF8JNGxlDtCDc/HdbzCHFMbpJQ6jvJQQxGKeO4=
+  		APP_STORAGE: /tmp
+  		VIEW_COMPILED_PATH: /tmp
+  		SESSION_DRIVER: cookie
+  		APP_ENV: google
+
+	handlers:
+  	- url: /resources
+    	static_dir: resources
 ```
+* To Update your APP_KEY in the app.yaml run: php artisan key:generate --show
+* Apache Web Server is not used in Google App Engine so the public rewrite rule is invalid, you must set your document_root to public and copy all JS, CSS, and IMG from /resources/assets to /public/resources/assets.
+* Update bootstrap/app.php and add the following line before the return statement:
+```xml
+	$app->useStoragePath(env('APP_STORAGE', base_path() . '/storage'));
+```
+* Update composer.son and use version 3.1.9 of Lavacharts (3.1.10 and greater did not work on GAE).
 4. Create the MySQL Database Container and initialize the schema in the Google Cloud Platform using the following steps:
 * Select SQL menu item from the Main Menu.
 * Select MySQL Database Engine and click the Next button.
