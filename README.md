@@ -27,7 +27,7 @@ What's New
 - 03-22-2018: Added support for the Azure Cloud.
 - 07-21-2017: Added new screencasts for how to setup using the Eclipse EE and MySQL Workbench.
 
-Comming Soon
+Coming Soon
 --------
 - Support for Amazon Cloud9 IDE and Cloud Code Services.
 
