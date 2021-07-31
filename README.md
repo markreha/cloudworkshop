@@ -17,6 +17,7 @@ Use the following links to get started with the Cloud Workshop SDK:
 
 What's New
 --------
+- 07-30-2021: Ported to Azure Serverless Architecture [here](https://github.com/markreha/playserverless).
 - 07-03-2020: Added Angular and React Reporting Reference Applications.
 - 12-30-2018: Added support for an Arduino IoT Device.
 - 07-22-2018: Added support for the Amazon AWS Cloud.
